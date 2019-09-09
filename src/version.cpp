@@ -11,7 +11,7 @@
 const std::string CLIENT_NAME("Kmushineros");
 
 // Client version number
-#define CLIENT_VERSION_SUFFIX   "1.0.2"
+#define CLIENT_VERSION_SUFFIX   "1.0.3"
 
 
 // The following part of the code determines the CLIENT_BUILD variable.
@@ -62,5 +62,5 @@ const std::string CLIENT_NAME("Kmushineros");
 #    endif
 #endif
 
-const std::string CLIENT_BUILD(BUILD_DESC CLIENT_VERSION_SUFFIX);
+const std::string CLIENT_BUILD(CLIENT_VERSION_SUFFIX);
 const std::string CLIENT_DATE(BUILD_DATE);
