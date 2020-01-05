@@ -1,3 +1,15 @@
+# KmushiCoin
+[![Telegram](http://trellobot.doomdns.org/telegrambadge.svg)](https://t.me/KmushiCoin_Es)
+
+_KmushiCoin es la primera Criptomoneda Colombiana respaldada por una empresa. KmushiCoin nace gracias a Tierra Viva (SAS) la cual tiene mas de 20 años en investigación y elaboración de abono orgánico por medio de los escarabajos._
+
+<p align="center">
+   <a href="https://tierravivaplanet.com/index"><img src="https://tierravivaplanet.com/img/fondo.jpg" /></a>
+</p>
+
+## Última versión
+https://github.com/kmushi-coin/kmushicoin-source/releases
+
 # Especificaciones:
 •PoW / PoS 
 
@@ -31,7 +43,13 @@
 
 •PoS percentage: 16% per year
 
-## Desarrolladores
-[CarmeloCampos](https://fb.com/CarmeloAlone)
 
-[Roger Viana (Vi Senpai)](https://fb.com/rogerjvm)
+## Autores ✒️
+
+_Menciona a todos aquellos que ayudaron con el proyecto_
+
+* **CarmeloCampos**  - [CarmeloCampos](https://github.com/CarmeloCampos)
+
+## Licencia 📄
+
+KmushiCoin released under the terms of the MIT license. See (COPYING) for more information or see https://opensource.org/licenses/MIT.
