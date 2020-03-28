@@ -4,7 +4,7 @@
 _KmushiCoin es la primera Criptomoneda Colombiana respaldada por una empresa. KmushiCoin nace gracias a Tierra Viva (SAS) la cual tiene mas de 20 años en investigación y elaboración de abono orgánico por medio de los escarabajos._
 
 <p align="center">
-   <a href="https://tierravivaplanet.com/index"><img src="https://tierravivaplanet.com/img/fondo.jpg" /></a>
+   <a href="https://kmushicoin.com/"><img src="https://kmushicoin.com/images/seo_image.png" /></a>
 </p>
 
 ## Última versión

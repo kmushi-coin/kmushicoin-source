@@ -1,3 +1,4 @@
+#Makefile:
 # Copyright (c) 2009-2010 Satoshi Nakamoto
 # Distributed under the MIT/X11 software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -6,25 +7,30 @@ TARGET_PLATFORM:=i686
 #TARGET_PLATFORM:=x86_64
 
 DEPSDIR:=/usr/$(TARGET_PLATFORM)-w64-mingw32
-CC:=$(TARGET_PLATFORM)-w64-mingw32-gcc
-CXX:=$(TARGET_PLATFORM)-w64-mingw32-g++
-RANLIB=$(TARGET_PLATFORM)-w64-mingw32-ranlib
-STRIP=$(TARGET_PLATFORM)-w64-mingw32-strip
+CC:=$(TARGET_PLATFORM)-w64-mingw32.static-gcc
+CXX:=$(TARGET_PLATFORM)-w64-mingw32.static-g++
+RANLIB=$(TARGET_PLATFORM)-w64-mingw32.static-ranlib
+STRIP=$(TARGET_PLATFORM)-w64-mingw32.static-strip
 
-USE_UPNP:=0
+USE_UPNP:=1
 
 INCLUDEPATHS= \
  -I"$(CURDIR)" \
  -I"$(CURDIR)"/obj \
- -I"$(DEPSDIR)/boost_1_55_0" \
- -I"$(DEPSDIR)/db-6.0.20/build_unix" \
- -I"$(DEPSDIR)/openssl-1.0.1f/include" \
- -I"$(DEPSDIR)"
+ -I"/mnt/mxe/usr/i686-w64-mingw32.static/include/boost" \
+ -I"/mnt/mxe/usr/i686-w64-mingw32.static/" \
+ -I"/mnt/mxe/usr/i686-w64-mingw32.static/lib" \
+ -I"/mnt/mxe/usr/i686-w64-mingw32.static/include/openssl" \
+ -I"/mnt/mxe/usr/i686-w64-mingw32.static/lib" \
+ -I"/mnt/mxe/usr/i686-w64-mingw32.static/include/"
 
 LIBPATHS= \
- -L"$(DEPSDIR)/boost_1_55_0/stage/lib" \
- -L"$(DEPSDIR)/db-6.0.20/build_unix" \
- -L"$(DEPSDIR)/openssl-1.0.1f"
+ -L"/mnt/mxe/i686-w64-mingw32.static/lib" \
+ -L"/mnt/mxe/i686-w64-mingw32.static/lib" \
+ -L"/mnt/mxe/usr/i686-w64-mingw32.static/include/boost" \
+ -L"/mnt/mxe/usr/i686-w64-mingw32.static/" \
+ -L"/mnt/mxe/usr/i686-w64-mingw32.static/lib" \
+ -L"/mnt/mxe/usr/i686-w64-mingw32.static/include/"
 
 LIBS= \
  -l boost_system-mt \
@@ -35,7 +41,8 @@ LIBS= \
  -l db_cxx \
  -l ssl \
  -l crypto \
- -l z
+ -l z \
+ -Wl,-rpath,/usr/local/include -L/usr/local/include
 
 DEFS=-D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -DBOOST_SPIRIT_THREADSAFE
 DEBUGFLAGS=-g
@@ -46,7 +53,7 @@ ifndef USE_UPNP
 	override USE_UPNP = -
 endif
 ifneq (${USE_UPNP}, -)
-	LIBPATHS += -L"$(DEPSDIR)/miniupnpc"
+	LIBPATHS += -L"/mnt/mxe/usr/i686-w64-mingw32.static/lib"
 	LIBS += -l miniupnpc -l iphlpapi
 	DEFS += -DSTATICLIB -DUSE_UPNP=$(USE_UPNP)
 endif
@@ -140,3 +147,4 @@ clean:
 	cd leveldb && TARGET_OS=OS_WINDOWS_CROSSCOMPILE $(MAKE) clean && cd ..
 
 FORCE:
+

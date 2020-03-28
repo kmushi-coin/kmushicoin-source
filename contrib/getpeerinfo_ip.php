@@ -1,7 +1,7 @@
 <?php
-$explorer = file_get_contents('http://explorer.tierravivaplanet.com/api/getpeerinfo');
+$explorer = file_get_contents('http://explorer.kmushicoin.com/api/getpeerinfo');
 
-$info = file_get_contents('http://explorer.tierravivaplanet.com/api/getinfo');
+$info = file_get_contents('http://explorer.kmushicoin.com/api/getinfo');
 
 $connections = json_decode($info,TRUE)["connections"];
 

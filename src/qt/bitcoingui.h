@@ -59,7 +59,9 @@ private:
     ClientModel *clientModel;
     WalletModel *walletModel;
 
-    QStackedWidget *centralWidget;
+    QToolBar *toolbar;
+
+    QStackedWidget *centralStackedWidget;
 
     OverviewPage *overviewPage;
     QWidget *transactionsPage;
