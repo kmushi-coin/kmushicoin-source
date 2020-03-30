@@ -1,8 +1,8 @@
 #!/bin/bash
 
 installLibs14_16() {
-    sudo add-apt-repository -y ppa:bitcoin/bitcoin && sudo apt-get -y update && sudo apt-get -y upgrade && \
-    sudo apt-get -y dist-upgrade && sudo apt-get -y install autoconf automake autotools-dev build-essential \
+    sudo add-apt-repository -y ppa:bitcoin/bitcoin && sudo apt-get -y update && \
+    sudo apt-get -y install autoconf automake autotools-dev build-essential \
     g++ gcc git libboost-all-dev libcrypto++-dev libcurl4-openssl-dev libdb++-dev libdb-dev libevent-dev \
     libgmp-dev libgmp3-dev libjansson-dev libminiupnpc-dev libprotobuf-dev libqrencode-dev libqt5core5a \
     libqt5dbus5 libqt5gui5 libssl-dev libssl1.0.0-dbg libtool make miniupnpc pkg-config qrencode qt5-default \
@@ -10,8 +10,8 @@ installLibs14_16() {
 }
 
 installLibs18() {
-    sudo add-apt-repository -y ppa:bitcoin/bitcoin && sudo apt-get -y update && sudo apt-get -y upgrade && \
-    sudo apt-get -y dist-upgrade && sudo apt-get -y install  \
+    sudo add-apt-repository -y ppa:bitcoin/bitcoin && sudo apt-get -y update && \
+    sudo apt-get -y install  \
     build-essential libdb-dev libdb++-dev libboost-all-dev git libssl1.0-dev \
     libdb-dev libdb++-dev libboost-all-dev libminiupnpc-dev libevent-dev libcrypto++-dev libgmp3-dev
     sudo apt-get -y install libdb4.8-dev libdb4.8++-dev \
