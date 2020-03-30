@@ -3,7 +3,7 @@
 installLibs14_16() {
     sudo add-apt-repository -y ppa:bitcoin/bitcoin && sudo apt-get -y update && \
     sudo apt-get -y install autoconf automake autotools-dev build-essential \
-    g++ gcc git libboost-all-dev libcrypto++-dev libcurl4-openssl-dev libdb++-dev libdb-dev libevent-dev \
+    g++ gcc git libboost-all-dev libcrypto++-dev libcurl4-openssl-dev libevent-dev \
     libgmp-dev libgmp3-dev libjansson-dev libminiupnpc-dev libprotobuf-dev libqrencode-dev libqt5core5a \
     libqt5dbus5 libqt5gui5 libssl-dev libssl1.0.0-dbg libtool make miniupnpc pkg-config qrencode qt5-default \
     qt5-qmake qtbase5-dev-tools qttools5-dev qttools5-dev-tools software-properties-common libdb4.8-dev
@@ -12,7 +12,7 @@ installLibs14_16() {
 installLibs18() {
     sudo add-apt-repository -y ppa:bitcoin/bitcoin && sudo apt-get -y update && \
     sudo apt-get -y install build-essential git libboost-all-dev libboost-filesystem-dev \
-    libboost-program-options-dev libboost-thread-dev libcrypto++-dev libdb++-dev libdb-dev \
+    libboost-program-options-dev libboost-thread-dev libcrypto++-dev \
     libdb4.8++-dev libdb4.8-dev libevent-dev libgmp3-dev libminiupnpc-dev libprotobuf-dev \
     libqrencode-dev libqt5core5a libqt5dbus5 libqt5gui5 libssl1.0-dev protobuf-compiler \
     qt5-default qttools5-dev qttools5-dev-tools 
@@ -63,7 +63,7 @@ echo ""
 echo -e $blanco"Se Clona el repositorio (HECHO)"
 cd kmushicoin-source
 echo -e $blanco"Se entra al repositorio (HECHO)"
-qmake USE_UPNP=1 USE_QRCODE=1 RELEASE=1
+qmake USE_UPNP=1 RELEASE=1
 echo -e $blanco"Se Crea archivo Makefile (HECHO)"
 make -j$(nproc) STATIC=1
 echo -e $blanco"Se compila (HECHO)"
