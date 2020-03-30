@@ -6,7 +6,9 @@ installLibs14_16() {
     sudo apt-get -y install  \
       qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools software-properties-common build-essential \
       libssl-dev libdb++-dev libboost-all-dev libqrencode-dev qrencode libminiupnpc-dev automake autoconf \
-      git pkg-config libcurl4-openssl-dev libjansson-dev libgmp-dev make g++ gcc libdb4.8-dev libdb4.8++-dev
+      git pkg-config libcurl4-openssl-dev libjansson-dev libgmp-dev make g++ gcc
+    sudo apt-get -y install libdb4.8-dev libdb4.8++-dev
+
 }
 
 installLibs18() {
@@ -15,7 +17,9 @@ installLibs18() {
     sudo apt-get -y install  \
       qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools software-properties-common build-essential \
       libssl1.0-dev libdb++-dev libboost-all-dev libqrencode-dev qrencode libminiupnpc-dev automake autoconf \
-      git pkg-config libcurl-openssl1.0-dev libjansson-dev libgmp-dev make g++ gcc libdb4.8-dev libdb4.8++-dev
+      git pkg-config libcurl-openssl1.0-dev libjansson-dev libgmp-dev make g++ gcc 
+    sudo apt-get -y install libdb4.8-dev libdb4.8++-dev
+
 }
 
 instalar_programas() {
