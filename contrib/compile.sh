@@ -15,10 +15,11 @@ installLibs18() {
     sudo env LC_ALL=C.UTF-8 add-apt-repository -y ppa:bitcoin/bitcoin
     sudo apt-get -y update
     sudo apt-get -y install  \
-      qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools software-properties-common build-essential \
-      libssl1.0-dev libdb++-dev libboost-all-dev libqrencode-dev qrencode libminiupnpc-dev automake autoconf \
-      git pkg-config libcurl-openssl1.0-dev libjansson-dev libgmp-dev make g++ gcc 
-    sudo apt-get -y install libdb4.8-dev libdb4.8++-dev
+      build-essential libdb-dev libdb++-dev libboost-all-dev git libssl1.0-dev \
+    libdb-dev libdb++-dev libboost-all-dev libminiupnpc-dev libevent-dev libcrypto++-dev libgmp3-dev
+    sudo apt-get -y install libdb4.8-dev libdb4.8++-dev \
+    build-essential libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libdb-dev libdb++-dev libminiupnpc-dev libssl1.0-dev \
+    libboost-all-dev qt5-default libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler libqrencode-dev
 
 }
 
