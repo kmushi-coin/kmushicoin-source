@@ -65,7 +65,7 @@ cd kmushicoin-source
 echo -e $blanco"Se entra al repositorio (HECHO)"
 qmake USE_UPNP=1 RELEASE=1
 echo -e $blanco"Se Crea archivo Makefile (HECHO)"
-make -j$(nproc) STATIC=1
+make -j$(nproc)
 echo -e $blanco"Se compila (HECHO)"
 START
 elif [ "$opcion" = "2" ]; then
@@ -81,7 +81,7 @@ echo -e $blanco"Compilando QT && DAEMON"
 git clone https://github.com/kmushi-coin/kmushicoin-source
 cd kmushicoin-source
 qmake USE_UPNP=1 RELEASE=1
-make -j$(nproc) STATIC=1
+make -j$(nproc)
 cd src
 make -j$(nproc) -f makefile.unix RELEASE=1 STATIC=1
 START
