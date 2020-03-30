@@ -51,7 +51,7 @@ START(){
 echo -e $azul "Opciones:"
 echo -e $magenta "Compilar QT: "$verde"1"
 echo -e $magenta "Compilar DAEMON: "$verde"2"
-echo -e $blanco "Compilar QT & DAEMON: "$verde"3"
+echo -e $magenta "Compilar QT & DAEMON: "$verde"3"
 echo -e $blanco "Instalar dependencias: "$verde"4"
 echo ""
 echo -e $rojo "Salir: "$verde"5"
