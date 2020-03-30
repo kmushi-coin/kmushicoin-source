@@ -67,9 +67,9 @@ echo ""
 echo -e $blanco"Se Clona el repositorio (HECHO)"
 cd kmushicoin-source
 echo -e $blanco"Se entra al repositorio (HECHO)"
-qmake USE_UPNP=1 USE_QRCODE=1
+qmake USE_UPNP=1 USE_QRCODE=1 RELEASE=1
 echo -e $blanco"Se Crea archivo Makefile (HECHO)"
-make -j$(nproc)
+make -j$(nproc) STATIC=1
 echo -e $blanco"Se compila (HECHO)"
 START
 elif [ "$opcion" = "2" ]; then
