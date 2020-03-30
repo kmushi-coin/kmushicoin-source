@@ -6,7 +6,7 @@ installLibs14_16() {
     g++ gcc git libboost-all-dev libcrypto++-dev libcurl4-openssl-dev libdb++-dev libdb-dev libevent-dev \
     libgmp-dev libgmp3-dev libjansson-dev libminiupnpc-dev libprotobuf-dev libqrencode-dev libqt5core5a \
     libqt5dbus5 libqt5gui5 libssl-dev libssl1.0.0-dbg libtool make miniupnpc pkg-config qrencode qt5-default \
-    qt5-qmake qtbase5-dev-tools qttools5-dev qttools5-dev-tools software-properties-common libdb4.8-dev libdb4.8++-dev
+    qt5-qmake qtbase5-dev-tools qttools5-dev qttools5-dev-tools software-properties-common libdb4.8-dev
 }
 
 installLibs18() {
