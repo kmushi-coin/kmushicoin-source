@@ -41,7 +41,7 @@ nombre="\033[3;32m"
 ############--COLORES--############
 echo -e $blanco"Programa creado para compilar "$verde"billetera qt"$blanco" y "$verde"demonio (daemon) "$blanco"de "$amarillo"Kmushicoin"
 sleep 2
-echo -e $rojo"Version: "$verde"1.4"
+echo -e $rojo"Version: "$verde"1.7"
 echo -e $rojo"Creado por CarmeloCampos"
 echo ""
 echo ""
@@ -49,16 +49,17 @@ echo ""
 START(){
 
 echo -e $azul "Opciones:"
-echo -e $magenta "Compilar Wallet qt: "$verde"1"
-echo -e $magenta "Compilar Wallet daemon: "$verde"2"
-echo -e $blanco "Instalar dependencias: "$verde"3"
+echo -e $magenta "Compilar QT: "$verde"1"
+echo -e $magenta "Compilar DAEMON: "$verde"2"
+echo -e $blanco "Compilar QT & DAEMON: "$verde"3"
+echo -e $blanco "Instalar dependencias: "$verde"4"
 echo ""
-echo -e $rojo "Salir: "$verde"4"
+echo -e $rojo "Salir: "$verde"5"
 
 read -p "Elejir opcion: " opcion
 if [ "$opcion" = "1" ]; then
 echo ""
-echo -e $blanco"Compilando wallet qt"
+echo -e $blanco"Compilando QT"
 git clone https://github.com/kmushi-coin/kmushicoin-source
 echo ""
 echo -e $blanco"Se Clona el repositorio (HECHO)"
@@ -71,16 +72,26 @@ echo -e $blanco"Se compila (HECHO)"
 START
 elif [ "$opcion" = "2" ]; then
 echo ""
-echo -e $blanco"Compilando wallet daemon"
+echo -e $blanco"Compilando DAEMON"
 git clone https://github.com/kmushi-coin/kmushicoin-source
 cd kmushicoin-source/src
 make -j$(nproc) -f makefile.unix RELEASE=1 STATIC=1
 START
-elif [ "$opcion" = "3" ]; then
+elif [ "$opcion" = "4" ]; then
+echo ""
+echo -e $blanco"Compilando QT && DAEMON"
+git clone https://github.com/kmushi-coin/kmushicoin-source
+cd kmushicoin-source
+qmake USE_UPNP=1 USE_QRCODE=1 RELEASE=1
+make -j$(nproc) STATIC=1
+cd src
+make -j$(nproc) -f makefile.unix RELEASE=1 STATIC=1
+START
+elif [ "$opcion" = "4" ]; then
 echo ""
 echo -e $verde"Actualizando e instalando dependencias"
 instalar_programas
-elif [ "$opcion" = "4" ]; then
+elif [ "$opcion" = "5" ]; then
 echo "Adios"
 exit
 else
