@@ -11,13 +11,11 @@ installLibs14_16() {
 
 installLibs18() {
     sudo add-apt-repository -y ppa:bitcoin/bitcoin && sudo apt-get -y update && \
-    sudo apt-get -y install  \
-    build-essential libdb-dev libdb++-dev libboost-all-dev git libssl1.0-dev \
-    libdb-dev libdb++-dev libboost-all-dev libminiupnpc-dev libevent-dev libcrypto++-dev libgmp3-dev
-    sudo apt-get -y install libdb4.8-dev libdb4.8++-dev \
-    build-essential libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libdb-dev libdb++-dev \
-    libminiupnpc-dev libssl1.0-dev libboost-all-dev qt5-default libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev \
-    qttools5-dev-tools libprotobuf-dev protobuf-compiler libqrencode-dev
+    sudo apt-get -y install build-essential git libboost-all-dev libboost-filesystem-dev \
+    libboost-program-options-dev libboost-thread-dev libcrypto++-dev libdb++-dev libdb-dev \
+    libdb4.8++-dev libdb4.8-dev libevent-dev libgmp3-dev libminiupnpc-dev libprotobuf-dev \
+    libqrencode-dev libqt5core5a libqt5dbus5 libqt5gui5 libssl1.0-dev protobuf-compiler \
+    qt5-default qttools5-dev qttools5-dev-tools 
 }
 
 instalar_programas() {
