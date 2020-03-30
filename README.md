@@ -10,6 +10,19 @@ _KmushiCoin es la primera Criptomoneda Colombiana respaldada por una empresa. Km
 ## Última versión
 https://github.com/kmushi-coin/kmushicoin-source/releases
 
+### Compilación (QT o DAEMON) 🔧
+
+_El siguiente código, es para descargar y ejecutar un mini programa que te ayudará con la compilación de kmushicoin en el respectivo modo (DAEMON o QT)_
+
+## Linux
+_Antes de iniciar, es necesario estar como root o ejecutar el comando con sudo_
+```
+wget https://raw.githubusercontent.com/kmushi-coin/kmushicoin-source/master/contrib/compile.sh
+chmod +x compile.sh
+./compile.sh
+(sudo ./compile.sh)
+```
+
 # Especificaciones:
 •PoW / PoS 
 

@@ -44,7 +44,7 @@ nombre="\033[3;32m"
 ############--COLORES--############
 echo -e $blanco"Programa creado para compilar "$verde"billetera qt"$blanco" y "$verde"demonio (daemon) "$blanco"de "$amarillo"Kmushicoin"
 sleep 2
-echo -e $rojo"Version: "$verde"1.0"
+echo -e $rojo"Version: "$verde"1.4"
 echo -e $rojo"Creado por CarmeloCampos"
 echo ""
 echo ""
