@@ -77,7 +77,7 @@ git clone https://github.com/kmushi-coin/kmushicoin-source
 cd kmushicoin-source/src
 make -j$(nproc) -f makefile.unix RELEASE=1 STATIC=1
 START
-elif [ "$opcion" = "4" ]; then
+elif [ "$opcion" = "3" ]; then
 echo ""
 echo -e $blanco"Compilando QT && DAEMON"
 git clone https://github.com/kmushi-coin/kmushicoin-source
