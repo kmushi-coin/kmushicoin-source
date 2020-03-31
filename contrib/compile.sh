@@ -167,6 +167,7 @@ echo -e $verde"Actualizando e instalando dependencias"
 echo -e $blanco""
 instalar_programas
 elif [ "$opcion" = "5" ]; then
+echo -e $blanco""
 echo "Adios"
 exit
 else
