@@ -60,15 +60,15 @@ instalar_programas() {
 
 clonar_github() {
 echo $amarillo"Clonando repositorio"
-echo $blanco""
+echo -e $blanco""
 sleep 1
 rm -R kmushicoin-source
 git clone https://github.com/kmushi-coin/kmushicoin-source
 sleep 1
-echo $blanco""
+echo -e $blanco""
 echo $amarillo"Repositorio Clonado"
 sleep 1
-echo $blanco""
+echo -e $blanco""
 }
 
 compilar_qt(){
@@ -77,11 +77,11 @@ echo $amarillo"Entrando en el repositorio"
 cd kmushicoin-source
 sleep 1
 echo $amarillo"Ejecutando comando "$verde"qmake"
-echo $blanco""
+echo -e $blanco""
 qmake USE_UPNP=1 RELEASE=1
 sleep 1
 echo $amarillo"Ejecutando comando "$verde"make"
-echo $blanco""
+echo -e $blanco""
 make -j$(nproc)
 sleep 1
 echo $amarillo"Se ha compilado la wallet QT"
@@ -94,7 +94,7 @@ echo $amarillo"Entrando en el repositorio"
 cd kmushicoin-source/src
 sleep 1
 echo $amarillo"Ejecutando comando "$verde"make"
-echo $blanco""
+echo -e $blanco""
 make -j$(nproc) -f makefile.unix RELEASE=1 STATIC=1
 sleep 1
 echo $amarillo"Se ha compilado la wallet DAEMON"
@@ -107,11 +107,11 @@ echo $amarillo"Entrando en el repositorio"
 cd kmushicoin-source
 sleep 1
 echo $amarillo"Ejecutando comando "$verde"qmake"
-echo $blanco""
+echo -e $blanco""
 qmake USE_UPNP=1 RELEASE=1
 sleep 1
 echo $amarillo"Ejecutando comando "$verde"make"
-echo $blanco""
+echo -e $blanco""
 make -j$(nproc)
 sleep 1
 echo $amarillo"Se ha compilado la wallet QT"
@@ -120,7 +120,7 @@ echo $amarillo"Entrando en el repositorio /src"
 cd src
 sleep 1
 echo $amarillo"Ejecutando comando "$verde"make"
-echo $blanco""
+echo -e $blanco""
 make -j$(nproc) -f makefile.unix RELEASE=1 STATIC=1
 sleep 1
 echo $amarillo"Se ha compilado la wallet DAEMON"
@@ -164,7 +164,7 @@ START
 elif [ "$opcion" = "4" ]; then
 echo ""
 echo -e $verde"Actualizando e instalando dependencias"
-echo $blanco"hola"
+echo -e $blanco""
 instalar_programas
 elif [ "$opcion" = "5" ]; then
 echo "Adios"
