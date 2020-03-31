@@ -29,17 +29,7 @@ installLibs16() {
 }
 
 installLibs18() {
-     
     sudo add-apt-repository -y ppa:bitcoin/bitcoin && sudo apt-get -y update && \
-    sudo apt-get -y install build-essential git libboost-all-dev libboost-filesystem-dev \
-    libboost-program-options-dev libboost-thread-dev libcrypto++-dev \
-    libdb4.8++-dev libdb4.8-dev libevent-dev libgmp3-dev libminiupnpc-dev libprotobuf-dev \
-    libqrencode-dev libqt5core5a libqt5dbus5 libqt5gui5 libssl1.0-dev protobuf-compiler \
-    qt5-default qttools5-dev qttools5-dev-tools 
-}
-
-installLibs19() {
-    sudo apt-get -y update && \
     sudo apt-get -y install build-essential git libboost-all-dev libboost-filesystem-dev \
     libboost-program-options-dev libboost-thread-dev libcrypto++-dev \
     libdb4.8++-dev libdb4.8-dev libevent-dev libgmp3-dev libminiupnpc-dev libprotobuf-dev \
@@ -53,7 +43,6 @@ instalar_programas() {
         ubuntu-14.04 ) installLibs14 ;;
         ubuntu-16.04 ) installLibs16 ;;
         ubuntu-18.04 ) installLibs18 ;;
-        ubuntu-19.10 ) installLibs19 ;;
         * ) echo "No se reconoce el sistema operativo"; exit 1;;
     esac
 }
