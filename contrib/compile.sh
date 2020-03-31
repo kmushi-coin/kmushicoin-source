@@ -48,7 +48,7 @@ installLibs19() {
 }
 
 instalar_programas() {
-    echo $blanco""
+    echo $blanco" "
     . /etc/os-release
     case "$ID-$VERSION_ID" in
         ubuntu-14.04 ) installLibs14 ;;
