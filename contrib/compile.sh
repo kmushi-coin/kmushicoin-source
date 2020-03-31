@@ -48,7 +48,6 @@ installLibs19() {
 }
 
 instalar_programas() {
-    echo $blanco" "
     . /etc/os-release
     case "$ID-$VERSION_ID" in
         ubuntu-14.04 ) installLibs14 ;;
@@ -165,6 +164,7 @@ START
 elif [ "$opcion" = "4" ]; then
 echo ""
 echo -e $verde"Actualizando e instalando dependencias"
+echo $blanco" "
 instalar_programas
 elif [ "$opcion" = "5" ]; then
 echo "Adios"
