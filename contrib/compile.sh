@@ -164,7 +164,7 @@ START
 elif [ "$opcion" = "4" ]; then
 echo ""
 echo -e $verde"Actualizando e instalando dependencias"
-echo $blanco" "
+echo $blanco" hola"
 instalar_programas
 elif [ "$opcion" = "5" ]; then
 echo "Adios"
