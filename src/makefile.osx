@@ -1,4 +1,5 @@
 # -*- mode: Makefile; -*-
+
 # Copyright (c) 2011 Bitcoin Developers
 # Distributed under the MIT/X11 software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -10,14 +11,18 @@ CXX=llvm-g++
 DEPSDIR=/opt/local
 
 INCLUDEPATHS= \
- -I"$(CURDIR)" \
- -I"$(CURDIR)"/obj \
- -I"$(DEPSDIR)/include" \
- -I"$(DEPSDIR)/include/db48"
+ -I"/opt/local/include/db48" \
+ -I"/usr/local/include/boost" \
+ -I"/usr/local/ssl/include" \
+ -I"/usr/include"
+
 
 LIBPATHS= \
- -L"$(DEPSDIR)/lib" \
- -L"$(DEPSDIR)/lib/db48"
+ -L"/usr/local/lib" \
+ -L"/usr/local/ssl/lib" \
+ -L"/usr/lib" \
+ -L"/usr/local/lib" \
+ -L"/opt/local/lib/db48"
 
 USE_UPNP:=1
 
