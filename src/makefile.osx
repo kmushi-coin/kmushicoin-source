@@ -8,36 +8,48 @@
 # Originally by Laszlo Hanyecz (solar@heliacal.net)
 
 CXX=llvm-g++
-DEPSDIR=/usr/local
+DEPSDIR=/opt/local
 
 INCLUDEPATHS= \
- -I"$(DEPSDIR)/BerkeleyDB.4.8/include" \
- -I"$(DEPSDIR)/include/boost" \
- -I"$(DEPSDIR)/ssl/include" \
- -I"/usr/include/miniupnpc"
+ -I"/opt/local/include/db48" \
+ -I"/usr/local/include/boost" \
+ -I"/usr/local/ssl/include" \
+ -I"/usr/include"
+
 
 LIBPATHS= \
- -L"$(DEPSDIR)/lib" \
- -L"$(DEPSDIR)/ssl/lib" \
- -L"$(DEPSDIR)/lib" \
- -L"$(DEPSDIR)/BerkeleyDB.4.8/lib"
+ -L"/usr/local/lib" \
+ -L"/usr/local/ssl/lib" \
+ -L"/usr/lib" \
+ -L"/usr/local/lib" \
+ -L"/opt/local/lib/db48"
 
 USE_UPNP:=1
 
-LMODE = static
-LMODE2 = static
-
 LIBS= -dead_strip
 
+ifdef STATIC
+# Build STATIC if you are redistributing the KmushiCoind binary
 LIBS += \
-   -Wl,-B$(LMODE) \
-   -l boost_system$(BOOST_LIB_SUFFIX) \
-   -l boost_filesystem$(BOOST_LIB_SUFFIX) \
-   -l boost_program_options$(BOOST_LIB_SUFFIX) \
-   -l boost_thread$(BOOST_LIB_SUFFIX) \
-   -l db_cxx$(BDB_LIB_SUFFIX) \
-   -l ssl \
-   -l crypto
+ $(DEPSDIR)/lib/db48/libdb_cxx-4.8.a \
+ $(DEPSDIR)/lib/libboost_system-mt.a \
+ $(DEPSDIR)/lib/libboost_filesystem-mt.a \
+ $(DEPSDIR)/lib/libboost_program_options-mt.a \
+ $(DEPSDIR)/lib/libboost_thread-mt.a \
+ $(DEPSDIR)/lib/libssl.a \
+ $(DEPSDIR)/lib/libcrypto.a \
+ -lz
+else
+LIBS += \
+ -ldb_cxx-4.8 \
+ -lboost_system-mt \
+ -lboost_filesystem-mt \
+ -lboost_program_options-mt \
+ -lboost_thread-mt \
+ -lssl \
+ -lcrypto \
+ -lz
+endif
 
 DEFS=-DMAC_OSX -DMSG_NOSIGNAL=0 -DBOOST_SPIRIT_THREADSAFE
 
@@ -51,7 +63,7 @@ CFLAGS = -g -msse2
 endif
 
 # ppc doesn't work because we don't support big-endian
-CFLAGS += -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter \
+CFLAGS += -Wall -Wextra -Wformat -Wno-ignored-qualifiers -Wformat-security -Wno-unused-parameter \
     $(DEBUGFLAGS) $(DEFS) $(INCLUDEPATHS)
 
 OBJS= \
@@ -100,18 +112,16 @@ OBJS= \
     obj/zerocoin/ZeroTest.o
 
 ifndef USE_UPNP
-    override USE_UPNP = -
+	override USE_UPNP = -
 endif
 ifneq (${USE_UPNP}, -)
-    LIBS += -l miniupnpc
-    DEFS += -DUSE_UPNP=$(USE_UPNP)
+	DEFS += -DUSE_UPNP=$(USE_UPNP)
+ifdef STATIC
+	LIBS += $(DEPSDIR)/lib/libminiupnpc.a
+else
+	LIBS += -lminiupnpc
 endif
-
-LIBS+= \
- -Wl,-B$(LMODE2) \
-   -l z \
-   -l dl \
-   -l pthread
+endif
 
 all: KmushiCoind
 
@@ -120,18 +130,27 @@ DEFS += $(addprefix -I,$(CURDIR)/leveldb/include)
 DEFS += $(addprefix -I,$(CURDIR)/leveldb/helpers)
 OBJS += obj/txdb-leveldb.o
 leveldb/libleveldb.a:
+<<<<<<< HEAD
   @echo "Building LevelDB ..."; cd leveldb; make libleveldb.a libmemenv.a; cd ..
+=======
+	@echo "Building LevelDB ..."; cd leveldb; make libleveldb.a libmemenv.a; cd ..
+>>>>>>> parent of be739ee... Update makefile.osx
 obj/txdb-leveldb.o: leveldb/libleveldb.a
 
 # auto-generated dependencies:
 -include obj/*.P
 
 obj/build.h: FORCE
+<<<<<<< HEAD
   /bin/sh ../share/genbuild.sh obj/build.h
+=======
+	/bin/sh ../share/genbuild.sh obj/build.h
+>>>>>>> parent of be739ee... Update makefile.osx
 version.cpp: obj/build.h
 DEFS += -DHAVE_BUILD_INFO
 
 obj/%.o: %.cpp
+<<<<<<< HEAD
   $(CXX) -c $(CFLAGS) -MMD -MF $(@:%.o=%.d) -o $@ $<
   @cp $(@:%.o=%.d) $(@:%.o=%.P); \
     sed -e 's/#.*//' -e 's/^[^:]*: *//' -e 's/ *\\$$//' \
@@ -161,5 +180,36 @@ clean:
   -rm -f obj/*.P
   -rm -f obj/zerocoin/*.P
   -rm -f obj/build.h
+=======
+	$(CXX) -c $(CFLAGS) -MMD -MF $(@:%.o=%.d) -o $@ $<
+	@cp $(@:%.o=%.d) $(@:%.o=%.P); \
+	  sed -e 's/#.*//' -e 's/^[^:]*: *//' -e 's/ *\\$$//' \
+	      -e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
+	  rm -f $(@:%.o=%.d)
+
+obj/zerocoin/%.o: zerocoin/%.cpp
+	$(CXX) -c $(xCXXFLAGS) -MMD -MF $(@:%.o=%.d) -o $@ $<
+	@cp $(@:%.o=%.d) $(@:%.o=%.P); \
+	  sed -e 's/#.*//' -e 's/^[^:]*: *//' -e 's/ *\\$$//' \
+	      -e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
+	  rm -f $(@:%.o=%.d)
+
+obj/scrypt-x86.o: scrypt-x86.S
+	$(CXX) -c $(xCXXFLAGS) -MMD -o $@ $<
+
+obj/scrypt-x86_64.o: scrypt-x86_64.S
+	$(CXX) -c $(xCXXFLAGS) -MMD -o $@ $<
+
+KmushiCoind: $(OBJS:obj/%=obj/%)
+	$(CXX) $(CFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
+
+clean:
+	-rm -f KmushiCoind
+	-rm -f obj/*.o
+	-rm -f obj/zerocoin/*.o
+	-rm -f obj/*.P
+	-rm -f obj/zerocoin/*.P
+	-rm -f obj/build.h
+>>>>>>> parent of be739ee... Update makefile.osx
 
 FORCE:
