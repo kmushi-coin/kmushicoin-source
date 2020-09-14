@@ -120,46 +120,46 @@ DEFS += $(addprefix -I,$(CURDIR)/leveldb/include)
 DEFS += $(addprefix -I,$(CURDIR)/leveldb/helpers)
 OBJS += obj/txdb-leveldb.o
 leveldb/libleveldb.a:
-    @echo "Building LevelDB ..."; cd leveldb; make libleveldb.a libmemenv.a; cd ..
+  @echo "Building LevelDB ..."; cd leveldb; make libleveldb.a libmemenv.a; cd ..
 obj/txdb-leveldb.o: leveldb/libleveldb.a
 
 # auto-generated dependencies:
 -include obj/*.P
 
 obj/build.h: FORCE
-    /bin/sh ../share/genbuild.sh obj/build.h
+  /bin/sh ../share/genbuild.sh obj/build.h
 version.cpp: obj/build.h
 DEFS += -DHAVE_BUILD_INFO
 
 obj/%.o: %.cpp
-    $(CXX) -c $(CFLAGS) -MMD -MF $(@:%.o=%.d) -o $@ $<
-    @cp $(@:%.o=%.d) $(@:%.o=%.P); \
-      sed -e 's/#.*//' -e 's/^[^:]*: *//' -e 's/ *\\$$//' \
-          -e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
-      rm -f $(@:%.o=%.d)
+  $(CXX) -c $(CFLAGS) -MMD -MF $(@:%.o=%.d) -o $@ $<
+  @cp $(@:%.o=%.d) $(@:%.o=%.P); \
+    sed -e 's/#.*//' -e 's/^[^:]*: *//' -e 's/ *\\$$//' \
+        -e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
+    rm -f $(@:%.o=%.d)
 
 obj/zerocoin/%.o: zerocoin/%.cpp
-    $(CXX) -c $(xCXXFLAGS) -MMD -MF $(@:%.o=%.d) -o $@ $<
-    @cp $(@:%.o=%.d) $(@:%.o=%.P); \
-      sed -e 's/#.*//' -e 's/^[^:]*: *//' -e 's/ *\\$$//' \
-          -e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
-      rm -f $(@:%.o=%.d)
+  $(CXX) -c $(xCXXFLAGS) -MMD -MF $(@:%.o=%.d) -o $@ $<
+  @cp $(@:%.o=%.d) $(@:%.o=%.P); \
+    sed -e 's/#.*//' -e 's/^[^:]*: *//' -e 's/ *\\$$//' \
+        -e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
+    rm -f $(@:%.o=%.d)
 
 obj/scrypt-x86.o: scrypt-x86.S
-    $(CXX) -c $(xCXXFLAGS) -MMD -o $@ $<
+  $(CXX) -c $(xCXXFLAGS) -MMD -o $@ $<
 
 obj/scrypt-x86_64.o: scrypt-x86_64.S
-    $(CXX) -c $(xCXXFLAGS) -MMD -o $@ $<
+  $(CXX) -c $(xCXXFLAGS) -MMD -o $@ $<
 
 KmushiCoind: $(OBJS:obj/%=obj/%)
-    $(CXX) $(CFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
+  $(CXX) $(CFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
 
 clean:
-    -rm -f KmushiCoind
-    -rm -f obj/*.o
-    -rm -f obj/zerocoin/*.o
-    -rm -f obj/*.P
-    -rm -f obj/zerocoin/*.P
-    -rm -f obj/build.h
+  -rm -f KmushiCoind
+  -rm -f obj/*.o
+  -rm -f obj/zerocoin/*.o
+  -rm -f obj/*.P
+  -rm -f obj/zerocoin/*.P
+  -rm -f obj/build.h
 
 FORCE:
