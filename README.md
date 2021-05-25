@@ -1,5 +1,5 @@
 # KmushiCoin
-[![Telegram](http://trellobot.doomdns.org/telegrambadge.svg)](https://t.me/KmushiCoin_Es)
+[![Telegram](https://patrolavia.github.io/telegram-badge/chat.svg)](https://t.me/KmushiCoin_Es)
 
 _KmushiCoin es la primera Criptomoneda Colombiana respaldada por una empresa. KmushiCoin nace gracias a Tierra Viva (SAS) la cual tiene mas de 20 años en investigación y elaboración de abono orgánico por medio de los escarabajos._
 
@@ -24,8 +24,6 @@ chmod +x compile.sh
 ```
 
 # Especificaciones:
-•PoW / PoS 
-
 •Algoritmo: Scrypt 
 
 •Nombre: KmushiCoin.
@@ -36,15 +34,11 @@ chmod +x compile.sh
 
 •Pre-Minado: 20% (4.000.000 ).
 
-•No Ico. 
-
 •Total de monedas: 20.000.000 (KTV).
 
 •Madurez: 6 Bloques.
 
 •Tiempo por bloque: 60 Segundos.
-
-•Confirmaciones: 5 Bloques.
 
 •Block type: Proof-of-Work/Proof-of-Stake
 
