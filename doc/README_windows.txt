@@ -1,4 +1,4 @@
-KmushiCoin 1.1.0 BETA
+KmushiCoin 0.4.4 BETA
 
 Copyright (c) 2013 NovaCoin Developers
 Copyright (c) 2011-2013 PPCoin Developers

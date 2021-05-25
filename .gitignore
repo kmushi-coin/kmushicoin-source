@@ -1,3 +1,2 @@
-*DS_Store
-.vscode/*
-kmushicoin-qt.pro.user
+src/qt/locale/*.qm
+KmushiCoin-qt.pro.user

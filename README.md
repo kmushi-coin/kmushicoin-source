@@ -66,3 +66,4 @@ _Menciona a todos aquellos que ayudaron con el proyecto_
 ## Licencia 📄
 
 KmushiCoin released under the terms of the MIT license. See (COPYING) for more information or see https://opensource.org/licenses/MIT.
+

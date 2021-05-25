@@ -1,8 +1,10 @@
 TEMPLATE = app
 TARGET = KmushiCoin-qt
-VERSION = 1.1.0
+VERSION = 1.2.0.0
 INCLUDEPATH += src src/json src/qt
-DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE
+QT += network
+DEFINES += ENABLE_WALLET
+DEFINES += BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE
 CONFIG += no_include_pwd
 CONFIG += thread
 
@@ -27,8 +29,8 @@ UI_DIR = build
 
 # use: qmake "RELEASE=1"
 contains(RELEASE, 1) {
-    # Mac: compile for maximum compatibility (10.13, 64-bit)
-    macx:QMAKE_CXXFLAGS += -mmacosx-version-min=10.13 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk
+    # Mac: compile for maximum compatibility (10.5, 32-bit)
+    macx:QMAKE_CXXFLAGS += -mmacosx-version-min=10.5 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.5.sdk
 
     !windows:!macx {
         # Linux: static link
@@ -46,9 +48,6 @@ QMAKE_LFLAGS *= -fstack-protector-all --param ssp-buffer-size=1
 # for extra security on Windows: enable ASLR and DEP via GCC linker flags
 win32:QMAKE_LFLAGS *= -Wl,--dynamicbase -Wl,--nxcompat
 win32:QMAKE_LFLAGS += -static-libgcc -static-libstdc++
-
-linux:QMAKE_LFLAGS += -static-libgcc -static-libstdc++
-
 
 # use: qmake "USE_QRCODE=1"
 # libqrencode (http://fukuchi.org/works/qrencode/index.en.html) must be installed for support
@@ -69,7 +68,7 @@ contains(USE_UPNP, -) {
     count(USE_UPNP, 0) {
         USE_UPNP=1
     }
-    DEFINES += USE_UPNP=$$USE_UPNP STATICLIB
+    DEFINES += USE_UPNP=$$USE_UPNP MINIUPNP_STATICLIB STATICLIB
     INCLUDEPATH += $$MINIUPNPC_INCLUDE_PATH
     LIBS += $$join(MINIUPNPC_LIB_PATH,,-L,) -lminiupnpc
     win32:LIBS += -liphlpapi
@@ -156,38 +155,30 @@ HEADERS += src/qt/bitcoingui.h \
     src/addrman.h \
     src/base58.h \
     src/bignum.h \
+    src/chainparams.h \
+    src/chainparamsseeds.h \
     src/checkpoints.h \
     src/compat.h \
     src/coincontrol.h \
     src/sync.h \
     src/util.h \
+    src/hash.h \
     src/uint256.h \
     src/kernel.h \
     src/scrypt.h \
     src/pbkdf2.h \
-    src/zerocoin/Accumulator.h \
-    src/zerocoin/AccumulatorProofOfKnowledge.h \
-    src/zerocoin/Coin.h \
-    src/zerocoin/CoinSpend.h \
-    src/zerocoin/Commitment.h \
-    src/zerocoin/ParamGeneration.h \
-    src/zerocoin/Params.h \
-    src/zerocoin/SerialNumberSignatureOfKnowledge.h \
-    src/zerocoin/SpendMetaData.h \
-    src/zerocoin/ZeroTest.h \
-    src/zerocoin/Zerocoin.h \
     src/serialize.h \
-    src/strlcpy.h \
+    src/core.h \
     src/main.h \
     src/miner.h \
     src/net.h \
     src/key.h \
     src/db.h \
     src/txdb.h \
+    src/txmempool.h \
     src/walletdb.h \
     src/script.h \
     src/init.h \
-    src/irc.h \
     src/mruset.h \
     src/json/json_spirit_writer_template.h \
     src/json/json_spirit_writer.h \
@@ -204,6 +195,7 @@ HEADERS += src/qt/bitcoingui.h \
     src/qt/guiconstants.h \
     src/qt/optionsmodel.h \
     src/qt/monitoreddatamapper.h \
+    src/qt/trafficgraphwidget.h \
     src/qt/transactiondesc.h \
     src/qt/transactiondescdialog.h \
     src/qt/bitcoinamountfield.h \
@@ -212,7 +204,10 @@ HEADERS += src/qt/bitcoingui.h \
     src/qt/transactionfilterproxy.h \
     src/qt/transactionview.h \
     src/qt/walletmodel.h \
-    src/bitcoinrpc.h \
+    src/rpcclient.h \
+    src/rpcprotocol.h \
+    src/rpcserver.h \
+    src/timedata.h \
     src/qt/overviewpage.h \
     src/qt/csvmodelwriter.h \
     src/crypter.h \
@@ -223,14 +218,15 @@ HEADERS += src/qt/bitcoingui.h \
     src/qt/askpassphrasedialog.h \
     src/protocol.h \
     src/qt/notificator.h \
-    src/qt/qtipcserver.h \
+    src/qt/paymentserver.h \
     src/allocators.h \
     src/ui_interface.h \
     src/qt/rpcconsole.h \
     src/version.h \
     src/netbase.h \
     src/clientversion.h \
-    src/threadsafety.h
+    src/threadsafety.h \
+    src/tinyformat.h
 
 SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/qt/transactiontablemodel.cpp \
@@ -245,17 +241,20 @@ SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/qt/editaddressdialog.cpp \
     src/qt/bitcoinaddressvalidator.cpp \
     src/alert.cpp \
+    src/chainparams.cpp \
     src/version.cpp \
     src/sync.cpp \
+    src/txmempool.cpp \
     src/util.cpp \
+    src/hash.cpp \
     src/netbase.cpp \
     src/key.cpp \
     src/script.cpp \
+    src/core.cpp \
     src/main.cpp \
     src/miner.cpp \
     src/init.cpp \
     src/net.cpp \
-    src/irc.cpp \
     src/checkpoints.cpp \
     src/addrman.cpp \
     src/db.cpp \
@@ -265,6 +264,7 @@ SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/qt/transactionrecord.cpp \
     src/qt/optionsmodel.cpp \
     src/qt/monitoreddatamapper.cpp \
+    src/qt/trafficgraphwidget.cpp \
     src/qt/transactiondesc.cpp \
     src/qt/transactiondescdialog.cpp \
     src/qt/bitcoinstrings.cpp \
@@ -274,13 +274,17 @@ SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/qt/transactionfilterproxy.cpp \
     src/qt/transactionview.cpp \
     src/qt/walletmodel.cpp \
-    src/bitcoinrpc.cpp \
+    src/rpcclient.cpp \
+    src/rpcprotocol.cpp \
+    src/rpcserver.cpp \
     src/rpcdump.cpp \
+    src/rpcmisc.cpp \
     src/rpcnet.cpp \
     src/rpcmining.cpp \
     src/rpcwallet.cpp \
     src/rpcblockchain.cpp \
     src/rpcrawtransaction.cpp \
+    src/timedata.cpp \
     src/qt/overviewpage.cpp \
     src/qt/csvmodelwriter.cpp \
     src/crypter.cpp \
@@ -291,7 +295,7 @@ SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/qt/askpassphrasedialog.cpp \
     src/protocol.cpp \
     src/qt/notificator.cpp \
-    src/qt/qtipcserver.cpp \
+    src/qt/paymentserver.cpp \
     src/qt/rpcconsole.cpp \
     src/noui.cpp \
     src/kernel.cpp \
@@ -299,17 +303,7 @@ SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/scrypt-x86.S \
     src/scrypt-x86_64.S \
     src/scrypt.cpp \
-    src/pbkdf2.cpp \
-    src/zerocoin/Accumulator.cpp \
-    src/zerocoin/AccumulatorProofOfKnowledge.cpp \
-    src/zerocoin/Coin.cpp \
-    src/zerocoin/CoinSpend.cpp \
-    src/zerocoin/Commitment.cpp \
-    src/zerocoin/ParamGeneration.cpp \
-    src/zerocoin/Params.cpp \
-    src/zerocoin/SerialNumberSignatureOfKnowledge.cpp \
-    src/zerocoin/SpendMetaData.cpp \
-    src/zerocoin/ZeroTest.cpp
+    src/pbkdf2.cpp
 
 RESOURCES += \
     src/qt/bitcoin.qrc
@@ -359,7 +353,6 @@ OTHER_FILES += \
 
 # platform specific defaults, if not overridden on command line
 isEmpty(BOOST_LIB_SUFFIX) {
-    macx:BOOST_LIB_SUFFIX = -mt
     windows:BOOST_LIB_SUFFIX = -mt
 }
 
@@ -369,7 +362,7 @@ isEmpty(BOOST_THREAD_LIB_SUFFIX) {
 }
 
 isEmpty(BDB_LIB_PATH) {
-    macx:BDB_LIB_PATH = /opt/local/lib/db48
+    macx:BDB_LIB_PATH = /usr/local/Cellar/berkeley-db@4/4.8.30/lib
 }
 
 isEmpty(BDB_LIB_SUFFIX) {
@@ -377,36 +370,25 @@ isEmpty(BDB_LIB_SUFFIX) {
 }
 
 isEmpty(BDB_INCLUDE_PATH) {
-    macx:BDB_INCLUDE_PATH = /opt/local/include/db48
+    macx:BDB_INCLUDE_PATH = /usr/local/Cellar/berkeley-db@4/4.8.30/include
 }
 
 isEmpty(BOOST_LIB_PATH) {
-    macx:BOOST_LIB_PATH = /usr/local/lib
+    macx:BOOST_LIB_PATH = /usr/local/Cellar/boost/1.75.0_2/lib
 }
 
 isEmpty(BOOST_INCLUDE_PATH) {
-    macx:BOOST_INCLUDE_PATH = /usr/local/include/boost
+    macx:BOOST_INCLUDE_PATH = /usr/local/Cellar/boost/1.75.0_2/include
 }
 
 isEmpty(OPENSSL_INCLUDE_PATH) {
-    macx:OPENSSL_INCLUDE_PATH = /usr/local/ssl/include
+    macx:OPENSSL_INCLUDE_PATH = /usr/local/Cellar/openssl@1.1/1.1.1j/include
 }
 
 isEmpty(OPENSSL_LIB_PATH) {
-    macx:OPENSSL_LIB_PATH = /usr/local/ssl/lib
+    macx:OPENSSL_LIB_PATH = /usr/local/Cellar/openssl@1.1/1.1.1j/lib
 }
 
-isEmpty(MINIUPNPC_INCLUDE_PATH) {
-    macx:MINIUPNPC_INCLUDE_PATH = /usr/include
-}
-
-isEmpty(MINIUPNPC_LIB_PATH) {
-    macx:MINIUPNPC_LIB_PATH = /usr/lib
-}
-
-isEmpty(QRENCODE_LIB_PATH) {
-    macx:QRENCODE_LIB_PATH = /usr/local/lib
-}
 
 windows:DEFINES += WIN32
 windows:RC_FILE = src/qt/res/bitcoin-qt.rc
@@ -422,8 +404,8 @@ windows:!contains(MINGW_THREAD_BUGFIX, 0) {
     QMAKE_LIBS_QT_ENTRY = -lmingwthrd $$QMAKE_LIBS_QT_ENTRY
 }
 
-macx:HEADERS += src/qt/macdockiconhandler.h src/qt/macnotificationhandler.h
-macx:OBJECTIVE_SOURCES += src/qt/macdockiconhandler.mm src/qt/macnotificationhandler.mm
+macx:HEADERS += src/qt/macdockiconhandler.h
+macx:OBJECTIVE_SOURCES += src/qt/macdockiconhandler.mm
 macx:LIBS += -framework Foundation -framework ApplicationServices -framework AppKit
 macx:DEFINES += MAC_OSX MSG_NOSIGNAL=0
 macx:ICON = src/qt/res/icons/bitcoin.icns
@@ -431,6 +413,7 @@ macx:TARGET = "KmushiCoin-Qt"
 macx:QMAKE_CFLAGS_THREAD += -pthread
 macx:QMAKE_LFLAGS_THREAD += -pthread
 macx:QMAKE_CXXFLAGS_THREAD += -pthread
+macx:QMAKE_INFO_PLIST = share/qt/Info.plist
 
 # Set libraries and includes at end, to use platform-defined defaults if not overridden
 INCLUDEPATH += $$BOOST_INCLUDE_PATH $$BDB_INCLUDE_PATH $$OPENSSL_INCLUDE_PATH $$QRENCODE_INCLUDE_PATH

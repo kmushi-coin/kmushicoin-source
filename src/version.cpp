@@ -11,7 +11,7 @@
 const std::string CLIENT_NAME("Kmushineros");
 
 // Client version number
-#define CLIENT_VERSION_SUFFIX   "1.1.1"
+#define CLIENT_VERSION_SUFFIX   "1.2"
 
 
 // The following part of the code determines the CLIENT_BUILD variable.
@@ -36,12 +36,12 @@ const std::string CLIENT_NAME("Kmushineros");
 // git will put "#define GIT_ARCHIVE 1" on the next line inside archives. 
 #define GIT_ARCHIVE 1
 #ifdef GIT_ARCHIVE
-#    define GIT_COMMIT_ID "32a928e"
-#    define GIT_COMMIT_DATE "Sat, 21 Apr 2018 05:20:30 +0200"
+#    define GIT_COMMIT_ID ""
+#    define GIT_COMMIT_DATE ""
 #endif
 
 #define BUILD_DESC_FROM_COMMIT(maj,min,rev,build,commit) \
-    "v" DO_STRINGIZE(maj) "." DO_STRINGIZE(min) "." DO_STRINGIZE(rev) "." DO_STRINGIZE(build) 
+    "v" DO_STRINGIZE(maj) "." DO_STRINGIZE(min) "." DO_STRINGIZE(rev) "." DO_STRINGIZE(build) "-g" commit
 
 #define BUILD_DESC_FROM_UNKNOWN(maj,min,rev,build) \
     "v" DO_STRINGIZE(maj) "." DO_STRINGIZE(min) "." DO_STRINGIZE(rev) "." DO_STRINGIZE(build) "-unk"
@@ -62,5 +62,5 @@ const std::string CLIENT_NAME("Kmushineros");
 #    endif
 #endif
 
-const std::string CLIENT_BUILD(CLIENT_VERSION_SUFFIX);
+const std::string CLIENT_BUILD(BUILD_DESC CLIENT_VERSION_SUFFIX);
 const std::string CLIENT_DATE(BUILD_DATE);

@@ -2,7 +2,7 @@
 #define GUICONSTANTS_H
 
 /* Milliseconds between model updates */
-static const int MODEL_UPDATE_DELAY = 500;
+static const int MODEL_UPDATE_DELAY = 250;
 
 /* AskPassphraseDialog -- Maximum passphrase length */
 static const int MAX_PASSPHRASE_SIZE = 1024;
@@ -12,6 +12,9 @@ static const int STATUSBAR_ICONSIZE = 16;
 
 /* Invalid field background style */
 #define STYLE_INVALID "background:#FF8080"
+
+/* Number of frames in spinner animation */
+#define SPINNER_FRAMES 36
 
 /* Transaction list -- unconfirmed transaction */
 #define COLOR_UNCONFIRMED QColor(128, 128, 128)

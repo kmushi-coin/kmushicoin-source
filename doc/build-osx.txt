@@ -7,7 +7,7 @@ software written by Eric Young (eay@cryptsoft.com) and UPnP software written by
 Thomas Bernard.
 
 
-Mac OS X KmushiCoind build instructions
+Mac OS X kmushicoind build instructions
 Laszlo Hanyecz <solar@heliacal.net>
 Douglas Huff <dhuff@jrbobdobbs.org>
 
@@ -27,7 +27,7 @@ but you can get the current version from http://developer.apple.com
 
 1.  Clone the github tree to get the source code:
 
-git clone git@github.com:rat4/KmushiCoin.git KmushiCoin
+git clone https://github.com/CoinBlack/kmushicoin.git kmushicoin
 
 2.  Download and install MacPorts from http://www.macports.org/
 
@@ -41,14 +41,14 @@ sudo port install boost db48 openssl miniupnpc
 Optionally install qrencode (and set USE_QRCODE=1):
 sudo port install qrencode
 
-4.  Now you should be able to build KmushiCoind:
+4.  Now you should be able to build kmushicoind:
 
-cd KmushiCoin/src
+cd kmushicoin/src
 make -f makefile.osx
 
 Run:
-  ./KmushiCoind --help  # for a list of command-line options.
+  ./kmushicoind --help  # for a list of command-line options.
 Run
-  ./KmushiCoind -daemon # to start the KmushiCoin daemon.
+  ./kmushicoind -daemon # to start the kmushicoin daemon.
 Run
-  ./KmushiCoind help # When the daemon is running, to get a list of RPC commands
+  ./kmushicoind help # When the daemon is running, to get a list of RPC commands
