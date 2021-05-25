@@ -15,7 +15,7 @@
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © Copyright © 2019-2021 The KmushiCoin developers (https://kmushicoin.com)
+Copyright © 2019-2021 The KmushiCoin developers (https://kmushicoin.com)
 Copyright © 2019-2021 Carmelo Campos</source>
         <translation>Telif Hakkı © 2009-2014 Bitcoin geliştiricileri
 Telif Hakkı © 2012-2014 NovaCoin geliştiricileri

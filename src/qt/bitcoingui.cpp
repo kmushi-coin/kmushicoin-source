@@ -278,8 +278,8 @@ void BitcoinGUI::createActions()
     receiveCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
     tabGroup->addAction(receiveCoinsAction);
 
-    QPixmap historyIconInactive(":/icons/transactions");
-    QPixmap historyIconActive(":icons/transactions_active");
+    QPixmap historyIconInactive(":/icons/history");
+    QPixmap historyIconActive(":icons/history_active");
     QIcon historyIcon(historyIconInactive);
 
     historyIcon.addPixmap(historyIconActive,QIcon::Selected,QIcon::On);
@@ -418,7 +418,7 @@ void BitcoinGUI::createToolBars()
         QWidget* header = new QWidget();
         header->setMinimumSize(144, 144);
         header->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        header->setStyleSheet("QWidget { background-color: rgb(255,255,255); background-repeat: no-repeat; background-image: url(:/images/header); background-position: top center; }");
+        header->setStyleSheet("QWidget { background-color: rgb(41,44,48); background-repeat: no-repeat; background-image: url(:/images/header); background-position: top center; }");
         toolbar->addWidget(header);
         toolbar->addWidget(makeToolBarSpacer());
     }

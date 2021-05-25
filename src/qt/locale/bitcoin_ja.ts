@@ -15,11 +15,12 @@
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © Copyright © 2019-2021 The KmushiCoin developers (https://kmushicoin.com)
+Copyright © 2019-2021 The KmushiCoin developers (https://kmushicoin.com)
 Copyright © 2019-2021 Carmelo Campos</source>
         <translation>コピーライト © 2009-2014 The Bitcoin developers
 コピーライト © 2012-2014 The NovaCoin developers
-コピーライト © 2014 The KmushiCoin developers</translation>
+コピーライト © 2019-2021 The KmushiCoin developers (https://kmushicoin.com)
+Copyright © 2019-2021 Carmelo Campos</translation>
     </message>
     <message>
         <location line="+15"/>
