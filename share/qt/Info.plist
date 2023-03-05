@@ -20,7 +20,7 @@
             <key>CFBundleTypeRole</key>
             <string>Editor</string>
             <key>CFBundleURLName</key>
-            <string>co.kmushicoin.KmushiCoinPayment</string>
+            <string>co.kmushicoin.BlackCoinPayment</string>
             <key>CFBundleURLSchemes</key>
             <array>
               <string>kmushicoin</string>

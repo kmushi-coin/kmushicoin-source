@@ -15,12 +15,12 @@
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2019-2021 The KmushiCoin developers (https://kmushicoin.com)
-Copyright © 2019-2021 Carmelo Campos</source>
+Copyright © 2014 The BlackCoin developers
+Copyright © 2019-2023 The KmushiCoin developers</source>
         <translation>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2019-2021 The KmushiCoin developers (https://kmushicoin.com)
-Copyright © 2019-2021 Carmelo Campos</translation>
+Copyright © 2014 The BlackCoin developers
+Copyright © 2019-2023 The KmushiCoin developers</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1333,7 +1333,7 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start KmushiCoin: click-to-pay handler</source>
+        <source>Cannot start kmushicoin: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1719,8 +1719,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-171"/>
-        <source>Enter a KmushiCoin address (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
-        <translation>Fyll i en KmushiCoin adress (t.ex. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</translation>
+        <source>Enter a KmushiCoin address (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
+        <translation>Fyll i en KmushiCoin adress (t.ex. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1847,7 +1847,7 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
+        <source>The address to send the payment to (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1888,8 +1888,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a KmushiCoin address (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
-        <translation>Fyll i en KmushiCoin adress (t.ex. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</translation>
+        <source>Enter a KmushiCoin address (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
+        <translation>Fyll i en KmushiCoin adress (t.ex. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</translation>
     </message>
 </context>
 <context>
@@ -1912,8 +1912,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
-        <translation>Adressen att signera meddelandet med (t.ex. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</translation>
+        <source>The address to sign the message with (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
+        <translation>Adressen att signera meddelandet med (t.ex. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1976,8 +1976,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
-        <translation>Adressen meddelandet var signerad med (t.ex. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</translation>
+        <source>The address the message was signed with (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
+        <translation>Adressen meddelandet var signerad med (t.ex. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -1992,8 +1992,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a KmushiCoin address (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
-        <translation>Fyll i en KmushiCoin adress (t.ex. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</translation>
+        <source>Enter a KmushiCoin address (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
+        <translation>Fyll i en KmushiCoin adress (t.ex. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2591,8 +2591,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or KmushiCoind</source>
-        <translation>Skicka kommando till -server eller KmushiCoind</translation>
+        <source>Send command to -server or kmushicoind</source>
+        <translation>Skicka kommando till -server eller kmushicoind</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2611,13 +2611,13 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: KmushiCoin.conf)</source>
-        <translation>Ange konfigurationsfilen (standard: KmushiCoin.conf)</translation>
+        <source>Specify configuration file (default: kmushicoin.conf)</source>
+        <translation>Ange konfigurationsfilen (standard: kmushicoin.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: KmushiCoind.pid)</source>
-        <translation>Ange pid filen (standard KmushiCoind.pid)</translation>
+        <source>Specify pid file (default: kmushicoind.pid)</source>
+        <translation>Ange pid filen (standard kmushicoind.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2634,7 +2634,7 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=KmushiCoinrpc
+rpcuser=KmushiCoinRPC
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.

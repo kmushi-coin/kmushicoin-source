@@ -106,8 +106,6 @@ private:
 
     uint64_t nWeight;
 
-    int spinnerFrame;
-
     /** Create the main UI actions. */
     void createActions();
     /** Create the menu bar and sub-menus. */

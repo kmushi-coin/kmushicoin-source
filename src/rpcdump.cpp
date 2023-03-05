@@ -245,8 +245,8 @@ Value dumpprivkey(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() != 1)
         throw runtime_error(
-            "dumpprivkey <KmushiCoinaddress>\n"
-            "Reveals the private key corresponding to <KmushiCoinaddress>.");
+            "dumpprivkey <kmushicoinaddress>\n"
+            "Reveals the private key corresponding to <kmushicoinaddress>.");
 
     EnsureWalletIsUnlocked();
 

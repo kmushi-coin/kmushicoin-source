@@ -36,7 +36,7 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
 
 #if QT_VERSION >= 0x040700
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
-    ui->lineEditCoinControlChange->setPlaceholderText(tr("Enter a KmushiCoin address (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)"));
+    ui->lineEditCoinControlChange->setPlaceholderText(tr("Enter a KmushiCoin address (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)"));
 #endif
 
     addEntry();
@@ -443,7 +443,7 @@ void SendCoinsDialog::coinControlChangeEdited(const QString & text)
         CoinControlDialog::coinControl->destChange = CBitcoinAddress(text.toStdString()).Get();
 
         // label for the change address
-        ui->labelCoinControlChangeLabel->setStyleSheet("QLabel{color:white;}");
+        ui->labelCoinControlChangeLabel->setStyleSheet("QLabel{color:black;}");
         if (text.isEmpty())
             ui->labelCoinControlChangeLabel->setText("");
         else if (!CBitcoinAddress(text.toStdString()).IsValid())

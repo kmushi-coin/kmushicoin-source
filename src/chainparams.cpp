@@ -85,9 +85,9 @@ public:
         assert(hashGenesisBlock == uint256("0x000007f0db3384e2e98b6904ebd55c412b76a688628f18e8af19e5dcf75a984b"));
         assert(genesis.hashMerkleRoot == uint256("0x68033db0f8c8a73524e37b2c10d3188b01ba3dac99082e96fd482e49183ff709"));
 
-        vSeeds.push_back(CDNSSeedData("node1.kmushicoin.com", "node2.kmushicoin.com"));
-        vSeeds.push_back(CDNSSeedData("explorer.kmushicoin.com", "pool.kmushicoin.com"));
-        vSeeds.push_back(CDNSSeedData("electrumx1.kmushicoin.com", "electrumx2.kmushicoin.com"));
+        vSeeds.push_back(CDNSSeedData("node1.kmushicoin.co", "node1.kmushicoin.co"));
+        vSeeds.push_back(CDNSSeedData("ghos2.kmushicoin.co", "ghos2.kmushicoin.co"));
+        vSeeds.push_back(CDNSSeedData("ghos3.kmushicoin.co", "ghos3.kmushicoin.co"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 46);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 85);
@@ -97,7 +97,7 @@ public:
 
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
-        nLastPOWBlock = 174100000;
+        nLastPOWBlock = 1800000;
     }
 
     virtual const CBlock& GenesisBlock() const { return genesis; }

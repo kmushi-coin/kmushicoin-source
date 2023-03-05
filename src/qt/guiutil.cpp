@@ -84,7 +84,7 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
     // NovaCoin: check prefix
-    if(uri.scheme() != QString("KmushiCoin"))
+    if(uri.scheme() != QString("kmushicoin"))
         return false;
 
     SendCoinsRecipient rv;
@@ -129,13 +129,13 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 
 bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 {
-    // Convert KmushiCoin:// to KmushiCoin:
+    // Convert kmushicoin:// to kmushicoin:
     //
     //    Cannot handle this later, because bitcoin:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("KmushiCoin://"))
+    if(uri.startsWith("kmushicoin://"))
     {
-        uri.replace(0, 12, "KmushiCoin:");
+        uri.replace(0, 12, "kmushicoin:");
     }
     QUrl uriInstance(uri);
     return parseBitcoinURI(uriInstance, out);
@@ -361,7 +361,7 @@ boost::filesystem::path static GetAutostartDir()
 
 boost::filesystem::path static GetAutostartFilePath()
 {
-    return GetAutostartDir() / "KmushiCoin.desktop";
+    return GetAutostartDir() / "kmushicoin.desktop";
 }
 
 bool GetStartOnSystemStartup()
@@ -426,7 +426,7 @@ HelpMessageBox::HelpMessageBox(QWidget *parent) :
     header = tr("KmushiCoin-Qt") + " " + tr("version") + " " +
         QString::fromStdString(FormatFullVersion()) + "\n\n" +
         tr("Usage:") + "\n" +
-        "  KmushiCoin-qt [" + tr("command-line options") + "]                     " + "\n";
+        "  kmushicoin-qt [" + tr("command-line options") + "]                     " + "\n";
 
     coreOptions = QString::fromStdString(HelpMessage());
 
@@ -466,7 +466,7 @@ void SetBlackThemeQSS(QApplication& app)
                       "QFrame         { border: none; }"
                       "QComboBox      { color: rgb(255,255,255); }"
                       "QComboBox QAbstractItemView::item { color: rgb(255,255,255); }"
-                      "QPushButton    { background: rgb(30,32,36); color: rgb(230,230,230); }"
+                      "QPushButton    { background: rgb(226,189,121); color: rgb(21,21,21); }"
                       "QDoubleSpinBox { background: rgb(63,67,72); color: rgb(255,255,255); border-color: rgb(194,194,194); }"
                       "QLineEdit      { background: rgb(63,67,72); color: rgb(255,255,255); border-color: rgb(194,194,194); }"
                       "QTextEdit      { background: rgb(63,67,72); color: rgb(255,255,255); }"
@@ -474,11 +474,11 @@ void SetBlackThemeQSS(QApplication& app)
                       "QMenuBar       { background: rgb(41,44,48); color: rgb(110,116,126); }"
                       "QMenu          { background: rgb(30,32,36); color: rgb(222,222,222); }"
                       "QMenu::item:selected { background-color: rgb(48,140,198); }"
-                      "QLabel         { color: rgb(255,204,8); }"
+                      "QLabel         { color: rgb(120,127,139); }"
                       "QScrollBar     { color: rgb(255,255,255); }"
-                      "QCheckBox      { color: rgb(255,204,8); }"
-                      "QRadioButton   { color: rgb(255,204,8); }"
-                      "QTabBar::tab   { color: rgb(255,204,8); border: 1px solid rgb(78,79,83); border-bottom: none; padding: 5px; }"
+                      "QCheckBox      { color: rgb(120,127,139); }"
+                      "QRadioButton   { color: rgb(120,127,139); }"
+                      "QTabBar::tab   { color: rgb(120,127,139); border: 1px solid rgb(78,79,83); border-bottom: none; padding: 5px; }"
                       "QTabBar::tab:selected  { background: rgb(41,44,48); }"
                       "QTabBar::tab:!selected { background: rgb(24,26,30); margin-top: 2px; }"
                       "QTabWidget::pane { border: 1px solid rgb(78,79,83); }"

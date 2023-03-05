@@ -52,10 +52,10 @@ bool AppInit(int argc, char* argv[])
             // First part of help message is specific to bitcoind / RPC client
             std::string strUsage = _("KmushiCoin version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
-                  "  KmushiCoind [options]                     " + "\n" +
-                  "  KmushiCoind [options] <command> [params]  " + _("Send command to -server or KmushiCoind") + "\n" +
-                  "  KmushiCoind [options] help                " + _("List commands") + "\n" +
-                  "  KmushiCoind [options] help <command>      " + _("Get help for a command") + "\n";
+                  "  kmushicoind [options]                     " + "\n" +
+                  "  kmushicoind [options] <command> [params]  " + _("Send command to -server or kmushicoind") + "\n" +
+                  "  kmushicoind [options] help                " + _("List commands") + "\n" +
+                  "  kmushicoind [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessage();
 
@@ -65,7 +65,7 @@ bool AppInit(int argc, char* argv[])
 
         // Command-line RPC
         for (int i = 1; i < argc; i++)
-            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "KmushiCoin:"))
+            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "kmushicoin:"))
                 fCommandLine = true;
 
         if (fCommandLine)

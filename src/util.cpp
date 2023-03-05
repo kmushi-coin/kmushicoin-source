@@ -918,7 +918,7 @@ static std::string FormatException(std::exception* pex, const char* pszThread)
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "KmushiCoin";
+    const char* pszModule = "kmushicoin";
 #endif
     if (pex)
         return strprintf(
@@ -951,7 +951,7 @@ boost::filesystem::path GetDefaultDataDir()
     // Windows < Vista: C:\Documents and Settings\Username\Application Data\KmushiCoin
     // Windows >= Vista: C:\Users\Username\AppData\Roaming\KmushiCoin
     // Mac: ~/Library/Application Support/KmushiCoin
-    // Unix: ~/.KmushiCoin
+    // Unix: ~/.kmushicoin
 #ifdef WIN32
     // Windows
     return GetSpecialFolderPath(CSIDL_APPDATA) / "KmushiCoin";
@@ -969,7 +969,7 @@ boost::filesystem::path GetDefaultDataDir()
     return pathRet / "KmushiCoin";
 #else
     // Unix
-    return pathRet / ".KmushiCoin";
+    return pathRet / ".kmushicoin";
 #endif
 #endif
 }
@@ -1018,7 +1018,7 @@ void ClearDatadirCache()
 
 boost::filesystem::path GetConfigFile()
 {
-    boost::filesystem::path pathConfigFile(GetArg("-conf", "KmushiCoin.conf"));
+    boost::filesystem::path pathConfigFile(GetArg("-conf", "kmushicoin.conf"));
     if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir(false) / pathConfigFile;
     return pathConfigFile;
 }
@@ -1051,7 +1051,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
 boost::filesystem::path GetPidFile()
 {
-    boost::filesystem::path pathPidFile(GetArg("-pid", "KmushiCoind.pid"));
+    boost::filesystem::path pathPidFile(GetArg("-pid", "kmushicoind.pid"));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }

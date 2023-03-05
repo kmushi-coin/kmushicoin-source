@@ -90,7 +90,7 @@ void Shutdown()
     TRY_LOCK(cs_Shutdown, lockShutdown);
     if (!lockShutdown) return;
 
-    RenameThread("KmushiCoin-shutoff");
+    RenameThread("kmushicoin-shutoff");
     mempool.AddTransactionsUpdated(1);
     StopRPCThreads();
 #ifdef ENABLE_WALLET
@@ -161,8 +161,8 @@ std::string HelpMessage()
 {
     string strUsage = _("Options:") + "\n";
     strUsage += "  -?                     " + _("This help message") + "\n";
-    strUsage += "  -conf=<file>           " + _("Specify configuration file (default: KmushiCoin.conf)") + "\n";
-    strUsage += "  -pid=<file>            " + _("Specify pid file (default: KmushiCoind.pid)") + "\n";
+    strUsage += "  -conf=<file>           " + _("Specify configuration file (default: kmushicoin.conf)") + "\n";
+    strUsage += "  -pid=<file>            " + _("Specify pid file (default: kmushicoind.pid)") + "\n";
     strUsage += "  -datadir=<dir>         " + _("Specify data directory") + "\n";
     strUsage += "  -wallet=<dir>          " + _("Specify wallet file (within data directory)") + "\n";
     strUsage += "  -dbcache=<n>           " + _("Set database cache size in megabytes (default: 25)") + "\n";

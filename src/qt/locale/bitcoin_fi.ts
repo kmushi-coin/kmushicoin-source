@@ -4,7 +4,7 @@
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
         <source>About KmushiCoin</source>
-        <translation>Tietoa KmushiCoinista</translation>
+        <translation>Tietoa BlackCoinista</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -15,12 +15,12 @@
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2019-2021 The KmushiCoin developers (https://kmushicoin.com)
-Copyright © 2019-2021 Carmelo Campos</source>
+Copyright © 2014 The BlackCoin developers
+Copyright © 2019-2023 The KmushiCoin developers</source>
         <translation>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2019-2021 The KmushiCoin developers (https://kmushicoin.com)
-Copyright © 2019-2021 Carmelo Campos</translation>
+Copyright © 2014 The BlackCoin developers
+Copyright © 2019-2023 The KmushiCoin developers</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -361,7 +361,7 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     <message>
         <location line="+4"/>
         <source>Show information about KmushiCoin</source>
-        <translation>Näytä tietoja KmushiCoinista</translation>
+        <translation>Näytä tietoja BlackCoinista</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -457,7 +457,7 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     <message>
         <location line="+193"/>
         <source>&amp;About KmushiCoin</source>
-        <translation>&amp;Tietoa KmushiCoinista</translation>
+        <translation>&amp;Tietoa BlackCoinista</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1338,7 +1338,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start KmushiCoin: click-to-pay handler</source>
+        <source>Cannot start kmushicoin: click-to-pay handler</source>
         <translation>Blackcoin-asiakasohjelmaa ei voida käynnistää: klikkaa maksaaksesi-käsittelijä</translation>
     </message>
 </context>
@@ -1509,7 +1509,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message>
         <location line="+7"/>
         <source>Show the KmushiCoin-Qt help message to get a list with possible KmushiCoin command-line options.</source>
-        <translation>Näytä KmushiCoin-Qt:n avustusohje saadaksesi listan käytettävistä KmushiCoinin komentokehotteen määritteistä.</translation>
+        <translation>Näytä KmushiCoin-Qt:n avustusohje saadaksesi listan käytettävistä BlackCoinin komentokehotteen määritteistä.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1534,7 +1534,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message>
         <location line="+25"/>
         <source>KmushiCoin Core</source>
-        <translation>KmushiCoinin ydin</translation>
+        <translation>BlackCoinin ydin</translation>
     </message>
     <message>
         <location line="+256"/>
@@ -1554,7 +1554,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message>
         <location filename="../rpcconsole.cpp" line="-28"/>
         <source>Welcome to the KmushiCoin RPC console.</source>
-        <translation>Tervetuloa KmushiCoinin RPC-konsoliin.</translation>
+        <translation>Tervetuloa BlackCoinin RPC-konsoliin.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1724,8 +1724,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-171"/>
-        <source>Enter a KmushiCoin address (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
-        <translation>Syötä KmushiCoin-osoite (esim. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</translation>
+        <source>Enter a KmushiCoin address (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
+        <translation>Syötä KmushiCoin-osoite (esim. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1852,8 +1852,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
-        <translation>Osoite, johon maksu lähetetään (esim. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</translation>
+        <source>The address to send the payment to (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
+        <translation>Osoite, johon maksu lähetetään (esim. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -1893,8 +1893,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a KmushiCoin address (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
-        <translation>Syötä KmushiCoin-osoite (esim. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</translation>
+        <source>Enter a KmushiCoin address (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
+        <translation>Syötä KmushiCoin-osoite (esim. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</translation>
     </message>
 </context>
 <context>
@@ -1917,8 +1917,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
-        <translation>Osoite, jolle viesti kirjataan (esim. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</translation>
+        <source>The address to sign the message with (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
+        <translation>Osoite, jolle viesti kirjataan (esim. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1981,8 +1981,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
-        <translation>Osoite, jolla viesti on allekirjoitettu (esim. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK) </translation>
+        <source>The address the message was signed with (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
+        <translation>Osoite, jolla viesti on allekirjoitettu (esim. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x) </translation>
     </message>
     <message>
         <location line="+40"/>
@@ -1997,8 +1997,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a KmushiCoin address (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
-        <translation>Syötä KmushiCoin-osoite (esim. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</translation>
+        <source>Enter a KmushiCoin address (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
+        <translation>Syötä KmushiCoin-osoite (esim. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2587,7 +2587,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+8"/>
         <source>KmushiCoin version</source>
-        <translation>KmushiCoinin versio</translation>
+        <translation>BlackCoinin versio</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2596,8 +2596,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or KmushiCoind</source>
-        <translation>Syötä komento kohteeseen -server tai KmushiCoind</translation>
+        <source>Send command to -server or kmushicoind</source>
+        <translation>Syötä komento kohteeseen -server tai kmushicoind</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2616,13 +2616,13 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: KmushiCoin.conf)</source>
-        <translation>Määritä asetustiedosto (oletus: KmushiCoin.conf)</translation>
+        <source>Specify configuration file (default: kmushicoin.conf)</source>
+        <translation>Määritä asetustiedosto (oletus: kmushicoin.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: KmushiCoind.pid)</source>
-        <translation>Määritä prosessitiedosto (oletus: KmushiCoin.pid)</translation>
+        <source>Specify pid file (default: kmushicoind.pid)</source>
+        <translation>Määritä prosessitiedosto (oletus: kmushicoin.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2639,7 +2639,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=KmushiCoinrpc
+rpcuser=KmushiCoinRPC
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2649,7 +2649,7 @@ for example: alertnotify=echo %%s | mail -s &quot;KmushiCoin Alert&quot; admin@f
 </source>
         <translation>%s, sinun on asetettava rpcpassword asetustiedostoon:
 %s
-On suositeltavaa, että käytät seuraavaa arvottua salasanaa: rpcuser=KmushiCoinrpc
+On suositeltavaa, että käytät seuraavaa arvottua salasanaa: rpcuser=KmushiCoinRPC
 rpcpassword=%s
 (Sinun ei tarvitse muistaa tätä salasanaa) Käyttäjänimen ja salasanan EI TULE OLLA SAMOJA.
 Jos tiedostoa ei ole olemassa, luo se asettaen samalla omistajan lukuoikeudet.

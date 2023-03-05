@@ -15,11 +15,11 @@
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2019-2021 The KmushiCoin developers (https://kmushicoin.com)
-Copyright © 2019-2021 Carmelo Campos</source>
+Copyright © 2014 The BlackCoin developers
+Copyright © 2019-2023 The KmushiCoin developers</source>
         <translation>版权所有 © 2009-2014 比特币Bitcoin开发组
 版权所有 © 2012-2014 新星币Novacoin开发组
-版权所有 © 2014 黑币KmushiCoin开发组</translation>
+版权所有 © 2014 黑币BlackCoin开发组</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1020,7 +1020,7 @@ Address: %4
         <location filename="../guiutil.cpp" line="+426"/>
         <location line="+12"/>
         <source>KmushiCoin-Qt</source>
-        <translation>黑币客户端KmushiCoin-Qt</translation>
+        <translation>黑币客户端BlackCoin-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1332,7 +1332,7 @@ Address: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start KmushiCoin: click-to-pay handler</source>
+        <source>Cannot start kmushicoin: click-to-pay handler</source>
         <translation>无法启动黑币: 点击支付处理器</translation>
     </message>
 </context>
@@ -1718,8 +1718,8 @@ Address: %4
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-171"/>
-        <source>Enter a KmushiCoin address (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
-        <translation>输入黑币地址(例如：AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</translation>
+        <source>Enter a KmushiCoin address (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
+        <translation>输入黑币地址(例如：KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1846,8 +1846,8 @@ Address: %4
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
-        <translation>收款人地址(例：AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</translation>
+        <source>The address to send the payment to (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
+        <translation>收款人地址(例：KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -1887,8 +1887,8 @@ Address: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a KmushiCoin address (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
-        <translation>输入一个黑币地址 (例：AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</translation>
+        <source>Enter a KmushiCoin address (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
+        <translation>输入一个黑币地址 (例：KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</translation>
     </message>
 </context>
 <context>
@@ -1911,8 +1911,8 @@ Address: %4
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
-        <translation>用来签名该消息的地址(例： AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</translation>
+        <source>The address to sign the message with (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
+        <translation>用来签名该消息的地址(例： KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1975,8 +1975,8 @@ Address: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
-        <translation>用来签名该消息的黑币地址(例： AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</translation>
+        <source>The address the message was signed with (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
+        <translation>用来签名该消息的黑币地址(例： KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -1991,8 +1991,8 @@ Address: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a KmushiCoin address (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
-        <translation>输入黑币地址(例： AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</translation>
+        <source>Enter a KmushiCoin address (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
+        <translation>输入黑币地址(例： KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2590,8 +2590,8 @@ Address: %4
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or KmushiCoind</source>
-        <translation>向-server服务器或KmushiCoind发送命令</translation>
+        <source>Send command to -server or kmushicoind</source>
+        <translation>向-server服务器或kmushicoind发送命令</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2613,13 +2613,13 @@ Address: %4
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: KmushiCoin.conf)</source>
-        <translation>指定配置文件(默认: KmushiCoin.conf)</translation>
+        <source>Specify configuration file (default: kmushicoin.conf)</source>
+        <translation>指定配置文件(默认: kmushicoin.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: KmushiCoind.pid)</source>
-        <translation>指定pid文件(默认: KmushiCoind.pid)</translation>
+        <source>Specify pid file (default: kmushicoind.pid)</source>
+        <translation>指定pid文件(默认: kmushicoind.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2637,7 +2637,7 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=KmushiCoinrpc
+rpcuser=KmushiCoinRPC
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2648,7 +2648,7 @@ for example: alertnotify=echo %%s | mail -s &quot;KmushiCoin Alert&quot; admin@f
         <translation>%s, 必须在配置文件里设置rpc密码:
  %s
 建议使用如下的随机密码:
-rpcuser=KmushiCoinrpc
+rpcuser=KmushiCoinRPC
 rpcpassword=%s
 (不需要记住该密码)
 用户名和密码不能重复。

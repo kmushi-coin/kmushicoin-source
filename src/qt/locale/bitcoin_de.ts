@@ -15,8 +15,8 @@
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2019-2021 The KmushiCoin developers (https://kmushicoin.com)
-Copyright © 2019-2021 Carmelo Campos</source>
+Copyright © 2014 The BlackCoin developers
+Copyright © 2019-2023 The KmushiCoin developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1187,7 +1187,7 @@ Adresse: %4</translation>
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Wählen Sie die Standarduntereinheit, die in der Benutzeroberfläche und beim Überweisen von KmushiCoins angezeigt werden soll.</translation>
+        <translation>Wählen Sie die Standarduntereinheit, die in der Benutzeroberfläche und beim Überweisen von BlackCoins angezeigt werden soll.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1326,7 +1326,7 @@ Adresse: %4</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start KmushiCoin: click-to-pay handler</source>
+        <source>Cannot start kmushicoin: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1713,8 +1713,8 @@ Adresse: %4</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-171"/>
-        <source>Enter a KmushiCoin address (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
-        <translation>Empfängeradresse (z.b. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</translation>
+        <source>Enter a KmushiCoin address (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
+        <translation>Empfängeradresse (z.b. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1841,7 +1841,7 @@ Adresse: %4</translation>
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
+        <source>The address to send the payment to (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1882,8 +1882,8 @@ Adresse: %4</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a KmushiCoin address (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
-        <translation>Empfängeradresse (z.b. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</translation>
+        <source>Enter a KmushiCoin address (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
+        <translation>Empfängeradresse (z.b. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</translation>
     </message>
 </context>
 <context>
@@ -1906,7 +1906,7 @@ Adresse: %4</translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
+        <source>The address to sign the message with (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1970,7 +1970,7 @@ Adresse: %4</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
+        <source>The address the message was signed with (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1986,8 +1986,8 @@ Adresse: %4</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a KmushiCoin address (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
-        <translation>Empfängeradresse (z.b. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</translation>
+        <source>Enter a KmushiCoin address (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
+        <translation>Empfängeradresse (z.b. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2585,8 +2585,8 @@ Adresse: %4</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or KmushiCoind</source>
-        <translation>Kommando versenden an -server oder KmushiCoind </translation>
+        <source>Send command to -server or kmushicoind</source>
+        <translation>Kommando versenden an -server oder kmushicoind </translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2605,13 +2605,13 @@ Adresse: %4</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: KmushiCoin.conf)</source>
-        <translation>Konfigurationsdatei angeben (Standard: KmushiCoin.conf)</translation>
+        <source>Specify configuration file (default: kmushicoin.conf)</source>
+        <translation>Konfigurationsdatei angeben (Standard: kmushicoin.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: KmushiCoind.pid)</source>
-        <translation>PID Datei angeben (Standard: KmushiCoin.pid)</translation>
+        <source>Specify pid file (default: kmushicoind.pid)</source>
+        <translation>PID Datei angeben (Standard: kmushicoin.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2628,7 +2628,7 @@ Adresse: %4</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=KmushiCoinrpc
+rpcuser=KmushiCoinRPC
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.

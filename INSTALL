@@ -1,9 +1,0 @@
-Building KmushiCoin
-
-See doc/readme-qt.rst for instructions on building KmushiCoin QT,
-the intended-for-end-users, nice-graphical-interface, reference
-implementation of KmushiCoin.
-
-See doc/build-*.txt for instructions on building KmushiCoind,
-the intended-for-services, no-graphical-interface, reference
-implementation of KmushiCoin.

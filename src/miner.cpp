@@ -482,7 +482,7 @@ void ThreadStakeMiner(CWallet *pwallet)
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
 
     // Make this thread recognisable as the mining thread
-    RenameThread("KmushiCoin-miner");
+    RenameThread("kmushicoin-miner");
 
     CReserveKey reservekey(pwallet);
 

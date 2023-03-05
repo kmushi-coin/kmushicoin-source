@@ -4,23 +4,23 @@
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
         <source>About KmushiCoin</source>
-        <translation>O KmushiCoinu</translation>
+        <translation>O BlackCoinu</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>&lt;b&gt;KmushiCoin&lt;/b&gt; version</source>
-        <translation>Verze &lt;b&gt;KmushiCoinu&lt;/b&gt; </translation>
+        <translation>Verze &lt;b&gt;BlackCoinu&lt;/b&gt; </translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2019-2021 The KmushiCoin developers (https://kmushicoin.com)
-Copyright © 2019-2021 Carmelo Campos</source>
+Copyright © 2014 The BlackCoin developers
+Copyright © 2019-2023 The KmushiCoin developers</source>
         <translation>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2019-2021 The KmushiCoin developers (https://kmushicoin.com)
-Copyright © 2019-2021 Carmelo Campos</translation>
+Copyright © 2014 The BlackCoin developers
+Copyright © 2019-2023 The KmushiCoin developers</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -355,7 +355,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+4"/>
         <source>Show information about KmushiCoin</source>
-        <translation>Zobraz informace a KmushiCoinu</translation>
+        <translation>Zobraz informace a BlackCoinu</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -451,7 +451,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+193"/>
         <source>&amp;About KmushiCoin</source>
-        <translation>&amp;O KmushiCoinu</translation>
+        <translation>&amp;O BlackCoinu</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1184,7 +1184,7 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     <message>
         <location line="+13"/>
         <source>The user interface language can be set here. This setting will take effect after restarting KmushiCoin.</source>
-        <translation>Zde můžeš nastavit jazyk uživatelského rozhraní. Nastavení se projeví až po restartu KmushiCoinu.</translation>
+        <translation>Zde můžeš nastavit jazyk uživatelského rozhraní. Nastavení se projeví až po restartu BlackCoinu.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1241,7 +1241,7 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
         <location line="-9"/>
         <location line="+9"/>
         <source>This setting will take effect after restarting KmushiCoin.</source>
-        <translation>Nastavení se projeví až po restartu KmushiCoinu.</translation>
+        <translation>Nastavení se projeví až po restartu BlackCoinu.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1333,7 +1333,7 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start KmushiCoin: click-to-pay handler</source>
+        <source>Cannot start kmushicoin: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1529,7 +1529,7 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     <message>
         <location line="+25"/>
         <source>KmushiCoin Core</source>
-        <translation>Jádro KmushiCoinu</translation>
+        <translation>Jádro BlackCoinu</translation>
     </message>
     <message>
         <location line="+256"/>
@@ -1539,7 +1539,7 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     <message>
         <location line="+7"/>
         <source>Open the KmushiCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Otevři logovací soubor KmushiCoinu z aktuálního datového adresáře. Pro velké logy to může trvat několik sekund.</translation>
+        <translation>Otevři logovací soubor BlackCoinu z aktuálního datového adresáře. Pro velké logy to může trvat několik sekund.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1719,8 +1719,8 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-171"/>
-        <source>Enter a KmushiCoin address (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
-        <translation>Napiš KmushiCoin adresu (např. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</translation>
+        <source>Enter a KmushiCoin address (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
+        <translation>Napiš KmushiCoin adresu (např. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1847,7 +1847,7 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
+        <source>The address to send the payment to (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1888,8 +1888,8 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a KmushiCoin address (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
-        <translation>Zadej KmushiCoin adresu (např. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</translation>
+        <source>Enter a KmushiCoin address (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
+        <translation>Zadej KmushiCoin adresu (např. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</translation>
     </message>
 </context>
 <context>
@@ -1912,8 +1912,8 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
-        <translation>Adresa pro podepsání zprávy (např. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</translation>
+        <source>The address to sign the message with (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
+        <translation>Adresa pro podepsání zprávy (např. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1976,8 +1976,8 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
-        <translation>Adresa kterou byla zpráva podepsána (např. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</translation>
+        <source>The address the message was signed with (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
+        <translation>Adresa kterou byla zpráva podepsána (např. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -1992,8 +1992,8 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a KmushiCoin address (e.g. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</source>
-        <translation>Zadej KmushiCoin adresu (např. AJenUzJeQY4Y42AEACPgrYMCi4bZbDXWoK)</translation>
+        <source>Enter a KmushiCoin address (e.g. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</source>
+        <translation>Zadej KmushiCoin adresu (např. KXeUtogDzigMfkBHPaY9WWGyG9MuAHeL7x)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2582,7 +2582,7 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+8"/>
         <source>KmushiCoin version</source>
-        <translation>Verze KmushiCoinu</translation>
+        <translation>Verze BlackCoinu</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2591,8 +2591,8 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or KmushiCoind</source>
-        <translation>Pošli příkaz na -server nebo KmushiCoind</translation>
+        <source>Send command to -server or kmushicoind</source>
+        <translation>Pošli příkaz na -server nebo kmushicoind</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2611,13 +2611,13 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: KmushiCoin.conf)</source>
-        <translation>Urči konfigurační soubor (výchozí: KmushiCoin.conf)</translation>
+        <source>Specify configuration file (default: kmushicoin.conf)</source>
+        <translation>Urči konfigurační soubor (výchozí: kmushicoin.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: KmushiCoind.pid)</source>
-        <translation>Urči pid soubor (výchozí: KmushiCoind.pid)</translation>
+        <source>Specify pid file (default: kmushicoind.pid)</source>
+        <translation>Urči pid soubor (výchozí: kmushicoind.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2634,7 +2634,7 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=KmushiCoinrpc
+rpcuser=KmushiCoinRPC
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -3092,7 +3092,7 @@ for example: alertnotify=echo %%s | mail -s &quot;KmushiCoin Alert&quot; admin@f
     <message>
         <location line="+4"/>
         <source>Error loading wallet.dat: Wallet requires newer version of KmushiCoin</source>
-        <translation>Chyba načítání wallet.dat: Peněženka vyžaduje novější verzi KmushiCoinu</translation>
+        <translation>Chyba načítání wallet.dat: Peněženka vyžaduje novější verzi BlackCoinu</translation>
     </message>
     <message>
         <location line="+1"/>
