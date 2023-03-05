@@ -2,10 +2,8 @@
     <qresource prefix="/icons">
         <file alias="bitcoin">res/icons/kmushicoin-80.png</file>
         <file alias="address-book">res/icons/address-book.png</file>
-        <file alias="address-book_active">res/icons/address-book_active.png</file>
         <file alias="quit">res/icons/quit.png</file>
         <file alias="send">res/icons/send.png</file>
-        <file alias="send_active">res/icons/send_active.png</file>
         <file alias="toolbar">res/icons/kmushicoin-128.png</file>
         <file alias="connect_0">res/icons/connect0_16.png</file>
         <file alias="connect_1">res/icons/connect1_16.png</file>
