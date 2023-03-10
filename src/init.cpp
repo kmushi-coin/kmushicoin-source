@@ -487,7 +487,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     // ********************************************************* Step 5: verify database integrity
 #ifdef ENABLE_WALLET
     if (!fDisableWallet) {
-        uiInterface.InitMessage(_("Verifying database integrity..."));
+        // uiInterface.InitMessage(_("Verifying database integrity..."));
 
         if (!bitdb.Open(GetDataDir()))
         {
@@ -641,7 +641,7 @@ bool AppInit2(boost::thread_group& threadGroup)
         return false;
     }
 
-    uiInterface.InitMessage(_("Loading block index..."));
+    // uiInterface.InitMessage(_("Loading block index..."));
 
     nStart = GetTimeMillis();
     if (!LoadBlockIndex())
@@ -692,7 +692,7 @@ bool AppInit2(boost::thread_group& threadGroup)
         pwalletMain = NULL;
         LogPrintf("Wallet disabled!\n");
     } else {
-        uiInterface.InitMessage(_("Loading wallet..."));
+        // uiInterface.InitMessage(_("Loading wallet..."));
 
         nStart = GetTimeMillis();
         bool fFirstRun = true;
@@ -770,7 +770,7 @@ bool AppInit2(boost::thread_group& threadGroup)
         }
         if (pindexBest != pindexRescan && pindexBest && pindexRescan && pindexBest->nHeight > pindexRescan->nHeight)
         {
-            uiInterface.InitMessage(_("Rescanning..."));
+            // uiInterface.InitMessage(_("Rescanning..."));
             LogPrintf("Rescanning last %i blocks (from block %i)...\n", pindexBest->nHeight - pindexRescan->nHeight, pindexRescan->nHeight);
             nStart = GetTimeMillis();
             pwalletMain->ScanForWalletTransactions(pindexRescan, true);
@@ -794,7 +794,7 @@ bool AppInit2(boost::thread_group& threadGroup)
 
     // ********************************************************* Step 10: load peers
 
-    uiInterface.InitMessage(_("Loading addresses..."));
+    // uiInterface.InitMessage(_("Loading addresses..."));
 
     nStart = GetTimeMillis();
 
@@ -844,7 +844,7 @@ bool AppInit2(boost::thread_group& threadGroup)
 
     // ********************************************************* Step 12: finished
 
-    uiInterface.InitMessage(_("Done loading"));
+    // uiInterface.InitMessage(_("Done loading"));
 
 #ifdef ENABLE_WALLET
     if (pwalletMain) {

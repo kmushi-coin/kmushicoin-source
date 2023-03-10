@@ -57,9 +57,9 @@ static const int nCoinbaseMaturityADJ = 6;            // 150 blocks
 
 static const int64_t COIN_YEAR_REWARD = 16 * CENT; // 16% per year
 
-inline bool IsProtocolV1RetargetingFixed(int nHeight) { return TestNet() || nHeight > 40000000; }
-inline bool IsProtocolV2(int nHeight) { return TestNet() || nHeight > 40000001; }
-inline bool IsProtocolV3(int64_t nTime) { return TestNet() || nTime > 1678461010; }
+inline bool IsProtocolV1RetargetingFixed(int nHeight) { return false; }
+inline bool IsProtocolV2(int nHeight) { return false; }
+inline bool IsProtocolV3(int64_t nTime) { nTime > 1678492800; }
 
 inline int64_t FutureDriftV1(int64_t nTime) { return nTime + 10 * 60; }
 inline int64_t FutureDriftV2(int64_t nTime) { return nTime + 15; }
