@@ -1,12 +1,8 @@
 #!/bin/bash
+MXE_INCLUDE_PATH=/mnt/mxe/usr/i686-w64-mingw32.static/include
+MXE_LIB_PATH=/mnt/mxe/usr/i686-w64-mingw32.static/lib
 
-#TARGET_PLATFORM=i686
-TARGET_PLATFORM=x86_64
-
-MXE_INCLUDE_PATH=/mnt/mxe/usr/$TARGET_PLATFORM-w64-mingw32.static/include
-MXE_LIB_PATH=/mnt/mxe/usr/$TARGET_PLATFORM-w64-mingw32.static/lib
-
-$TARGET_PLATFORM-w64-mingw32.static-qmake-qt5 \
+i686-w64-mingw32.static-qmake-qt5 \
 	BOOST_LIB_SUFFIX=-mt \
 	BOOST_THREAD_LIB_SUFFIX=_win32-mt \
 	BOOST_INCLUDE_PATH=$MXE_INCLUDE_PATH/boost \
@@ -17,6 +13,6 @@ $TARGET_PLATFORM-w64-mingw32.static-qmake-qt5 \
 	BDB_LIB_PATH=$MXE_LIB_PATH \
 	MINIUPNPC_INCLUDE_PATH=$MXE_INCLUDE_PATH \
 	MINIUPNPC_LIB_PATH=$MXE_LIB_PATH \
-	QMAKE_LRELEASE=/mnt/mxe/usr/$TARGET_PLATFORM-w64-mingw32.static/qt5/bin/lrelease kmushicoin-qt.pro
+	QMAKE_LRELEASE=/mnt/mxe/usr/i686-w64-mingw32.static/qt5/bin/lrelease
 
-make -f Makefile.Release -j12
+make -j 16 -f Makefile.Release
