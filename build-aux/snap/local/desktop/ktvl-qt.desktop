@@ -1,0 +1,15 @@
+# http://standards.freedesktop.org/desktop-entry-spec/desktop-entry-spec-1.0.html
+
+[Desktop Entry]
+Encoding=UTF-8
+Name=KTV Core
+Comment=KTV Core QT main network
+GenericName=KTV Digital Currency QT client main network
+Exec=ktv-core.qt %u
+Terminal=false
+Type=Application
+Icon=${SNAP}/share/pixmaps/ktv.png
+MimeType=x-scheme-handler/ktv;
+Categories=X-Office;X-Finance;
+Keywords=internet;ktv;zktv;ktv;core;wallet;qt;main;snap;launchpad;crypto;digital;currency;coin;token;zerocoin;
+Version=1.0

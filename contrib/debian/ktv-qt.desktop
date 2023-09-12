@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=KTV
+Comment=KTV P2P Cryptocurrency
+Comment[fr]=KTV, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=KTV, eşten eşe kriptografik sanal para birimi
+Exec=ktv-qt %u
+Terminal=false
+Type=Application
+Icon=pivx128
+MimeType=x-scheme-handler/ktv;
+Categories=Office;Finance;
+StartupWMClass=Ktv-qt

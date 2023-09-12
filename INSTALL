@@ -1,9 +1,13 @@
-Building KmushiCoin
+Building KTV
 
-See doc/readme-qt.rst for instructions on building KmushiCoin QT,
-the intended-for-end-users, nice-graphical-interface, reference
-implementation of KmushiCoin.
+Use the autogen script to prepare the build environment.
 
-See doc/build-*.txt for instructions on building KmushiCoind,
+    ./autogen.sh
+    ./configure
+    make
+
+Always verify the signatures and checksums.
+
+See doc/build-*.md for instructions on building ktvd,
 the intended-for-services, no-graphical-interface, reference
-implementation of KmushiCoin.
+implementation of KTV.

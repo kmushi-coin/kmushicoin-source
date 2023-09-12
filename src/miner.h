@@ -1,30 +1,41 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2012 The Bitcoin developers
-// Copyright (c) 2013 The NovaCoin developers
+// Copyright (c) 2009-2014 The Bitcoin developers
+// Copyright (c) 2016-2020 The PIVX developers
+// Copyright (c) 2019-2021 The KTV developers
 // Distributed under the MIT/X11 software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef NOVACOIN_MINER_H
-#define NOVACOIN_MINER_H
+// file COPYING or https://www.opensource.org/licenses/mit-license.php.
 
-#include "main.h"
-#include "wallet.h"
+#ifndef BITCOIN_MINER_H
+#define BITCOIN_MINER_H
 
-/* Generate a new block, without valid proof-of-work */
-CBlock* CreateNewBlock(CReserveKey& reservekey, bool fProofOfStake=false, int64_t* pFees = 0);
+#include "primitives/block.h"
 
-/** Modify the extranonce in a block */
-void IncrementExtraNonce(CBlock* pblock, CBlockIndex* pindexPrev, unsigned int& nExtraNonce);
+#include <stdint.h>
 
-/** Do mining precalculation */
-void FormatHashBuffers(CBlock* pblock, char* pmidstate, char* pdata, char* phash1);
+class CBlock;
+class CBlockHeader;
+class CBlockIndex;
+class CStakeableOutput;
+class CReserveKey;
+class CScript;
+class CWallet;
 
-/** Check mined proof-of-work block */
-bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey);
+struct CBlockTemplate;
 
-/** Check mined proof-of-stake block */
-bool CheckStake(CBlock* pblock, CWallet& wallet);
+static const bool DEFAULT_PRINTPRIORITY = false;
 
-/** Base sha256 mining transform */
-void SHA256Transform(void* pstate, void* pinput, const void* pinit);
+#ifdef ENABLE_WALLET
+    /** Run the miner threads */
+    void GenerateBitcoins(bool fGenerate, CWallet* pwallet, int nThreads);
+    /** Generate a new PoW block, without valid proof-of-work */
+    std::unique_ptr<CBlockTemplate> CreateNewBlockWithKey(std::unique_ptr<CReserveKey>& reservekey, CWallet* pwallet);
+    std::unique_ptr<CBlockTemplate> CreateNewBlockWithScript(const CScript& coinbaseScript, CWallet* pwallet);
 
-#endif // NOVACOIN_MINER_H
+    void BitcoinMiner(CWallet* pwallet, bool fProofOfStake);
+    void ThreadStakeMinter();
+#endif // ENABLE_WALLET
+
+extern double dHashesPerSec;
+extern int64_t nHPSTimerStart;
+
+#endif // BITCOIN_MINER_H

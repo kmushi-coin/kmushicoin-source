@@ -1,0 +1,11 @@
+[Protocol]
+exec=ktv-qt '%u'
+protocol=ktv
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false
