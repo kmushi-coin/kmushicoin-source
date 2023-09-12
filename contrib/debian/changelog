@@ -1,5 +1,5 @@
-kmushicoin (1.1.2.1) unstable; urgency=low
+ktv (3.2.0-trusty1) trusty; urgency=medium
 
-  * Update debian package scripts for use by kmushicoin.
+  * KTV v3.2.0 (trusty).
 
- -- Xerxes Rånby <xerxes@gudinna.com>  Mon, 22 December 2014 17:58:43 +0100
+ -- Fuzzbawls  Fri, 12 Apr 2019 12:01:00 -0700

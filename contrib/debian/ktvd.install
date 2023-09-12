@@ -1,0 +1,3 @@
+usr/local/bin/ktvd usr/bin
+usr/local/bin/ktv-cli usr/bin
+debian/examples/ktv.conf etc/ktv
