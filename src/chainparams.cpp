@@ -137,8 +137,8 @@ public:
         consensus.nMaxProposalPayments = 6;
 
         // spork keys
-        consensus.strSporkPubKey = "04621c4a9c9ef056de4504f2a83a73359d04caaee9262fca05a14b37e758e4c5c91d5dda7700b02bffbd877c22c4129106df7f3ec7821285b314912b51b0105fbe";
-        consensus.strSporkPubKeyOld = "04bc10da9808467708edf1177571c041fc4b6a81300eff228603e813cb37afd37b725c786c7e305415a743a07c2948d0ec1b33a4cc2a852a7d5aa4b8b462c4b846";
+        consensus.strSporkPubKey = "04eb4a35342135eabf6e5974ac98ca2f9746957a24972e5b667ea8c883e2ff674956d6f044c852a7646ce55a8d037592d2fd89cb79213b4e428bd3f1ee6ccc6909";
+        consensus.strSporkPubKeyOld = "04031614d3640b94844ad3139ee8cd62e6c7937ce10e7fc3e56bac50f039d5c3143d4aff458879357312845f78fbd19600f8c55ffe6c1a5c01b16ebd6c72455c41";
         consensus.nTime_EnforceNewSporkKey = 1639699200; //!> Friday, December 17, 2021 12:00:00 AM
         consensus.nTime_RejectOldSporkKey = 1641254400;  //!> Tuesday, January 4, 2022 12:00:00 AM
 
@@ -210,8 +210,7 @@ public:
         pchMessageStart[3] = 0x7f;
         nDefaultPort = 36599;
 
-        vSeeds.clear();
-        vSeeds.emplace_back("dnsseed.kmushicoin.co", "ghos6.kmushicoin.co", true);
+        vSeeds.emplace_back("dnsseed.kmushicoin.co", "ghos6.kmushicoin.co");
         vSeeds.push_back(CDNSSeedData("node1.kmushicoin.co", "node1.kmushicoin.co"));
         vSeeds.push_back(CDNSSeedData("ghos2.kmushicoin.co", "ghos2.kmushicoin.co"));
         vSeeds.push_back(CDNSSeedData("ghos3.kmushicoin.co", "ghos3.kmushicoin.co"));
