@@ -72,14 +72,16 @@ static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits
  */
 static Checkpoints::MapCheckpoints mapCheckpoints = {
     {0, uint256S("0000096fb6742a7e770f5866fd761a71a97f0aeadcaf13a28bdb98717b6b01e0")},
-    {209, uint256S("0000002381714b9d8f0db9f114b175da7222741205b5cdb1d0c9ea70c226822d")},
-    {305, uint256S("c41cdc7cd9d8fb798b6f90952bbbf73a317b7959b485ad7723b77388f56c58fd")},
+    {209, uint256S("0000000f1f34832c89ceabe3275e5703c337d577c4a9e357d13dd7b1d4282b9f")},
+    {305, uint256S("6ad734da10b6eea8a9d74e14f5d9a96ffe1532e1d2dccb6a503cf469f6e22677")},
+    {1000, uint256S("144f6fef5445a82903b81b0caf6caaae32a916986307871ec52083be521de395")},
+    {1637, uint256S("bdea6b702ff090411d67b4901d2c992b4a5649db803792547379342724e10a63")},
 };
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1694386304, // * UNIX timestamp of last checkpoint block
-    0,    // * total number of transactions between genesis and last checkpoint
+    1694585776, // * UNIX timestamp of last checkpoint block
+    3119,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the UpdateTip debug.log lines)
     200        // * estimated number of transactions per day after checkpoint
 };
@@ -210,7 +212,7 @@ public:
         pchMessageStart[3] = 0x7f;
         nDefaultPort = 36599;
 
-        vSeeds.emplace_back("dnsseed.kmushicoin.co", "ghos6.kmushicoin.co");
+        vSeeds.emplace_back("dnsseed.kmushicoin.com", "seed.kmushicoin.com");
         vSeeds.push_back(CDNSSeedData("node1.kmushicoin.co", "node1.kmushicoin.co"));
         vSeeds.push_back(CDNSSeedData("ghos2.kmushicoin.co", "ghos2.kmushicoin.co"));
         vSeeds.push_back(CDNSSeedData("ghos3.kmushicoin.co", "ghos3.kmushicoin.co"));
