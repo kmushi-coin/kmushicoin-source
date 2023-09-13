@@ -210,8 +210,7 @@ public:
         pchMessageStart[3] = 0x7f;
         nDefaultPort = 36599;
 
-        vSeeds.emplace_back("dnsseed.kmushicoin.co", true);
-        vSeeds.emplace_back("dnsseed.kmushicoin.co", "ghos6.kmushicoin.co", true);
+        vSeeds.emplace_back("dnsseed.kmushicoin.co", "ghos6.kmushicoin.co");
         vSeeds.push_back(CDNSSeedData("node1.kmushicoin.co", "node1.kmushicoin.co"));
         vSeeds.push_back(CDNSSeedData("ghos2.kmushicoin.co", "ghos2.kmushicoin.co"));
         vSeeds.push_back(CDNSSeedData("ghos3.kmushicoin.co", "ghos3.kmushicoin.co"));
