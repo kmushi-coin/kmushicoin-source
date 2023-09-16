@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_45" data-name="Capa 45" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f6c02c;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Receive-off">
+    <g id="ic-receive-on">
+      <g id="Group_8987" data-name="Group 8987">
+        <g id="Group_8986" data-name="Group 8986">
+          <polygon id="Path_18953" data-name="Path 18953" class="cls-1" points="20.18 12.73 18.82 11.27 14 15.72 14 2 12 2 12 15.72 7.18 11.27 5.82 12.73 13 19.36 20.18 12.73"/>
+          <polygon id="Path_18954" data-name="Path 18954" class="cls-1" points="22 17 22 22 4 22 4 17 2 17 2 24 24 24 24 17 22 17"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

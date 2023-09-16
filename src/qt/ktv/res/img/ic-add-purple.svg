@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 22">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #cea446;
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Add-purple">
+    <g id="ic-add-purple">
+      <polygon id="Path_18951" data-name="Path 18951" class="cls-1" points="19 10 14 10 14 5 12 5 12 10 7 10 7 12 12 12 12 17 14 17 14 12 19 12 19 10"/>
+      <polygon id="Rectangle_4603" data-name="Rectangle 4603" class="cls-2" points="5 3 21 3 21 19 5 19 5 3"/>
+    </g>
+  </g>
+</svg>

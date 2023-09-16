@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #cea446;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_9004" data-name="Group 9004">
+    <path id="Path_18964" data-name="Path 18964" class="cls-1" d="m6,5h12v2.59l-.79-.79-1.41,1.41,3.21,3.21,3.21-3.21-1.41-1.41-.79.79V3H4v7h2v-5Z"/>
+    <path id="Path_18965" data-name="Path 18965" class="cls-1" d="m12,8c-2.21,0-4,1.79-4,4s1.79,4,4,4,4-1.79,4-4-1.79-4-4-4Zm0,6c-1.1,0-2-.9-2-2s.9-2,2-2,2,.9,2,2-.9,2-2,2Z"/>
+    <path id="Path_18966" data-name="Path 18966" class="cls-1" d="m18,19H6v-2.59l.79.79,1.41-1.41-3.21-3.21-3.21,3.21,1.41,1.41.79-.79v4.59h16v-7h-2v5Z"/>
+  </g>
+  <path id="Rectangle_4647" data-name="Rectangle 4647" class="cls-2" d="m0,0h24v24H0V0Z"/>
+</svg>

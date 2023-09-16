@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_6" data-name="Capa 6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f6c02c;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="check_active" data-name="check active">
+    <g id="Group_8199" data-name="Group 8199">
+      <path id="check_on_light" data-name="check on light" class="cls-1" d="m19.56,0H2.44C1.1,0,0,1.1,0,2.44v17.11c0,1.35,1.1,2.44,2.44,2.44h17.11c1.35,0,2.44-1.1,2.44-2.44V2.44c0-1.35-1.1-2.44-2.44-2.44Zm-11,17.11l-6.11-5.88,1.71-1.65,4.4,4.23,9.29-8.93,1.71,1.64-11,10.58Z"/>
+    </g>
+  </g>
+</svg>
