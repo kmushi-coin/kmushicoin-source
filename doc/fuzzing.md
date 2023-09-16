@@ -125,7 +125,7 @@ example using `brew install llvm`.
 
 Should you run into problems with the address sanitizer, it is possible you
 may need to run `./configure` with `--disable-asm` to avoid errors
-with certain assembly code from KTV's code. See [developer notes on sanitizers](https://github.com/KTV-Project/KTV/blob/master/doc/developer-notes.md#sanitizers)
+with certain assembly code from KTV's code. See [developer notes on sanitizers](https://github.com/kmushi-coin/kmushicoin-source/blob/master/doc/developer-notes.md#sanitizers)
 for more information.
 
 You may also need to take care of giving the correct path for clang and

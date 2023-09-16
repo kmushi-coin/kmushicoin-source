@@ -6,7 +6,7 @@
 #ifndef KTV_POS_TEST_FIXTURE_H
 #define KTV_POS_TEST_FIXTURE_H
 
-#include "test/test_pivx.h"
+#include "test/test_ktv.h"
 
 class CWallet;
 

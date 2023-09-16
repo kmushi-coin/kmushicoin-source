@@ -29,7 +29,7 @@ packages:
 - "python3-setuptools"
 - "fonts-tuffy"
 remotes:
-- "url": "https://github.com/ktv-project/ktv.git"
+- "url": "https://github.com/kmushi-coin/kmushicoin-source.git"
   "dir": "ktv"
 files:
 - "Xcode-11.3.1-11C505-extracted-SDK-with-libcxx-headers.tar.gz"

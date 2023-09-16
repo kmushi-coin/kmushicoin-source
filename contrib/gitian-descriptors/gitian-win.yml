@@ -23,7 +23,7 @@ packages:
 - "ca-certificates"
 - "python3"
 remotes:
-- "url": "https://github.com/ktv-project/ktv.git"
+- "url": "https://github.com/kmushi-coin/kmushicoin-source.git"
   "dir": "ktv"
 files: []
 script: |

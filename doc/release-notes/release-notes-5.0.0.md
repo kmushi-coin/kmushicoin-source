@@ -1,8 +1,8 @@
-KTV version *v5.0.0* is now available from:  <https://github.com/ktv-project/ktv/releases>
+KTV version *v5.0.0* is now available from:  <https://github.com/kmushi-coin/kmushicoin-source/releases>
 
 This is a new major version release, including various bug fixes and performance improvements, as well as updated translations.
 
-Please report bugs using the issue tracker at github: <https://github.com/ktv-project/ktv/issues>
+Please report bugs using the issue tracker at github: <https://github.com/kmushi-coin/kmushicoin-source/issues>
 
 
 Mandatory Update
@@ -158,7 +158,7 @@ Account API Removed
 The 'account' API was deprecated in v4.2.0, and has been fully removed in v5.0.0.
 The 'label' API was introduced in v4.2.0 as a replacement for accounts.
 
-See the release notes from [v4.2.0](https://github.com/KTV-Project/KTV/blob/master/doc/release-notes/release-notes-4.2.0.md#label-and-account-apis-for-wallet) for a full description of the changes from the 'account' API to the 'label' API.
+See the release notes from [v4.2.0](https://github.com/kmushi-coin/kmushicoin-source/blob/master/doc/release-notes/release-notes-4.2.0.md#label-and-account-apis-for-wallet) for a full description of the changes from the 'account' API to the 'label' API.
 
 SwiftX Removed
 --------------
@@ -471,7 +471,7 @@ Each new command is detailed below:
         "spend" : n,                    (numeric, sapling) the index of the spend within vShieldedSpend
         "txidPrev" : "transactionid",   (string) The id for the transaction this note was created in
         "outputPrev" : n,               (numeric, sapling) the index of the output within the vShieldedOutput
-        "address" : "pivxaddress",      (string) The KTV address involved in the transaction
+        "address" : "ktvaddress",      (string) The KTV address involved in the transaction
         "value" : x.xxx                 (numeric) The amount in KTV
         "valueSat" : xxxx               (numeric) The amount in satoshis
       }
@@ -480,7 +480,7 @@ Each new command is detailed below:
     "outputs" : [
       {
         "output" : n,                   (numeric, sapling) the index of the output within the vShieldedOutput
-        "address" : "pivxaddress",      (string) The KTV address involved in the transaction
+        "address" : "ktvaddress",      (string) The KTV address involved in the transaction
         "outgoing" : true|false         (boolean, sapling) True if the output is not for an address in the wallet
         "value" : x.xxx                 (numeric) The amount in KTV
         "valueSat" : xxxx               (numeric) The amount in satoshis
@@ -878,7 +878,7 @@ Detailed release notes follow. This overview includes changes that affect behavi
 - #2112 `e7283dec9e` [Consensus] Set v5 enforcement height for mainnet (furszy)
 
 ### Build Systems
-- #1856 `1bbb906059` [CMake] Add test_pivx unit test target (Fuzzbawls)
+- #1856 `1bbb906059` [CMake] Add test_ktv unit test target (Fuzzbawls)
 - #1877 `a59e8273fb` [Misc] Fixing recurrent compiler warnings (furszy)
 - #1882 `5bd7d52c2c` [Build][Doc] Post branch-off/release maintenance (Fuzzbawls)
 - #1883 `e7d78bd2c2` [Build] Clean lcov artifacts from all paths (Fuzzbawls)

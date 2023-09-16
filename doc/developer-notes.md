@@ -234,14 +234,14 @@ debug.log file if inconsistencies are detected.
 
 Valgrind is a programming tool for memory debugging, memory leak detection, and
 profiling. The repo contains a Valgrind suppressions file
-([`valgrind.supp`](https://github.com/ktv-project/ktv/blob/master/contrib/valgrind.supp))
+([`valgrind.supp`](https://github.com/kmushi-coin/kmushicoin-source/blob/master/contrib/valgrind.supp))
 which includes known Valgrind warnings in our dependencies that cannot be fixed
 in-tree. Example use:
 
 ```shell
-$ valgrind --suppressions=contrib/valgrind.supp src/test/test_pivx
+$ valgrind --suppressions=contrib/valgrind.supp src/test/test_ktv
 $ valgrind --suppressions=contrib/valgrind.supp --leak-check=full \
-      --show-leak-kinds=all src/test/test_pivx --log_level=test_suite
+      --show-leak-kinds=all src/test/test_ktv --log_level=test_suite
 $ valgrind -v --leak-check=full src/ktvd -printtoconsole
 ```
 
@@ -258,7 +258,7 @@ To enable LCOV report generation during test runs:
 make
 make cov
 
-# A coverage report will now be accessible at `./test_pivx.coverage/index.html`.
+# A coverage report will now be accessible at `./test_ktv.coverage/index.html`.
 ```
 
 **Sanitizers**

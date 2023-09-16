@@ -6,7 +6,7 @@
 #ifndef KTV_SAPLING_TEST_FIXTURE_H
 #define KTV_SAPLING_TEST_FIXTURE_H
 
-#include "test/test_pivx.h"
+#include "test/test_ktv.h"
 
 /**
  * Testing setup that configures a complete environment for Sapling testing.

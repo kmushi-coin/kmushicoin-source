@@ -1,4 +1,4 @@
-KTV version v5.3.0 is now available from: <https://github.com/ktv-project/ktv/releases>
+KTV version v5.3.0 is now available from: <https://github.com/kmushi-coin/kmushicoin-source/releases>
 
 Mandatory Update
 ==============
@@ -15,7 +15,7 @@ If you are running a Masternode over Tor, please read the "How To Upgrade" secti
 
 Note: In preparation for the enforcement, upgraded peers will start rejecting non-upgraded peers few hours before the enforcement block height, we recommend everyone to be updated at max a day before the final time.
 
-Please report bugs using the issue tracker at github: <https://github.com/ktv-project/ktv/issues>
+Please report bugs using the issue tracker at github: <https://github.com/kmushi-coin/kmushicoin-source/issues>
 
 How to Upgrade
 ==============
@@ -58,7 +58,7 @@ From KTV v5.3 onwards, macOS versions earlier than 10.12 are no longer supported
 
 KTV should also work on most other Unix-like systems but is not frequently tested on them.
 
-The node's known peers are persisted to disk in a file called `peers.dat`. The format of this file has been changed in a backwards-incompatible way in order to accommodate the storage of Tor v3 and other BIP155 addresses. This means that if the file is modified by v5.3 or newer then older versions will not be able to read it. Those old versions, in the event of a downgrade, will log an error message "Incorrect keysize in addrman deserialization" and will continue normal operation as if the file was missing, creating a new empty one. ([PR #2411](https://github.com/KTV-Project/KTV/pull/2411))
+The node's known peers are persisted to disk in a file called `peers.dat`. The format of this file has been changed in a backwards-incompatible way in order to accommodate the storage of Tor v3 and other BIP155 addresses. This means that if the file is modified by v5.3 or newer then older versions will not be able to read it. Those old versions, in the event of a downgrade, will log an error message "Incorrect keysize in addrman deserialization" and will continue normal operation as if the file was missing, creating a new empty one. ([PR #2411](https://github.com/kmushi-coin/kmushicoin-source/pull/2411))
 
 Notable Changes
 ==============
@@ -72,17 +72,17 @@ The launch-on-startup option is no longer available on macOS
 
 A new checkbox in the send widget allows the user to deduct the fee from the transaction recipient amount.
 The most common use-case is when sending the whole balance, or a selection of UTXOs, without getting any change back.
-If the transaction has multiple recipients, each recipient can be checked with a toggleable button in the context menu, and the fee will be split, and subtracted evenly from the outputs selected ([PR #2347](https://github.com/KTV-Project/KTV/pull/2347)).
+If the transaction has multiple recipients, each recipient can be checked with a toggleable button in the context menu, and the fee will be split, and subtracted evenly from the outputs selected ([PR #2347](https://github.com/kmushi-coin/kmushicoin-source/pull/2347)).
 
 #### Settings
 
 A new checkbox added to the wallet settings to enable or disable automatic port mapping with NAT-PMP.
 If both UPnP and NAT-PMP are enabled, a successful allocation from UPnP prevails over one from NAT-PMP.<br/>
-Note: Successful automatic port mapping requires a router that supports either UPnP or NAT-PMP ([PR #2338](https://github.com/KTV-Project/KTV/pull/2338)).
+Note: Successful automatic port mapping requires a router that supports either UPnP or NAT-PMP ([PR #2338](https://github.com/kmushi-coin/kmushicoin-source/pull/2338)).
 
 #### RPC-Console
 
-The GUI RPC-Console now accepts "parenthesized syntax", nested commands, and simple queries ([PR #2282](https://github.com/KTV-Project/KTV/pull/2282).
+The GUI RPC-Console now accepts "parenthesized syntax", nested commands, and simple queries ([PR #2282](https://github.com/kmushi-coin/kmushicoin-source/pull/2282).
 A new command `help-console` (available only on the GUI console) documents how to use it:
 
 ```
@@ -111,7 +111,7 @@ P2P and network changes
 
 #### Tor v3 hidden services support - addrv2 message (BIP155)
 
-This release adds support for Tor version 3 hidden services, and rumoring them over the network to other peers using [BIP155](https://github.com/bitcoin/bips/blob/master/bip-0155.mediawiki). Version 2 hidden services are still supported by KTV, but the Tor network has started [deprecating](https://blog.torproject.org/v2-deprecation-timeline) them, and will remove support soon. ([PR #2411](https://github.com/KTV-Project/KTV/pull/2411))
+This release adds support for Tor version 3 hidden services, and rumoring them over the network to other peers using [BIP155](https://github.com/bitcoin/bips/blob/master/bip-0155.mediawiki). Version 2 hidden services are still supported by KTV, but the Tor network has started [deprecating](https://blog.torproject.org/v2-deprecation-timeline) them, and will remove support soon. ([PR #2411](https://github.com/kmushi-coin/kmushicoin-source/pull/2411))
 
 The Tor onion service that is automatically created by setting the `-listenonion` configuration parameter will now be created as a Tor v3 service instead of Tor v2. The private key that was used for Tor v2 (if any) will be left untouched in the `onion_private_key` file in the data directory (see `-datadir`) and can be removed if not needed. KTV will no longer attempt to read it. The private key for the Tor v3 service will be saved in a file named `onion_v3_private_key`. To use the deprecated Tor v2 service (not recommended), then `onion_private_key` can be copied over `onion_v3_private_key`, e.g.
 `cp -f onion_private_key onion_v3_private_key`.
@@ -132,7 +132,7 @@ Please use the recommended alternatives if you rely on this feature:
 Multi-wallet support
 --------------------
 
-KTV now supports loading multiple, separate wallets ([PR #2337](https://github.com/KTV-Project/KTV/pull/2337)) with individual balances, keys and received transactions.
+KTV now supports loading multiple, separate wallets ([PR #2337](https://github.com/kmushi-coin/kmushicoin-source/pull/2337)) with individual balances, keys and received transactions.
 
 Multi-wallet is enabled by using more than one `-wallet` argument when starting KTV client, either on the command line or in the `ktv.conf` config file.
 
@@ -154,7 +154,7 @@ Reindexing changes
 ------------------
 
 It is now possible to only redo validation, without rebuilding the block index, using the command line option `-reindex-chainstate` (in addition to `-reindex` which does both).
-This new option is useful when the blocks on disk are assumed to be fine, but the chainstate is still corrupted. It is also useful for benchmarks ([PR #2391](https://github.com/KTV-Project/KTV/pull/2391)).
+This new option is useful when the blocks on disk are assumed to be fine, but the chainstate is still corrupted. It is also useful for benchmarks ([PR #2391](https://github.com/kmushi-coin/kmushicoin-source/pull/2391)).
 
 Mining/Staking transaction selection ("Child Pays For Parent")
 --------------------------------------------------------------
@@ -166,7 +166,7 @@ Removal of Priority Estimation - Coin Age Priority
 --------------------------------------------------
 
 In previous versions of KTV, a portion of each block could be reserved for transactions based on the age and value of UTXOs they spent. This concept (Coin Age Priority) is a policy choice by miners/stakers, and there are no consensus rules around the inclusion of Coin Age Priority transactions in blocks.
-KTV v5.3.0 removes all remaining support for Coin Age Priority ([PR #2378](https://github.com/KTV-Project/KTV/pull/2378)). This has the following implications:
+KTV v5.3.0 removes all remaining support for Coin Age Priority ([PR #2378](https://github.com/kmushi-coin/kmushicoin-source/pull/2378)). This has the following implications:
 
 - The concept of *free transactions* has been removed. High Coin Age Priority transactions would previously be allowed to be relayed even if they didn't attach a miner fee. This is no longer possible since there is no concept of Coin Age Priority. The `-limitfreerelay` and `-relaypriority` options which controlled relay of free transactions have therefore been removed.
 - The `-blockprioritysize` option has been removed.
@@ -179,7 +179,7 @@ Configuration/Settings changes
 
 #### Wallets directory configuration (`-walletdir`)
 
-KTV now has more flexibility in where the wallets directory can be located. Previously wallet database files were stored at the top level of the KTV data directory ([PR #2423](https://github.com/KTV-Project/KTV/pull/2423)). The behavior is now:
+KTV now has more flexibility in where the wallets directory can be located. Previously wallet database files were stored at the top level of the KTV data directory ([PR #2423](https://github.com/kmushi-coin/kmushicoin-source/pull/2423)). The behavior is now:
 
 - For new installations (where the data directory doesn't already exist), wallets will now be stored in a new `wallets/` subdirectory inside the data directory by default.
 
@@ -198,7 +198,7 @@ If `-wallet=<path>` is specified with paths that are names of existing data file
 
 #### Configuration sections for testnet and regtest
 
-It is now possible for a single configuration file to set different options for different networks ([PR #2324](https://github.com/KTV-Project/KTV/pull/2324)). This is done by using sections or by prefixing the option with the network, such as:
+It is now possible for a single configuration file to set different options for different networks ([PR #2324](https://github.com/kmushi-coin/kmushicoin-source/pull/2324)). This is done by using sections or by prefixing the option with the network, such as:
 ```
     main.uacomment=ktv
     test.uacomment=ktv-testnet
@@ -214,15 +214,15 @@ The `addnode=`, `connect=`, `port=`, `bind=`, `rpcport=`, `rpcbind=`, and `walle
 
 #### Custom directory for blocks storage
 
-A new initialization option flag `-blocksdir` allows the users to store block files outside of the data directory ([PR #2326](https://github.com/KTV-Project/KTV/pull/2326)).
+A new initialization option flag `-blocksdir` allows the users to store block files outside of the data directory ([PR #2326](https://github.com/kmushi-coin/kmushicoin-source/pull/2326)).
 
 #### Enable NAT-PMP port mapping at startup
 
-The `-natpmp` option has been added to use NAT-PMP to map the listening port. If both UPnP and NAT-PMP are enabled, a successful allocation from UPnP prevails over one from NAT-PMP ([PR #2338](https://github.com/KTV-Project/KTV/pull/2338)).
+The `-natpmp` option has been added to use NAT-PMP to map the listening port. If both UPnP and NAT-PMP are enabled, a successful allocation from UPnP prevails over one from NAT-PMP ([PR #2338](https://github.com/kmushi-coin/kmushicoin-source/pull/2338)).
 
 #### asmap feature
 
-A new `-asmap` configuration option has been added to diversify the node's network connections by mapping IP addresses Autonomous System Numbers (ASNs) and then limiting the number of connections made to any single ASN ([PR #2480](https://github.com/KTV-Project/KTV/pull/2480)).
+A new `-asmap` configuration option has been added to diversify the node's network connections by mapping IP addresses Autonomous System Numbers (ASNs) and then limiting the number of connections made to any single ASN ([PR #2480](https://github.com/kmushi-coin/kmushicoin-source/pull/2480)).
 
 #### Removed startup options
 
@@ -234,7 +234,7 @@ Low-level RPC changes
 #### Support for JSON-RPC Named Arguments
 
 Commands sent over the JSON-RPC interface and through the `ktv-cli` binary can now use named arguments. This follows the [JSON-RPC specification](http://www.jsonrpc.org/specification) for passing parameters by-name with an object.
-`ktv-cli` has been updated to support this by parsing `name=value` arguments when the `-named` option is given. ([PR #2386](https://github.com/KTV-Project/KTV/pull/2386))
+`ktv-cli` has been updated to support this by parsing `name=value` arguments when the `-named` option is given. ([PR #2386](https://github.com/kmushi-coin/kmushicoin-source/pull/2386))
 
 Some examples:
 
@@ -250,14 +250,14 @@ The RPC server remains fully backwards compatible with positional arguments.
 
 #### Query options for `listunspent` RPC
 
-The `listunspent` RPC now takes a `query_options` argument ([PR #2317](https://github.com/KTV-Project/KTV/pull/2317)), which is a JSON object containing one or more of the following members:
+The `listunspent` RPC now takes a `query_options` argument ([PR #2317](https://github.com/kmushi-coin/kmushicoin-source/pull/2317)), which is a JSON object containing one or more of the following members:
   - `minimumAmount` - a number specifying the minimum value of each UTXO
   - `maximumAmount` - a number specifying the maximum value of each UTXO
   - `maximumCount` - a number specifying the minimum number of UTXOs
   - `minimumSumAmount` - a number specifying the minimum sum value of all UTXOs
 
 The `listunspent` RPC also takes an additional boolean argument `include_unsafe` (true by default) to optionally exclude "unsafe" utxos.
-An unconfirmed output from outside keys is considered unsafe ([PR #2351](https://github.com/KTV-Project/KTV/pull/2351)).
+An unconfirmed output from outside keys is considered unsafe ([PR #2351](https://github.com/kmushi-coin/kmushicoin-source/pull/2351)).
 
 The `listunspent` output also shows whether the utxo is considered safe to spend or not.
 
@@ -308,7 +308,7 @@ The `stop` RPC no longer accepts the (already deprecated, ignored, and undocumen
   ```
 
 In all cases the selected recipients will receive less KTV than their corresponding amount set.
-If no outputs/addresses are specified, the sender pays the fee as usual. ([PR #2341](https://github.com/KTV-Project/KTV/pull/2341))
+If no outputs/addresses are specified, the sender pays the fee as usual. ([PR #2341](https://github.com/kmushi-coin/kmushicoin-source/pull/2341))
 
 ### New output fields in `getmempoolinfo`
 
@@ -332,11 +332,11 @@ The `getpeerinfo` RPC now includes a mapped_as field to indicate the mapped Auto
 
 #### Show wallet's auto-combine settings in `getwalletinfo`
 
-`getwalletinfo` now has two additional auto-combine related return fields. `autocombine_enabled` (boolean) and `autocombine_threshold` (numeric) that will show the auto-combine threshold and whether or not it is currently enabled ([PR #2248](https://github.com/KTV-Project/KTV/pull/2248)).
+`getwalletinfo` now has two additional auto-combine related return fields. `autocombine_enabled` (boolean) and `autocombine_threshold` (numeric) that will show the auto-combine threshold and whether or not it is currently enabled ([PR #2248](https://github.com/kmushi-coin/kmushicoin-source/pull/2248)).
 
 #### Deprecate the autocombine RPC command
 
-The `autocombine` RPC command has been replaced ([PR #2248](https://github.com/KTV-Project/KTV/pull/2248)) with specific set/get commands (`setautocombinethreshold` and `getautocombinethreshold`, respectively) to bring this functionality further in-line with our RPC standards. Previously, the `autocombine` command gave no user-facing feedback when the setting was changed. This is now resolved with the introduction of the two new commands as detailed below:
+The `autocombine` RPC command has been replaced ([PR #2248](https://github.com/kmushi-coin/kmushicoin-source/pull/2248)) with specific set/get commands (`setautocombinethreshold` and `getautocombinethreshold`, respectively) to bring this functionality further in-line with our RPC standards. Previously, the `autocombine` command gave no user-facing feedback when the setting was changed. This is now resolved with the introduction of the two new commands as detailed below:
 
 * `setautocombinethreshold`
     ```
@@ -524,7 +524,7 @@ For nodes on low-memory systems, the database cache can be changed back to 100 M
 - Adding `-dbcache=100` startup flag
 - Changing it in the GUI under `Settings → Options → Main → Size of database cache`
 
-Note that the database cache setting has the most performance impact during initial sync of a node, and when catching up after downtime ([PR #2391](https://github.com/KTV-Project/KTV/pull/2391)).
+Note that the database cache setting has the most performance impact during initial sync of a node, and when catching up after downtime ([PR #2391](https://github.com/kmushi-coin/kmushicoin-source/pull/2391)).
 
 Updated settings
 ----------------
@@ -536,7 +536,7 @@ Build system changes
 
 #### C++14 standard
 
-KTV now requires a C++14 compiler ([PR #2269](https://github.com/KTV-Project/KTV/pull/2269)).
+KTV now requires a C++14 compiler ([PR #2269](https://github.com/kmushi-coin/kmushicoin-source/pull/2269)).
 
 #### Bump miniUPnPc API version
 
@@ -546,7 +546,7 @@ OpenSSL is no longer used by KTV
 
 #### Disabled PoW mining RPC Commands
 
-A new configure flag has been introduced to allow more granular control over weather or not the PoW mining RPC commands are compiled into the wallet. By default they are not. This behavior can be overridden by passing `--enable-mining-rpc` to the `configure` script ([PR #2105](https://github.com/KTV-Project/KTV/pull/2105)).
+A new configure flag has been introduced to allow more granular control over weather or not the PoW mining RPC commands are compiled into the wallet. By default they are not. This behavior can be overridden by passing `--enable-mining-rpc` to the `configure` script ([PR #2105](https://github.com/kmushi-coin/kmushicoin-source/pull/2105)).
 
 #### NAT-PMP Support
 
@@ -558,7 +558,7 @@ ISO 8601 for timestamps in logs and backup file names
 -----------------------------------------------------
 
 The log timestamp format is now ISO 8601 (e.g. "2021-02-28T12:34:56Z").
-The file extension applied to automatic backups is now in ISO 8601 basic notation (e.g. "20210228T123456Z"). The basic notation is used to prevent illegal `:` characters from appearing in the filename ([PR #2300](https://github.com/KTV-Project/KTV/pull/2300)).
+The file extension applied to automatic backups is now in ISO 8601 basic notation (e.g. "20210228T123456Z"). The basic notation is used to prevent illegal `:` characters from appearing in the filename ([PR #2300](https://github.com/kmushi-coin/kmushicoin-source/pull/2300)).
 
 
 v5.3.0 Change log

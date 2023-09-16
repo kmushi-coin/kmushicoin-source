@@ -1,9 +1,9 @@
-KTV version v5.3.1 is now available from: https://github.com/ktv-project/ktv/releases
+KTV version v5.3.1 is now available from: https://github.com/kmushi-coin/kmushicoin-source/releases
 
 This is an important release for stakers and Masternodes: including several tier two synchronization, GUI and build system bug fixes.
 We recommend everyone to update your node/wallet.
 
-Please report bugs using the issue tracker at github: https://github.com/ktv-project/ktv/issues
+Please report bugs using the issue tracker at github: https://github.com/kmushi-coin/kmushicoin-source/issues
 
 How to Upgrade
 ==============

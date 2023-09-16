@@ -1,11 +1,11 @@
-KTV version *3.1.0.2* is now available from:  <https://github.com/ktv-project/ktv/releases>
+KTV version *3.1.0.2* is now available from:  <https://github.com/kmushi-coin/kmushicoin-source/releases>
 
 This is a new mandatory bugfix release, specifically addressing a bug with windows OS masternode control wallets as well as a missed commit from our private repository affecting the budget amount. 
 
-### Users upgrading to this version are encouraged to also read the detailed release notes for the previous [3.1.0](https://github.com/KTV-Project/KTV/releases/tag/v3.1.0) release as information will not be duplicated here.
+### Users upgrading to this version are encouraged to also read the detailed release notes for the previous [3.1.0](https://github.com/kmushi-coin/kmushicoin-source/releases/tag/v3.1.0) release as information will not be duplicated here.
 
 
-Please report bugs using the issue tracker at github: <https://github.com/ktv-project/ktv/issues>
+Please report bugs using the issue tracker at github: <https://github.com/kmushi-coin/kmushicoin-source/issues>
 
 Mandatory Update
 ==============

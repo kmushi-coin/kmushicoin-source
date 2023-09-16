@@ -124,7 +124,7 @@ use old versions of Upstart and do not supply the start-stop-daemon utility.
 Copy ktvd.init to /etc/init.d/ktvd. Test by running `service ktvd start`.
 
 Using this script, you can adjust the path and flags to the ktvd program by
-setting the PIVXD and FLAGS environment variables in the file
+setting the ktvd and FLAGS environment variables in the file
 /etc/sysconfig/ktvd. You can also use the DAEMONOPTS environment variable here.
 
 ### macOS
