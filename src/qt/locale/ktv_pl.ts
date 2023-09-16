@@ -385,7 +385,7 @@ do stakingu</translation>
         <translation>Hasła nie pasują!</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PIVs from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your KTVs from being stolen by malware infecting your computer.</source>
         <translation>%1 zostanie teraz zamknięty, aby zakończyć proces szyfrowania. Pamiętaj, że zaszyfrowanie portfela nie może w pełni zabezpieczyć Twoich KTV przed kradzieżą przez złośliwe oprogramowanie infekujące Twój komputer.</translation>
     </message>
     <message>
@@ -739,7 +739,7 @@ do stakingu</translation>
         <translation>Błąd ładowania delegacji: %1</translation>
     </message>
     <message>
-        <source>You can delegate your PIVs, letting a hot node (24/7 online node)
+        <source>You can delegate your KTVs, letting a hot node (24/7 online node)
 stake on your behalf, while you keep the keys securely offline.</source>
         <translation>Możesz delegować swoje KTV, używając gorącego węzła (węzeł online 24/7)
 stake w Twoim imieniu, podczas gdy klucze są bezpiecznie offline.</translation>
@@ -3036,12 +3036,12 @@ Czy chce Pan/Pani kontynuować bez notatki?
         <translation>Nie masz żadnego %1 do wybrania.</translation>
     </message>
     <message>
-        <source>Error generating address to shield PIVs</source>
+        <source>Error generating address to shield KTVs</source>
         <translation>Błąd podczas generowania adresu dla shield KTV</translation>
     </message>
     <message>
-        <source>You don't have any transparent PIVs to shield.</source>
-        <translation>Nie masz żadnych transparentnych PIVs do shield.</translation>
+        <source>You don't have any transparent KTVs to shield.</source>
+        <translation>Nie masz żadnych transparentnych KTVs do shield.</translation>
     </message>
     <message>
         <source>No contacts available, you can go to the contacts screen and add some there!</source>
@@ -3588,7 +3588,7 @@ Wystąpił błąd podczas próby zapisania listy adresów w %1. Proszę spróbuj
         <translation>Upewnij się, że Twój portfel jest całkowicie zsynchronizowany i używasz najnowszej wersji.</translation>
     </message>
     <message>
-        <source>You must have a balance of KTV with a minimum of 300 confirmations.</source>
+        <source>You must have a balance of KTV with a minimum of 100 confirmations.</source>
         <translation>Musisz mieć saldo KTV z minimum 300 potwierdzeń.</translation>
     </message>
     <message>
@@ -3608,8 +3608,8 @@ Wystąpił błąd podczas próby zapisania listy adresów w %1. Proszę spróbuj
         <translation>Mamy kanały wsparcia w większości naszych oficjalnych grup czatowych, na przykład %1</translation>
     </message>
     <message>
-        <source>#support in our Discord</source>
-        <translation>#wsparcie na naszym Discordzie</translation>
+        <source>#support in our Telegram</source>
+        <translation>#wsparcie na naszym Telegram</translation>
     </message>
     <message>
         <source>%1 per single Masternode instance</source>

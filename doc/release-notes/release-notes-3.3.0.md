@@ -140,7 +140,7 @@ Detailed release notes follow. This overview includes changes that affect behavi
 ### Core
  - #875 `a99c2dd3bb` [Zerocoin] GMP BigNum: Fix limits for random number generators (random-zebra)
  - #888 `0c071c3fd0` [Zerocoin] remove CTransaction::IsZerocoinSpend/IsZerocoinMint (random-zebra)
- - #891 `855408c2c3` [ZPIV] Zerocoin public coin spend. (furszy)
+ - #891 `855408c2c3` [ZKTV] Zerocoin public coin spend. (furszy)
  - #897 `65bd788945` [zKTV] Disable zerocoin minting (random-zebra)
  - #899 `4b22a09024` [zKTV] Disable zKTV staking (random-zebra)
  - #909 `458b08c8f2` [Consensus] Mainnet public spend enforcement height set. (furszy)

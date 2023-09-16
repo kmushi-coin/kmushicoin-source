@@ -57,7 +57,7 @@ New SHIELD Protocol Implemented!
 --------------------------------
 
 #### Overview
-Users will be able to protect their financial information by sending and receiving PIVs privately, as well as sending and receiving encrypted messages attached to the shield transactions.
+Users will be able to protect their financial information by sending and receiving KTVs privately, as well as sending and receiving encrypted messages attached to the shield transactions.
 More visual information about the protocol can be found at https://kmushicoin.co .
 
 #### GUI features

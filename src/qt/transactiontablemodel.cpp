@@ -465,7 +465,7 @@ QString TransactionTableModel::formatTxType(const TransactionRecord* wtx) const
     case TransactionRecord::SendToShielded:
         return tr("Shielded send to");
     case TransactionRecord::SendToNobody:
-        return tr("Burned PIVs");
+        return tr("Burned KTVs");
     default:
         return QString();
     }

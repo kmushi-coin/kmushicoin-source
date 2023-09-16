@@ -331,7 +331,7 @@ bool TransactionRecord::decomposeDebitTransaction(const CWallet* wallet, const C
             sub.address = getValueOrReturnEmpty(wtx.mapValue, "to");
             if (sub.address.empty() && txout.scriptPubKey.StartsWithOpcode(OP_RETURN)) {
                 sub.type = TransactionRecord::SendToNobody;
-                // Burned PIVs, op_return could be for a proposal/budget fee or another sort of data stored there.
+                // Burned KTVs, op_return could be for a proposal/budget fee or another sort of data stored there.
                 std::string comment = wtx.GetComment();
                 if (IsValidUTF8(comment)) {
                     sub.address = comment;

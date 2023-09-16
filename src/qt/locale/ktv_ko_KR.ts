@@ -723,7 +723,7 @@ for staking</source>
         <translation>위임 데이터 로딩 에러: %1</translation>
     </message>
     <message>
-        <source>You can delegate your PIVs, letting a hot node (24/7 online node)
+        <source>You can delegate your KTVs, letting a hot node (24/7 online node)
 stake on your behalf, while you keep the keys securely offline.</source>
         <translation>안전히 개인 프라이빗 키를 오프라인으로 보관한 상태로, 가지고 계신 KTV 를 매일 24시간 온라인으로 돌아가는 핫 노드로 위임하여, 대신 스테이킹을 하게 할수 있습니다. </translation>
     </message>
@@ -2821,7 +2821,7 @@ Do you wish to proceed without memo?
         <translation>선택할 수 있는 %1을 가지고 있지 않습니다.</translation>
     </message>
     <message>
-        <source>You don't have any transparent PIVs to shield.</source>
+        <source>You don't have any transparent KTVs to shield.</source>
         <translation>Shield 가 가능한 Transparent KTV 가 없습니다.</translation>
     </message>
     <message>

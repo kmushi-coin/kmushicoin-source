@@ -26,7 +26,7 @@ public:
 
     static CLegacyZKtvStake* NewZKtvStake(const CTxIn& txin, int nHeight);
 
-    bool IsZPIV() const override { return true; }
+    bool IsZKTV() const override { return true; }
     uint32_t GetChecksum() const { return nChecksum; }
     const CBlockIndex* GetIndexFrom() const override;
     CAmount GetValue() const override;

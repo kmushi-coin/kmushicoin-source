@@ -733,9 +733,9 @@ for staking</source>
         <translation>Fehler beim Laden der Zuweisungen: %1</translation>
     </message>
     <message>
-        <source>You can delegate your PIVs, letting a hot node (24/7 online node)
+        <source>You can delegate your KTVs, letting a hot node (24/7 online node)
 stake on your behalf, while you keep the keys securely offline.</source>
-        <translation>Sie können Ihre PIVs zuweisen und einen Node (24/7) für Sie staken lassen, während Sie Ihre Schlüssel sicher offline verwahren. </translation>
+        <translation>Sie können Ihre KTVs zuweisen und einen Node (24/7) für Sie staken lassen, während Sie Ihre Schlüssel sicher offline verwahren. </translation>
     </message>
     <message>
         <source>Enter owner address</source>
@@ -3006,12 +3006,12 @@ Möchten Sie fortfahren?
 </translation>
     </message>
     <message>
-        <source>Error generating address to shield PIVs</source>
-        <translation>Fehlererzeugende Adresse zur Abschirmung von PIVs</translation>
+        <source>Error generating address to shield KTVs</source>
+        <translation>Fehlererzeugende Adresse zur Abschirmung von KTVs</translation>
     </message>
     <message>
-        <source>You don't have any transparent PIVs to shield.</source>
-        <translation>Sie haben keine transparenten PIVs zu schützen.</translation>
+        <source>You don't have any transparent KTVs to shield.</source>
+        <translation>Sie haben keine transparenten KTVs zu schützen.</translation>
     </message>
     <message>
         <source>No contacts available, you can go to the contacts screen and add some there!</source>
@@ -3567,8 +3567,8 @@ Es gab ein Problem bei dem Versuch die Adressen unter %1 zu speichern. Bitte ver
         <translation>Hier können Sie mehr lesen</translation>
     </message>
     <message>
-        <source>#support in our Discord</source>
-        <translation>#Unterstützung in unserem Discord</translation>
+        <source>#support in our Telegram</source>
+        <translation>#Unterstützung in unserem Telegram</translation>
     </message>
     <message>
         <source>%1 per single Masternode instance</source>
@@ -4618,8 +4618,8 @@ wird ein Backup erstellt.
         <translation>Abgeschirmt senden an</translation>
     </message>
     <message>
-        <source>Burned PIVs</source>
-        <translation>Verbrannte PIVs</translation>
+        <source>Burned KTVs</source>
+        <translation>Verbrannte KTVs</translation>
     </message>
     <message>
         <source>watch-only</source>
@@ -4804,7 +4804,7 @@ wird ein Backup erstellt.
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>PIVs überweisen</translation>
+        <translation>KTVs überweisen</translation>
     </message>
     <message>
         <source>Transaction creation failed!

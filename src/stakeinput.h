@@ -25,7 +25,7 @@ public:
     virtual const CBlockIndex* GetIndexFrom() const = 0;
     virtual bool GetTxOutFrom(CTxOut& out) const = 0;
     virtual CAmount GetValue() const = 0;
-    virtual bool IsZPIV() const = 0;
+    virtual bool IsZKTV() const = 0;
     virtual CDataStream GetUniqueness() const = 0;
 };
 
@@ -40,7 +40,7 @@ public:
     CKtvStake(const CTxOut& _from, const COutPoint& _outPointFrom, const CBlockIndex* _pindexFrom) :
             CStakeInput(_pindexFrom), outputFrom(_from), outpointFrom(_outPointFrom) {}
 
-    static CKtvStake* NewPivStake(const CTxIn& txin, int nHeight, uint32_t nTime);
+    static CKtvStake* NewKtvStake(const CTxIn& txin, int nHeight, uint32_t nTime);
 
     const CBlockIndex* GetIndexFrom() const override;
     bool GetTxOutFrom(CTxOut& out) const override;
@@ -48,7 +48,7 @@ public:
     CDataStream GetUniqueness() const override;
     CTxIn GetTxIn() const;
     bool CreateTxOuts(const CWallet* pwallet, std::vector<CTxOut>& vout, CAmount nTotal) const;
-    bool IsZPIV() const override { return false; }
+    bool IsZKTV() const override { return false; }
 };
 
 

@@ -384,7 +384,7 @@ za staking</translation>
         <translation>Lozinke se ne podudaraju!</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PIVs from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your KTVs from being stolen by malware infecting your computer.</source>
         <translation>%1 će se sada zatvoriti kako bi dovršio postupak šifriranja. Upamtite da šifriranje Vašeg novčanika ne može u potpunosti zaštititi Vaše novčiće od kradje zlonamjernim softverom koji može zaraziti Vaše računalo.</translation>
     </message>
     <message>
@@ -738,7 +738,7 @@ za staking</translation>
         <translation>Greška pri učitavanju delegacija: %1</translation>
     </message>
     <message>
-        <source>You can delegate your PIVs, letting a hot node (24/7 online node)
+        <source>You can delegate your KTVs, letting a hot node (24/7 online node)
 stake on your behalf, while you keep the keys securely offline.</source>
         <translation>Možete delegirati vaše novčiće, dozvoljavajući drugom novčaniku (koji radi 24/7)
 staking u vaše ime, dok su vaši novčići spremljeni na sigurnom.</translation>
@@ -3040,11 +3040,11 @@ Uz naknadu %2
 </translation>
     </message>
     <message>
-        <source>Error generating address to shield PIVs</source>
+        <source>Error generating address to shield KTVs</source>
         <translation>Pogreška pri generiranju adrese za zaštićene KTV-ove</translation>
     </message>
     <message>
-        <source>You don't have any transparent PIVs to shield.</source>
+        <source>You don't have any transparent KTVs to shield.</source>
         <translation>Nemate nikakvih transparentnih KTV za zaštititi.</translation>
     </message>
     <message>
@@ -3616,7 +3616,7 @@ pitanja</translation>
         <translation>Provjerite je li vaš novčanik potpuno sinkroniziran i koristite li najnovije izdanje. </translation>
     </message>
     <message>
-        <source>You must have a balance of KTV with a minimum of 300 confirmations.</source>
+        <source>You must have a balance of KTV with a minimum of 100 confirmations.</source>
         <translation>Morate imati saldo KTV-a s barem 300 potvrda na blockchainu.</translation>
     </message>
     <message>
@@ -3636,8 +3636,8 @@ pitanja</translation>
         <translation>Imamo kanale za podršku u većini naših službenih chat grupa, na primjer %1</translation>
     </message>
     <message>
-        <source>#support in our Discord</source>
-        <translation>#support na našem Discordu</translation>
+        <source>#support in our Telegram</source>
+        <translation>#support na našem Telegram</translation>
     </message>
     <message>
         <source>A decentralized budgeting system (Treasury)</source>
@@ -4696,8 +4696,8 @@ stvorit će se nova sigurnosna kopija.
         <translation>Zaštićeno slanje na</translation>
     </message>
     <message>
-        <source>Burned PIVs</source>
-        <translation>Uništeni PIVovi</translation>
+        <source>Burned KTVs</source>
+        <translation>Uništeni KTV</translation>
     </message>
     <message>
         <source>watch-only</source>

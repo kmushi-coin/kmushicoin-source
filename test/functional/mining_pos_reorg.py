@@ -50,7 +50,7 @@ class ReorgStakeTest(KtvTestFramework):
         assert_equal(self.nodes[nodeid].getblockcount(), wi['last_processed_block'])
         return wi['balance'] + wi['immature_balance']
 
-    def check_money_supply(self, expected_piv):
+    def check_money_supply(self, expected_ktv):
         # verify that nodes have the expected KTV supply
         ktv_supply = [self.nodes[i].getsupplyinfo(True)['transparentsupply']
                       for i in range(self.num_nodes)]

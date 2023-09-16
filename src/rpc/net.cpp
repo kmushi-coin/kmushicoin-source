@@ -536,7 +536,7 @@ UniValue listbanned(const JSONRPCRequest& request)
         rec.pushKV("ban_created", banEntry.nCreateTime);
         rec.pushKV("ban_reason", banEntry.banReasonToString());
 
-        bannedAddresses.push_back(rec);
+        // bannedAddresses.push_back(rec);
     }
 
     return bannedAddresses;

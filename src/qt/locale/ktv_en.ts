@@ -474,7 +474,7 @@ for staking</source>
     </message>
     <message>
         <location line="+18"/>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PIVs from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your KTVs from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -927,7 +927,7 @@ for staking</source>
     </message>
     <message>
         <location filename="../ktv/forms/coldstakingwidget.ui" line="-603"/>
-        <source>You can delegate your PIVs, letting a hot node (24/7 online node)
+        <source>You can delegate your KTVs, letting a hot node (24/7 online node)
 stake on your behalf, while you keep the keys securely offline.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3777,12 +3777,12 @@ Do you want to continue?
     </message>
     <message>
         <location line="+12"/>
-        <source>Error generating address to shield PIVs</source>
+        <source>Error generating address to shield KTVs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
-        <source>You don&apos;t have any transparent PIVs to shield.</source>
+        <source>You don&apos;t have any transparent KTVs to shield.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4514,7 +4514,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+1"/>
-        <source>You must have a balance of KTV with a minimum of 300 confirmations.</source>
+        <source>You must have a balance of KTV with a minimum of 100 confirmations.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4539,7 +4539,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+1"/>
-        <source>#support in our Discord</source>
+        <source>#support in our Telegram</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5934,7 +5934,7 @@ backup will be created.
     </message>
     <message>
         <location line="+2"/>
-        <source>Burned PIVs</source>
+        <source>Burned KTVs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

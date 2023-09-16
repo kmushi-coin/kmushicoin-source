@@ -100,7 +100,7 @@ static bool LoadStakeInput(const CBlock& block, std::unique_ptr<CStakeInput>& st
     const CTxIn& txin = block.vtx[1]->vin[0];
     stake = txin.IsZerocoinSpend() ?
             std::unique_ptr<CStakeInput>(CLegacyZKtvStake::NewZKtvStake(txin, nHeight)) :
-            std::unique_ptr<CStakeInput>(CKtvStake::NewPivStake(txin, nHeight, block.nTime));
+            std::unique_ptr<CStakeInput>(CKtvStake::NewKtvStake(txin, nHeight, block.nTime));
 
     return stake != nullptr;
 }
@@ -156,7 +156,7 @@ bool CheckProofOfStake(const CBlock& block, std::string& strError, const CBlockI
     }
 
     // zPoS disabled (ContextCheck) before blocks V7, and the tx input signature is in CoinSpend
-    if (stakeInput->IsZPIV()) return true;
+    if (stakeInput->IsZKTV()) return true;
 
     // Verify tx input signature
     CTxOut stakePrevout;

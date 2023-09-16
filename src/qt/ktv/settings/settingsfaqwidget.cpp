@@ -78,32 +78,25 @@ SettingsFaqWidget::SettingsFaqWidget(KTVGUI* parent, ClientModel* _model) :
     // Set FAQ content strings
     QString introContent = formatFAQContent(
         formatFAQParagraph(
-            tr("Kmushicoin is a hybrid POS/MN coin that exists with the sole aim of becoming "
-               "one the most widely utilized privacy-based coins in the market. The stated "
-               "mission of Kmushicoin is to be an open source, scalable, cryptocurrency "
-               "that places user privacy of transaction data above all else. ")) +
+            tr("Kmushicoin is a hybrid POS/MN currency that exists for the sole purpose of caring for the environment. Kmushicoin's stated mission is to be an open source, scalable cryptocurrency that puts environmental stewardship above all else. Kmushicoin was created by the environmental company Tierra Viva in 2019, since then we have been working tirelessly every day to reforest thousands of hectares giving benefit to farmers.")) +
         formatFAQParagraph(
-            tr("We endeavor to make it impossible for a third party to figure out through chain analysis "
-               "who the sender and receiver are and the amount of coins that are transferred on the "
-               "blockchain when shields are used.  We accomplish this task utilizing masternodes, "
-               "coin mixing, shielded addresses, zk-Snarks and The Onion Router (TOR).  "
-               "For more information read the Kmushicoin Whitepaper located here %1 ")
+            tr("We strive to educate the community about Kmushicoin and cryptocurrencies in Colombia, demonstrating the advances of blockchain with the environment, benefits by obtaining the only organic beetle compost in the world.  For more information read the Kmushicoin Whitepaper located here %1 ")
                 .arg("<a style='color: #ffcc08' href='https://cdn.tierravivaescarabajos.com/WHITE%20PAPER.pdf'>" + tr("https://cdn.tierravivaescarabajos.com/WHITE%20PAPER.pdf") + "</a>.")));
     ui->labelContent_Intro->setText(introContent);
 
-    QString unspendablePIVContent = formatFAQContent(
+    QString unspendableKTVContent = formatFAQContent(
         formatFAQParagraph(
             tr("Newly received KTV requires 6 confirmations on the network "
                "to become eligible for spending which can take ~6 minutes.")) +
         formatFAQParagraph(
             tr("Your KTV wallet also needs to be completely synchronized "
                "to see and spend balances on the network.")));
-    ui->labelContent_UnspendableKTV->setText(unspendablePIVContent);
+    ui->labelContent_UnspendableKTV->setText(unspendableKTVContent);
 
     QString stakeContent = formatFAQContent(
         formatFAQOrderedList(
             formatFAQListItem(tr("Make sure your wallet is completely synchronized and you are using the latest release.")) +
-            formatFAQListItem(tr("You must have a balance of KTV with a minimum of 300 confirmations.")) +
+            formatFAQListItem(tr("You must have a balance of KTV with a minimum of 100 confirmations.")) +
             formatFAQListItem(tr("Your wallet must stay online and be unlocked for staking purposes.")) +
             formatFAQListItem(tr("Once all those steps are followed staking should be enabled."))) +
         formatFAQParagraph(
@@ -118,7 +111,7 @@ SettingsFaqWidget::SettingsFaqWidget(KTVGUI* parent, ClientModel* _model) :
     QString supportContent = formatFAQContent(
         formatFAQParagraph(
             tr("We have support channels in most of our official chat groups, for example %1  if you prefer to submit a ticket, you can do so at soporte@kmushicoin.co")
-                .arg("<a style='color: #ffcc08' href='https://discord.gg/c26QuZw'>" + tr("#support in our Discord") + "</a>.")));
+                .arg("<a style='color: #ffcc08' href='https://t.me/Kmushicoin_es'>" + tr("#support in our Telegram") + "</a>.")));
     ui->labelContent_Support->setText(supportContent);
 
     QString masternodeContent = formatFAQContent(

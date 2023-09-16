@@ -710,7 +710,7 @@ para staking</translation>
         <translation>Error al cargar las delegaciones: %1</translation>
     </message>
     <message>
-        <source>You can delegate your PIVs, letting a hot node (24/7 online node)
+        <source>You can delegate your KTVs, letting a hot node (24/7 online node)
 stake on your behalf, while you keep the keys securely offline.</source>
         <translation>Puedes delegar tus KTV, dejando un nodo activo (nodo en línea 24/7)
 Haga Stake en tu nombre, manteniendo las llaves en un lugar seguro fuera de línea.</translation>
@@ -753,7 +753,7 @@ Haga Stake en tu nombre, manteniendo las llaves en un lugar seguro fuera de lín
     </message>
     <message>
         <source>Create Cold Staking Address</source>
-        <translation>Crear direccion de apuesta en frio</translation>
+        <translation>Crear direccion de Cold Stake</translation>
     </message>
     <message>
         <source>Creates an address to receive delegated coins
@@ -766,7 +766,7 @@ and stake them on their owner's behalf.</source>
     </message>
     <message>
         <source>List your own cold staking addresses.</source>
-        <translation>Enumere sus propias direcciones de apuesta en frío.</translation>
+        <translation>Enumere sus propias direcciones de Cold Stake.</translation>
     </message>
     <message>
         <source>Invalid entry</source>
@@ -1584,7 +1584,7 @@ MAESTROS</translation>
     <message>
         <source>COLD
 STAKING</source>
-        <translation>APUESTA
+        <translation>Stake
 EN FRIO</translation>
     </message>
     <message>
@@ -3276,6 +3276,22 @@ Ha habido un error al tratar de guardar la libreta de direcciones en %1. Por fav
         <translation>1) ¿Qué es KTV?</translation>
     </message>
     <message>
+        <source>Kmushicoin is a hybrid POS/MN currency that exists for the sole purpose of caring for the environment. Kmushicoin's stated mission is to be an open source, scalable cryptocurrency that puts environmental stewardship above all else. Kmushicoin was created by the environmental company Tierra Viva in 2019, since then we have been working tirelessly every day to reforest thousands of hectares giving benefit to farmers.</source>
+        <translation>Kmushicoin es una moneda híbrida POS/MN que existe con el único objetivo de cuidar al medio ambiente. La misión declarada de Kmushicoin es ser una criptomoneda de código abierto, escalable, que pone el cuidado del medio ambiente por encima de todo. Kmushicoin fue creada por la empresa ambiental Tierra Viva en el año 2019, desde entonces venimos trabajando diario sin descanso para poder reforestar miles de hectareas dando beneficio a los agricultores</translation>
+    </message>
+    <message>
+        <source>We strive to educate the community about Kmushicoin and cryptocurrencies in Colombia, demonstrating the advances of blockchain with the environment, benefits by obtaining the only organic beetle compost in the world.  For more information read the Kmushicoin Whitepaper located here %1 </source>
+        <translation>Nos esforzamos por educar a la comunidad sobre Kmushicoin y las criptomonedas en Colombia, demostrando los avances de blockchain con el medio ambiente, beneficios al obtener el único abono orgánico de escarabajos en el mundo.  Para mayor información lea el Whitepaper de Kmushicoin ubicado aquí %1 </translation>
+    </message>
+    <message>
+        <source>Newly received KTV requires 6 confirmations on the network to become eligible for spending which can take ~6 minutes.</source>
+        <translation>El KTV recién recibido requiere 6 confirmaciones en la red para poder ser gastado, lo que puede llevar unos 6 minutos.</translation>
+    </message>
+    <message>
+        <source>Your KTV wallet also needs to be completely synchronized to see and spend balances on the network.</source>
+        <translation>Tu monedero KTV también debe estar completamente sincronizado para ver y gastar saldos en la red.</translation>
+    </message>
+    <message>
         <source>2) Why are my KTV unspendable?</source>
         <translation>2) ¿Por qué mis KTV no se pueden gastar?</translation>
     </message>
@@ -3305,7 +3321,111 @@ Ha habido un error al tratar de guardar la libreta de direcciones en %1. Por fav
     </message>
     <message>
         <source>How do I stake KTV?</source>
-        <translation>¿Cómo apuesto KTV?</translation>
+        <translation>¿Cómo hago stake KTV?</translation>
+    </message>
+    <message>
+        <source>Make sure your wallet is completely synchronized and you are using the latest release.</source>
+        <translation>Asegúrate de que tu monedero está completamente sincronizado y de que utilizas la última versión.</translation>
+    </message>
+    <message>
+        <source>Make sure your wallet is completely synchronized and you are using the latest release.</source>
+        <translation>Asegúrate de que tu monedero está completamente sincronizado y de que utilizas la última versión.</translation>
+    </message>
+    <message>
+        <source>You must have a balance of KTV with a minimum of 100 confirmations.</source>
+        <translation>Debe tener un saldo de KTV con un mínimo de 100 confirmaciones</translation>
+    </message>
+    <message>
+        <source>Your wallet must stay online and be unlocked for staking purposes.</source>
+        <translation>Su monedero debe permanecer en línea y desbloqueado a efectos de stake.</translation>
+    </message>
+    <message>
+        <source>Once all those steps are followed staking should be enabled.</source>
+        <translation>Una vez seguidos todos estos pasos, el staking debería estar activado.</translation>
+    </message>
+    <message>
+        <source>You can see the status of staking in the wallet by mousing over the package icon in the row on the top left of the wallet interface. The package will be lit up and will state "Staking Enabled" to indicate it is staking. Using the command line interface (%1); the command %2 will confirm that staking is active.</source>
+        <translation>Puede ver el estado del staking en el monedero pasando el ratón por encima del icono del paquete en la fila de la parte superior izquierda de la interfaz del monedero. El paquete se iluminará y dirá "Staking Enabled" para indicar que está haciendo staking. Usando la interfaz de línea de comandos (%1); el comando %2 confirmará que el staking está activo.</translation>
+    </message>
+    <message>
+        <source>We have support channels in most of our official chat groups, for example %1  if you prefer to submit a ticket, you can do so at soporte@kmushicoin.co</source>
+        <translation>Disponemos de canales de soporte en la mayoría de nuestros grupos de chat oficiales, por ejemplo %1  Si prefieres enviar un ticket, puedes hacerlo en soporte@kmushicoin.co</translation>
+    </message>
+    <message>
+        <source>#support in our Telegram</source>
+        <translation>#soporte en nuestro Telegram</translation>
+    </message>
+    <message>
+        <source>if you prefer to submit a ticket, you can do so at</source>
+        <translation>si prefiere enviar un ticket, puede hacerlo en</translation>
+    </message>
+    <message>
+        <source>A masternode is a computer running a full node %1 wallet with a requirement of %2 secured collateral to provide extra services to the network and in return, receive a portion of the block reward regularly. These services include:</source>
+        <translation>Un masternode es un ordenador que ejecuta un monedero de nodo completo %1 con un requisito de garantía asegurada %2 para proporcionar servicios adicionales a la red y, a cambio, recibir una parte de la recompensa de bloque con regularidad. Estos servicios incluyen:</translation>
+    </message>
+    <message>
+        <source>A decentralized governance (Proposal Voting)</source>
+        <translation>Una gobernanza descentralizada (Votación de propuestas)</translation>
+    </message>
+    <message>
+        <source>A decentralized budgeting system (Treasury)</source>
+        <translation>Un sistema presupuestario descentralizado (Tesorería)</translation>
+    </message>
+    <message>
+        <source>Validation of transactions within each block</source>
+        <translation>Validación de las transacciones dentro de cada bloque</translation>
+    </message>
+    <message>
+        <source>Act as an additional full node in the network</source>
+        <translation>Actúa como un nodo completo adicional en la red</translation>
+    </message>
+    <message>
+        <source>For providing such services, masternodes are also paid a certain portion of reward for each block. This can serve as a passive income to the masternode owners minus their running cost.</source>
+        <translation>Por prestar estos servicios, los masternodes también reciben una parte de la recompensa por cada bloque. Esto puede servir como un ingreso pasivo para los propietarios del masternode menos su coste de funcionamiento.</translation>
+    </message>
+    <message>
+        <source>Masternode Perks:</source>
+        <translation>Ventajas de Masternode:</translation>
+    </message>
+    <message>
+        <source>Participate in KTV Governance</source>
+        <translation>Participar en la gobernanza de KTV</translation>
+    </message>
+    <message>
+        <source>Earn Masternode Rewards</source>
+        <translation>Gana recompensas Masternode</translation>
+    </message>
+    <message>
+        <source>Commodity option for future sale</source>
+        <translation>Opción de venta futura de materias primas</translation>
+    </message>
+    <message>
+        <source>Help secure the KTV network</source>
+        <translation>Ayudar a asegurar la red KTV</translation>
+    </message>
+    <message>
+        <source>Requirements:</source>
+        <translation>Requisitos:</translation>
+    </message>
+    <message>
+        <source>Must be stored in a core wallet</source>
+        <translation>Debe almacenarse en un monedero central</translation>
+    </message>
+    <message>
+        <source>Need dedicated IP address</source>
+        <translation>Necesita una dirección IP dedicada</translation>
+    </message>
+    <message>
+        <source>Masternode wallet to remain online</source>
+        <translation>El monedero Masternode seguirá en línea</translation>
+    </message>
+    <message>
+        <source>A Masternode Controller wallet is where the %1 collateral can reside during a Controller-Remote masternode setup. It is a wallet that can activate the remote masternode wallet(s) and allows you to keep your collateral coins offline while the remote masternode remains online.</source>
+        <translation>Un monedero de Controlador de Masternode es donde el colateral %1 puede residir durante una configuración de Controlador-Remoto de masternode. Es una cartera que puede activar la(s) cartera(s) del masternode remoto y te permite mantener tus monedas colaterales fuera de línea mientras el masternode remoto permanece en línea.</translation>
+    </message>
+    <message>
+        <source>Close FAQ</source>
+        <translation>Cerrar FAQ</translation>
     </message>
     <message>
         <source>4</source>
@@ -4245,15 +4365,15 @@ una nueva copia de seguridad.
     </message>
     <message>
         <source>%1 Stake</source>
-        <translation>%1 Apuesta</translation>
+        <translation>%1 Stake</translation>
     </message>
     <message>
         <source>z%1 Stake</source>
-        <translation>z%1 Apuesta</translation>
+        <translation>z%1 Stake</translation>
     </message>
     <message>
         <source>%1 Cold Stake</source>
-        <translation>%1 apuesta en frio</translation>
+        <translation>%1 Cold Stake</translation>
     </message>
     <message>
         <source>%1 Stake on behalf of</source>

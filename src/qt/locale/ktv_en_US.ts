@@ -384,8 +384,8 @@ for staking</translation>
         <translation>Passphrases do not match!</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PIVs from being stolen by malware infecting your computer.</source>
-        <translation>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PIVs from being stolen by malware infecting your computer.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your KTVs from being stolen by malware infecting your computer.</source>
+        <translation>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your KTVs from being stolen by malware infecting your computer.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -738,9 +738,9 @@ for staking</translation>
         <translation>Error loading delegations: %1</translation>
     </message>
     <message>
-        <source>You can delegate your PIVs, letting a hot node (24/7 online node)
+        <source>You can delegate your KTVs, letting a hot node (24/7 online node)
 stake on your behalf, while you keep the keys securely offline.</source>
-        <translation>You can delegate your PIVs, letting a hot node (24/7 online node)
+        <translation>You can delegate your KTVs, letting a hot node (24/7 online node)
 stake on your behalf, while you keep the keys securely offline.</translation>
     </message>
     <message>
@@ -3066,12 +3066,12 @@ Do you want to continue?
 </translation>
     </message>
     <message>
-        <source>Error generating address to shield PIVs</source>
-        <translation>Error generating address to shield PIVs</translation>
+        <source>Error generating address to shield KTVs</source>
+        <translation>Error generating address to shield KTVs</translation>
     </message>
     <message>
-        <source>You don't have any transparent PIVs to shield.</source>
-        <translation>You don't have any transparent PIVs to shield.</translation>
+        <source>You don't have any transparent KTVs to shield.</source>
+        <translation>You don't have any transparent KTVs to shield.</translation>
     </message>
     <message>
         <source>No contacts available, you can go to the contacts screen and add some there!</source>
@@ -3660,8 +3660,8 @@ There was an error trying to save the address list to %1. Please try again.</tra
         <translation>Make sure your wallet is completely synchronized and you are using the latest release.</translation>
     </message>
     <message>
-        <source>You must have a balance of KTV with a minimum of 300 confirmations.</source>
-        <translation>You must have a balance of KTV with a minimum of 300 confirmations.</translation>
+        <source>You must have a balance of KTV with a minimum of 100 confirmations.</source>
+        <translation>You must have a balance of KTV with a minimum of 100 confirmations.</translation>
     </message>
     <message>
         <source>Your wallet must stay online and be unlocked for staking purposes.</source>
@@ -3680,8 +3680,8 @@ There was an error trying to save the address list to %1. Please try again.</tra
         <translation>We have support channels in most of our official chat groups, for example %1</translation>
     </message>
     <message>
-        <source>#support in our Discord</source>
-        <translation>#support in our Discord</translation>
+        <source>#support in our Telegram</source>
+        <translation>#support in our Telegram</translation>
     </message>
     <message>
         <source>%1 per single Masternode instance</source>
@@ -4796,8 +4796,8 @@ backup will be created.
         <translation>Shielded send to</translation>
     </message>
     <message>
-        <source>Burned PIVs</source>
-        <translation>Burned PIVs</translation>
+        <source>Burned KTVs</source>
+        <translation>Burned KTVs</translation>
     </message>
     <message>
         <source>watch-only</source>

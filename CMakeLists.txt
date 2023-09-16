@@ -230,7 +230,7 @@ set(SERVER_SOURCES
         ./src/txmempool.cpp
         ./src/validation.cpp
         ./src/validationinterface.cpp
-        ./src/zpivchain.cpp
+        ./src/zktvchain.cpp
         )
 add_library(SERVER_A STATIC ${BitcoinHeaders} ${SERVER_SOURCES})
 if(MINIUPNP_FOUND)
@@ -274,7 +274,7 @@ set(WALLET_SOURCES
         ./src/wallet/wallet.cpp
         ./src/wallet/walletdb.cpp
         ./src/wallet/walletutil.cpp
-        ./src/zktv/zpivmodule.cpp
+        ./src/zktv/zktvmodule.cpp
         ./src/zktv/zpos.cpp
         ./src/stakeinput.cpp
         )
