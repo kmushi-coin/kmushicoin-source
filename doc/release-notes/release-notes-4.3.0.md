@@ -1,8 +1,8 @@
-KTV version *4.3.0* is now available from:  <https://github.com/ktv-project/ktv/releases>
+KTV version *4.3.0* is now available from:  <https://github.com/kmushi-coin/kmushicoin-source/releases>
 
 This is a new major version release, including various bug fixes and performance improvements, as well as updated translations.
 
-Please report bugs using the issue tracker at github: <https://github.com/ktv-project/ktv/issues>
+Please report bugs using the issue tracker at github: <https://github.com/kmushi-coin/kmushicoin-source/issues>
 
 
 Recommended Update
@@ -41,7 +41,7 @@ Performance Improvements
 
 Version 4.3.0 contains a number of significant performance improvements, which make Initial Block Download, startup, transaction and block validation much faster:
 
-- The chainstate database (which is used for tracking UTXOs) has been changed from a per-transaction model to a per-output model ([See PR 1801](https://github.com/KTV-Project/KTV/pull/1801)). Advantages of this model are that it:
+- The chainstate database (which is used for tracking UTXOs) has been changed from a per-transaction model to a per-output model ([See PR 1801](https://github.com/kmushi-coin/kmushicoin-source/pull/1801)). Advantages of this model are that it:
   - avoids the CPU overhead of deserializing and serializing the unused outputs;
   - has more predictable memory usage;
   - uses simpler code;
@@ -49,7 +49,7 @@ Version 4.3.0 contains a number of significant performance improvements, which m
   
   As a result, validating the blockchain during Initial Block Download (IBD) and reindex is ~30-40% faster, uses 10-20% less memory, and flushes to disk far less frequently. The only downside is that the on-disk database is 15% larger. During the conversion from the previous format a few extra gigabytes may be used.
 
-- LevelDB has been upgraded to version 1.22 ([See PR 1738](https://github.com/KTV-Project/KTV/pull/1738)). This version contains hardware acceleration for CRC on architectures supporting SSE 4.2. As a result, synchronization and block validation are now faster.
+- LevelDB has been upgraded to version 1.22 ([See PR 1738](https://github.com/kmushi-coin/kmushicoin-source/pull/1738)). This version contains hardware acceleration for CRC on architectures supporting SSE 4.2. As a result, synchronization and block validation are now faster.
 
 Removal of Priority Estimation
 ------------------------------

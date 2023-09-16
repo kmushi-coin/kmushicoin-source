@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_5" data-name="Capa 5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        stroke: #ffcc08;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <g id="Top-BarTheme-Copy">
+    <circle id="Oval" class="cls-1" cx="12" cy="12" r="12"/>
+    <path id="Path_18926" data-name="Path 18926" class="cls-2" d="m12,3C7.03,3,3,7.03,3,12s4.03,9,9,9,9-4.03,9-9c0-2.39-.95-4.68-2.64-6.36-1.69-1.69-3.98-2.64-6.36-2.64Z"/>
+  </g>
+</svg>

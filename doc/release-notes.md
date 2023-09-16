@@ -1,10 +1,10 @@
 (note: this is a temporary file, to be added-to by anybody, and moved to release-notes at release time)
 
-KTV version *version* is now available from:  <https://github.com/ktv-project/ktv/releases>
+KTV version *version* is now available from:  <https://github.com/kmushi-coin/kmushicoin-source/releases>
 
 This is a new major version release, including various bug fixes and performance improvements, as well as updated translations.
 
-Please report bugs using the issue tracker at github: <https://github.com/ktv-project/ktv/issues>
+Please report bugs using the issue tracker at github: <https://github.com/kmushi-coin/kmushicoin-source/issues>
 
 
 How to Upgrade
@@ -63,7 +63,7 @@ All nodes derive (and verify) their masternode lists independently, from the sam
 
 Masternodes are "registered" by special transactions called ProTx, and removed only by spending the collateral.
 A ProTx either creates a 10000-KTV collateral as tx output, or includes a reference to an unspent 10000-KTV utxo on chain (and a proof of ownership).
-See PR [#2267](https://github.com/KTV-Project/KTV/pull/2267) for more information.
+See PR [#2267](https://github.com/kmushi-coin/kmushicoin-source/pull/2267) for more information.
 
 Upgrade instructions: !TODO
 
@@ -279,7 +279,7 @@ Upgrade instructions: !TODO
 ### Protocol changes
 
 Starting with the enforcement block, masternode rewards and budget payments are paid as outputs of the coinbase transaction, instead of the coinstake transaction.
-With this rule, a new opcode (`0xd2`) is introduced (see PR [#2275](https://github.com/KTV-Project/KTV/pull/2275)).
+With this rule, a new opcode (`0xd2`) is introduced (see PR [#2275](https://github.com/kmushi-coin/kmushicoin-source/pull/2275)).
 It enforces the same rules as the legacy cold-staking opcode, but without allowing a "free" script for the last output of the transaction.
 The new opcode takes the name of `OP_CHECKCOLDSTAKEVERIFY`, and the legacy opcode (`0xd1`) is renamed to `OP_CHECKCOLDSTAKEVERIFY_LOF` (last-output-free).
 Scripts with the old opcode are still accepted on the network (the restriction on the last-output is enforced after the script validation in this case), but the client creates new delegations with the new opcode, by default, after the upgrade enforcement.
@@ -301,7 +301,7 @@ P2P and network changes
 Multi-wallet support
 --------------------
 
-KTV now supports loading multiple, separate wallets (See [PR #2337](https://github.com/KTV-Project/KTV/pull/2337)). The wallets are completely separated, with individual balances, keys and received transactions.
+KTV now supports loading multiple, separate wallets (See [PR #2337](https://github.com/kmushi-coin/kmushicoin-source/pull/2337)). The wallets are completely separated, with individual balances, keys and received transactions.
 
 Multi-wallet is enabled by using more than one `-wallet` argument when starting KTV client, either on the command line or in the ktv.conf config file.
 
@@ -425,7 +425,7 @@ Removal of Priority Estimation - Coin Age Priority
 --------------------------------------------------
 
 In previous versions of KTV, a portion of each block could be reserved for transactions based on the age and value of UTXOs they spent. This concept (Coin Age Priority) is a policy choice by miners/stakers, and there are no consensus rules around the inclusion of Coin Age Priority transactions in blocks. 
-KTV v6.0.0 removes all remaining support for Coin Age Priority (See [PR #2378](https://github.com/KTV-Project/KTV/pull/2378)). This has the following implications:
+KTV v6.0.0 removes all remaining support for Coin Age Priority (See [PR #2378](https://github.com/kmushi-coin/kmushicoin-source/pull/2378)). This has the following implications:
 
 - The concept of *free transactions* has been removed. High Coin Age Priority transactions would previously be allowed to be relayed even if they didn't attach a miner fee. This is no longer possible since there is no concept of Coin Age Priority. The `-limitfreerelay` and `-relaypriority` options which controlled relay of free transactions have therefore been removed.
 - The `-blockprioritysize` option has been removed.
@@ -448,7 +448,7 @@ Note: Successful automatic port mapping requires a router that supports either U
 
 ### RPC-Console
 
-The GUI RPC-Console now accepts "parenthesized syntax", nested commands, and simple queries (see [PR #2282](https://github.com/KTV-Project/KTV/pull/2282).
+The GUI RPC-Console now accepts "parenthesized syntax", nested commands, and simple queries (see [PR #2282](https://github.com/kmushi-coin/kmushicoin-source/pull/2282).
 A new command `help-console` (available only on the GUI console) documents how to use it:
 
 ```
@@ -497,7 +497,7 @@ Low-level RPC changes
 
 ### Query options for listunspent RPC
 
-- The `listunspent` RPC now takes a `query_options` argument (see [PR #2317](https://github.com/KTV-Project/KTV/pull/2317)), which is a JSON object
+- The `listunspent` RPC now takes a `query_options` argument (see [PR #2317](https://github.com/kmushi-coin/kmushicoin-source/pull/2317)), which is a JSON object
   containing one or more of the following members:
   - `minimumAmount` - a number specifying the minimum value of each UTXO
   - `maximumAmount` - a number specifying the maximum value of each UTXO
@@ -505,7 +505,7 @@ Low-level RPC changes
   - `minimumSumAmount` - a number specifying the minimum sum value of all UTXOs
 
 - The `listunspent` RPC also takes an additional boolean argument `include_unsafe` (true by default) to optionally exclude "unsafe" utxos.
-  An unconfirmed output from outside keys is considered unsafe (see [PR #2351](https://github.com/KTV-Project/KTV/pull/2351)).
+  An unconfirmed output from outside keys is considered unsafe (see [PR #2351](https://github.com/kmushi-coin/kmushicoin-source/pull/2351)).
 
 - The `listunspent` output also shows whether the utxo is considered safe to spend or not.
 

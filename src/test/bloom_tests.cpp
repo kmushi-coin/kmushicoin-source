@@ -16,7 +16,7 @@
 #include "uint256.h"
 #include "util/system.h"
 #include "utilstrencodings.h"
-#include "test/test_pivx.h"
+#include "test/test_ktv.h"
 
 #include <vector>
 

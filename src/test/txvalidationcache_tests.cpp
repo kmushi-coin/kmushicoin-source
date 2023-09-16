@@ -4,7 +4,7 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or https://www.opensource.org/licenses/mit-license.php.
 
-#include "test/test_pivx.h"
+#include "test/test_ktv.h"
 
 #include "consensus/validation.h"
 #include "pubkey.h"

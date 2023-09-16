@@ -18,8 +18,8 @@ Test plan:
     - proxy on IPv6
 
 - Create various proxies (as threads)
-- Create pivxds that connect to them
-- Manipulate the pivxds using addnode (onetry) an observe effects
+- Create ktvds that connect to them
+- Manipulate the ktvds using addnode (onetry) an observe effects
 
 addnode connect to IPv4
 addnode connect to IPv6

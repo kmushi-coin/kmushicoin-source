@@ -36,7 +36,7 @@ When an updated source file is merged into the GitHub repo, Transifex will autom
 
 To create the pull-request, use the following commands:
 ```
-git add src/qt/pivxstrings.cpp src/qt/locale/ktv_en.ts
+git add src/qt/ktvstrings.cpp src/qt/locale/ktv_en.ts
 git commit
 ```
 

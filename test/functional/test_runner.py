@@ -302,7 +302,7 @@ def main():
 
     enable_wallet = config["components"].getboolean("ENABLE_WALLET")
     enable_utils = config["components"].getboolean("ENABLE_UTILS")
-    enable_pivxd = config["components"].getboolean("ENABLE_BITCOIND")
+    enable_ktvd = config["components"].getboolean("ENABLE_BITCOIND")
 
     if config["environment"]["EXEEXT"] == ".exe" and not args.force:
         # https://github.com/bitcoin/bitcoin/commit/d52802551752140cf41f0d9a225a43e84404d3e9
@@ -310,7 +310,7 @@ def main():
         print("Tests currently disabled on Windows by default. Use --force option to enable")
         sys.exit(0)
 
-    if not (enable_wallet and enable_utils and enable_pivxd):
+    if not (enable_wallet and enable_utils and enable_ktvd):
         print("No functional tests to run. Wallet, utils, and ktvd must all be enabled")
         print("Rerun `configure` with -enable-wallet, -with-utils and -with-daemon and rerun make")
         sys.exit(0)
@@ -521,7 +521,7 @@ class TestHandler:
         self.test_list = test_list
         self.flags = flags
         self.num_running = 0
-        # In case there is a graveyard of zombie pivxds, we can apply a
+        # In case there is a graveyard of zombie ktvds, we can apply a
         # pseudorandom offset to hopefully jump over them.
         # (625 is PORT_RANGE/MAX_NODES)
         self.portseed_offset = int(time.time() * 1000) % 625

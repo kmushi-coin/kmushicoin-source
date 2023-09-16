@@ -1,8 +1,8 @@
-KTV version v5.1.0 is now available from:  <https://github.com/ktv-project/ktv/releases>
+KTV version v5.1.0 is now available from:  <https://github.com/kmushi-coin/kmushicoin-source/releases>
 
 This is a new major version release, including various bug fixes and performance improvements, as well as updated translations.
 
-Please report bugs using the issue tracker at github: <https://github.com/ktv-project/ktv/issues>
+Please report bugs using the issue tracker at github: <https://github.com/kmushi-coin/kmushicoin-source/issues>
 
 Recommended Update
 ==============

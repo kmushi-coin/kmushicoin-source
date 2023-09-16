@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 26">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f6c02c;
+      }
+
+      .cls-2 {
+        fill: #ffe092;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="switch_on" data-name="switch on">
+    <g id="switch_on-2" data-name="switch on">
+      <path id="switch_path" data-name="switch path" class="cls-2" d="m34,11.22c.02,3.84-3.07,6.98-6.91,7-.03,0-.06,0-.09,0H7c-3.84.02-6.98-3.07-7-6.91,0-.03,0-.06,0-.09-.02-3.84,3.07-6.98,6.91-7,.03,0,.06,0,.09,0h20c3.84-.02,6.98,3.07,7,6.91,0,.03,0,.06,0,.09Z"/>
+      <path id="switch_button-2" data-name="switch button-2" class="cls-1" d="m27,1c5.52,0,10,4.48,10,10s-4.48,10-10,10-10-4.48-10-10S21.48,1,27,1Z"/>
+    </g>
+  </g>
+</svg>

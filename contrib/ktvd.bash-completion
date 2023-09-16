@@ -3,7 +3,7 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-_pivxd() {
+_ktvd() {
     local cur prev words=() cword
     local ktvd
 
@@ -33,7 +33,7 @@ _pivxd() {
             # only parse -help if sensible
             if [[ -z "$cur" || "$cur" =~ ^- ]]; then
                 local helpopts
-                helpopts=$($pivxd -help 2>&1 | awk '$1 ~ /^-/ { sub(/=.*/, "="); print $1 }' )
+                helpopts=$($ktvd -help 2>&1 | awk '$1 ~ /^-/ { sub(/=.*/, "="); print $1 }' )
                 COMPREPLY=( $( compgen -W "$helpopts" -- "$cur" ) )
             fi
 

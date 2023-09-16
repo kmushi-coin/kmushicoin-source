@@ -6,7 +6,7 @@
 
 #define BOOST_TEST_MODULE Ktv Test Suite
 
-#include "test/test_pivx.h"
+#include "test/test_ktv.h"
 
 #include "blockassembler.h"
 #include "consensus/merkle.h"
@@ -41,7 +41,7 @@ std::ostream& operator<<(std::ostream& os, const uint256& num)
 }
 
 BasicTestingSetup::BasicTestingSetup(const std::string& chainName)
-    : m_path_root(fs::temp_directory_path() / "test_pivx" / strprintf("%lu_%i", (unsigned long)GetTime(), (int)(InsecureRandRange(1 << 30))))
+    : m_path_root(fs::temp_directory_path() / "test_ktv" / strprintf("%lu_%i", (unsigned long)GetTime(), (int)(InsecureRandRange(1 << 30))))
 {
     ECC_Start();
     SetupEnvironment();

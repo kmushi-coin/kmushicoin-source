@@ -71,7 +71,7 @@ bool ProcessBlockFound(const std::shared_ptr<const CBlock>& pblock, CWallet& wal
     {
         WAIT_LOCK(g_best_block_mutex, lock);
         if (pblock->hashPrevBlock != g_best_block)
-            return error("PIVXMiner : generated block is stale");
+            return error("KTVMiner : generated block is stale");
     }
 
     // Remove key from key pool
@@ -83,7 +83,7 @@ bool ProcessBlockFound(const std::shared_ptr<const CBlock>& pblock, CWallet& wal
     sc.registerEvent();
     bool res = ProcessNewBlock(pblock, nullptr);
     if (!res || sc.stateErrorFound()) {
-        return error("PIVXMiner : ProcessNewBlock, block not accepted");
+        return error("KTVMiner : ProcessNewBlock, block not accepted");
     }
 
     g_connman->ForEachNode([&pblock](CNode* node)
@@ -113,7 +113,7 @@ void CheckForCoins(CWallet* pwallet, std::vector<CStakeableOutput>* availableCoi
 
 void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
 {
-    LogPrintf("PIVXMiner started\n");
+    LogPrintf("KTVMiner started\n");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
     util::ThreadRename("ktv-miner");
     const Consensus::Params& consensus = Params().GetConsensus();
@@ -189,7 +189,7 @@ void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
         // POW - miner main
         IncrementExtraNonce(pblock, pindexPrev->nHeight + 1, nExtraNonce);
 
-        LogPrintf("Running PIVXMiner with %u transactions in block (%u bytes)\n", pblock->vtx.size(),
+        LogPrintf("Running KTVMiner with %u transactions in block (%u bytes)\n", pblock->vtx.size(),
             ::GetSerializeSize(*pblock, PROTOCOL_VERSION));
 
         //
@@ -275,12 +275,12 @@ void static ThreadBitcoinMiner(void* parg)
         BitcoinMiner(pwallet, false);
         boost::this_thread::interruption_point();
     } catch (const std::exception& e) {
-        LogPrintf("PIVXMiner exception");
+        LogPrintf("KTVMiner exception");
     } catch (...) {
-        LogPrintf("PIVXMiner exception");
+        LogPrintf("KTVMiner exception");
     }
 
-    LogPrintf("PIVXMiner exiting\n");
+    LogPrintf("KTVMiner exiting\n");
 }
 
 void GenerateBitcoins(bool fGenerate, CWallet* pwallet, int nThreads)

@@ -1,6 +1,6 @@
 # Copyright (c) 2018-2019 The Ion developers
 # Copyright (c) 2019 The KTV developers
-name: pivx-core
+name: ktv-core
 base: core18
 version: 5.3.3
 summary:   KTV (Private – Instant – Verified – Transaction)
@@ -11,68 +11,68 @@ description: |
   Zero Knowledge cryptography proofs for industry-leading
   transaction anonymity.
 
-  - [Download](https://pivx.org/wp-content/uploads/2018/10/KTV-White.pdf) KTV White Paper PDF
+  - [Download](https://cdn.tierravivaescarabajos.com/WHITE%20PAPER.pdf) KTV White Paper PDF
 grade: devel
 confinement: strict
 
 apps:
   daemon:
-    command: pivxd
+    command: ktvd
     plugs: [network, network-bind, home, removable-media]
-    desktop: pivxd.desktop
+    desktop: ktvd.desktop
     environment:
       XDG_DATA_DIRS: $SNAP_USER_DATA:$SNAP/usr/share:$XDG_DATA_DIRS
       HOME: $SNAP_USER_COMMON
   daemon-testnet:
-    command: pivxd --testnet
+    command: ktvd --testnet
     plugs: [network, network-bind, home, removable-media]
-    desktop: pivxd_testnet.desktop
+    desktop: ktvd_testnet.desktop
     environment:
       XDG_DATA_DIRS: $SNAP_USER_DATA:$SNAP/usr/share:$XDG_DATA_DIRS
       HOME: $SNAP_USER_COMMON
   qt:
-    command: desktop-launch pivx-qt
+    command: desktop-launch ktv-qt
     plugs: [network, network-bind, network-status, unity7, desktop, desktop-legacy, wayland, x11, mir, opengl, home, gsettings, removable-media, screen-inhibit-control, pulseaudio, media-hub]
-    desktop: pivx-qt.desktop
+    desktop: ktv-qt.desktop
     environment:
       QT_XKB_CONFIG_ROOT: $SNAP_USER_DATA:$SNAP/usr/share:$QT_XKB_CONFIG_ROOT
       XDG_DATA_DIRS: $SNAP_USER_DATA:$SNAP/usr/share:$XDG_DATA_DIRS
       HOME: $SNAP_USER_COMMON
   qt-testnet:
-    command: desktop-launch pivx-qt --testnet
+    command: desktop-launch ktv-qt --testnet
     plugs: [network, network-bind, network-status, unity7, desktop, desktop-legacy, wayland, x11, mir, opengl, home, gsettings, removable-media, screen-inhibit-control, pulseaudio, media-hub]
-    desktop: pivx-qt_testnet.desktop
+    desktop: ktv-qt_testnet.desktop
     environment:
       QT_XKB_CONFIG_ROOT: $SNAP_USER_DATA:$SNAP/usr/share:$QT_XKB_CONFIG_ROOT
       XDG_DATA_DIRS: $SNAP_USER_DATA:$SNAP/usr/share:$XDG_DATA_DIRS
       HOME: $SNAP_USER_COMMON
   cli:
-    command: pivx-cli
+    command: ktv-cli
     plugs: [network, network-bind, home, removable-media]
     environment:
       XDG_DATA_DIRS: $SNAP_USER_DATA:$SNAP/usr/share:$XDG_DATA_DIRS
       HOME: $SNAP_USER_COMMON
   cli-testnet:
-    command: pivx-cli --testnet
+    command: ktv-cli --testnet
     plugs: [network, network-bind, home, removable-media]
     environment:
       XDG_DATA_DIRS: $SNAP_USER_DATA:$SNAP/usr/share:$XDG_DATA_DIRS
       HOME: $SNAP_USER_COMMON
   tx:
-    command: pivx-tx
+    command: ktv-tx
     plugs: [home]
   test:
-    command: test_pivx
+    command: test_ktv
     plugs: [home]
   testqt:
-    command: test_pivx-qt
+    command: test_ktv-qt
     plugs: [home]
 
 layout:
-  /usr/share/pivx/sapling-spend.params:
-    bind-file: $SNAP/share/pivx/sapling-spend.params
-  /usr/share/pivx/sapling-output.params:
-    bind-file: $SNAP/share/pivx/sapling-output.params
+  /usr/share/ktv/sapling-spend.params:
+    bind-file: $SNAP/share/ktv/sapling-spend.params
+  /usr/share/ktv/sapling-output.params:
+    bind-file: $SNAP/share/ktv/sapling-output.params
 
 parts:
 
@@ -105,8 +105,8 @@ parts:
       - xdg-user-dirs
       - fcitx-frontend-qt5
 
-  pivx-core:
-    source: https://github.com/KTV-Project/KTV
+  ktv-core:
+    source: https://github.com/kmushi-coin/kmushicoin-source
     source-type: git
     source-tag: master
     plugin: nil
@@ -118,7 +118,7 @@ parts:
       #    project is called ioncore because ion exists already as package. For anybody
       #    offering non official release and using own SNAP, this variable should be used
       #    default value is "false", to enable it, use your projects binary prefix
-      OVERRIDEBINPREFIX="pivx"
+      OVERRIDEBINPREFIX="ktv"
       OVERRIDEDATADIR="false"
       OVERRIDECONF="${OVERRIDEDATADIR}"
       COPYCONF=0    # copy example config into users data folder, 1 = enabled
@@ -227,7 +227,7 @@ parts:
       echo "INSTALLATION OF ${BINPREF}-${SNAPCRAFT_PROJECT_VERSION}" # run make install with a prefix where to install
       echo "+++++++++++++++++++++++++++++++++++++++++++++++"
       make install prefix=${SNAPCRAFT_PART_INSTALL}
-      install -m 0644 -D -T $SNAPCRAFT_PART_BUILD/src/qt/res/icons/bitcoin.png $SNAPCRAFT_PART_INSTALL/share/pixmaps/pivx.png
+      install -m 0644 -D -T $SNAPCRAFT_PART_BUILD/src/qt/res/icons/bitcoin.png $SNAPCRAFT_PART_INSTALL/share/pixmaps/ktv.png
       install -m 0644 -D -T $SNAPCRAFT_PART_BUILD/src/qt/res/icons/bitcoin_testnet.png $SNAPCRAFT_PART_INSTALL/share/pixmaps/ktv_testnet.png
       echo "-----------------------------------------------"
       echo "+++++++++++++++++++++++++++++++++++++++++++++++"
@@ -262,7 +262,7 @@ parts:
       fi
       echo "-----------------------------------------------"
       echo "+++++++++++++++++++++++++++++++++++++++++++++++"
-      echo "CONFIG FILE" # create .pivx folder and copy example config - !!!warning!!!: do not copy as pivx.conf
+      echo "CONFIG FILE" # create .ktv folder and copy example config - !!!warning!!!: do not copy as ktv.conf
       echo "+++++++++++++++++++++++++++++++++++++++++++++++"
       mkdir -p ${SNAP_USER_COMMON}/.${DATADIR}
       if [ $COPYCONF = 1 ]; then
