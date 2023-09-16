@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 22">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #ffe092;
+      }
+    </style>
+  </defs>
+  <g id="ic_chevron_right" data-name="ic chevron right">
+    <g id="Group_8822" data-name="Group 8822">
+      <path id="Path_18879" data-name="Path 18879" class="cls-2" d="m16.36,12l-7.13,7.68-1.47-1.36,5.87-6.32-5.87-6.32,1.47-1.36,7.13,7.68Z"/>
+    </g>
+    <path id="Rectangle_4407" data-name="Rectangle 4407" class="cls-1" d="m0,24V0h24v24H0Z"/>
+  </g>
+</svg>
