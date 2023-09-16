@@ -7,33 +7,16 @@
       }
 
       .cls-2 {
-        fill: none;
-      }
-
-      .cls-3 {
         fill: #775c15;
       }
     </style>
   </defs>
-  <g id="Group_9043" data-name="Group 9043">
-    <g id="Group_9038" data-name="Group 9038">
-      <circle id="Ellipse_629" data-name="Ellipse 629" class="cls-1" cx="50" cy="70" r="14"/>
-      <path id="Rectangle_4698" data-name="Rectangle 4698" class="cls-1" d="m41,28h18v18h-18v-18Z"/>
-    </g>
-    <g id="Group_9042" data-name="Group 9042">
-      <g id="Group_9039" data-name="Group 9039">
-        <path id="Rectangle_4699" data-name="Rectangle 4699" class="cls-3" d="m81,58h2v4h-2v-4Z"/>
-        <path id="Path_18992" data-name="Path 18992" class="cls-3" d="m81,91H19v-7h-2v9h66v-27h-2v25Z"/>
-        <path id="Rectangle_4700" data-name="Rectangle 4700" class="cls-3" d="m17,76h2v4h-2v-4Z"/>
-        <path id="Path_18993" data-name="Path 18993" class="cls-3" d="m80,27v2h7v16h-27v-16h16v-2h-9.69c4.98-3.48,6.19-10.33,2.71-15.31-3.48-4.98-10.33-6.19-15.31-2.71-1.61,1.13-2.9,2.67-3.71,4.46-2.51-5.53-9.03-7.97-14.55-5.46-5.53,2.51-7.97,9.03-5.46,14.55.81,1.79,2.1,3.33,3.71,4.46H11v20h6v25h2v-25h62v7h2v-7h6v-20h-9Zm-20-18c4.97,0,9,4.03,9,9s-4.03,9-9,9h-9v-9c0-4.97,4.03-8.99,9-9Zm-29,9c0-4.97,4.03-9,9-9s9,4.03,9,9v9h-9c-4.97,0-8.99-4.03-9-9Zm-14,27h-4v-16h27v16h-23Zm25,0v-16h16v16h-16Z"/>
-      </g>
-      <g id="Group_9041" data-name="Group 9041">
-        <path id="Path_18994" data-name="Path 18994" class="cls-3" d="m55,55.88v2.12c6.63,2.76,9.76,10.37,7,17-2.76,6.63-10.37,9.76-17,7s-9.76-10.37-7-17c1.32-3.17,3.83-5.68,7-7v-2.12c-7.81,2.76-11.9,11.33-9.14,19.14,2.76,7.81,11.33,11.9,19.14,9.14,7.81-2.76,11.9-11.33,9.14-19.14-1.51-4.27-4.87-7.63-9.14-9.14Z"/>
-        <g id="Group_9040" data-name="Group 9040">
-          <path id="Rectangle_4701" data-name="Rectangle 4701" class="cls-3" d="m49,52h2v20h-2v-20Z"/>
-        </g>
-      </g>
-    </g>
-  </g>
-  <path id="Rectangle_4702" data-name="Rectangle 4702" class="cls-2" d="m0,0h100v100H0V0Z"/>
+  <circle id="Ellipse_629" data-name="Ellipse 629" class="cls-1" cx="50" cy="70" r="14"/>
+  <path id="Rectangle_4698" data-name="Rectangle 4698" class="cls-1" d="m41,28h18v18h-18v-18Z"/>
+  <path id="Rectangle_4699" data-name="Rectangle 4699" class="cls-2" d="m81,58h2v4h-2v-4Z"/>
+  <path id="Path_18992" data-name="Path 18992" class="cls-2" d="m81,91H19v-7h-2v9h66v-27h-2v25Z"/>
+  <path id="Rectangle_4700" data-name="Rectangle 4700" class="cls-2" d="m17,76h2v4h-2v-4Z"/>
+  <path id="Path_18993" data-name="Path 18993" class="cls-2" d="m80,27v2h7v16h-27v-16h16v-2h-9.69c4.98-3.48,6.19-10.33,2.71-15.31-3.48-4.98-10.33-6.19-15.31-2.71-1.61,1.13-2.9,2.67-3.71,4.46-2.51-5.53-9.03-7.97-14.55-5.46-5.53,2.51-7.97,9.03-5.46,14.55.81,1.79,2.1,3.33,3.71,4.46H11v20h6v25h2v-25h62v7h2v-7h6v-20h-9Zm-20-17.99c4.97,0,9,4.03,9,9s-4.03,9-9,9h-9v-9c0-4.97,4.03-8.99,9-9Zm-29,9c0-4.97,4.03-9,9-9s9,4.03,9,9v9h-9c-4.97,0-8.99-4.03-9-9Zm-14,27h-4v-16h27v16h-23Zm25,0v-16h16v16h-16Z"/>
+  <path id="Path_18994" data-name="Path 18994" class="cls-2" d="m55,55.88v2.12c6.63,2.76,9.76,10.37,7,17-2.76,6.63-10.37,9.76-17,7s-9.76-10.37-7-17c1.32-3.17,3.83-5.68,7-7v-2.12c-7.81,2.76-11.9,11.33-9.14,19.14,2.76,7.81,11.33,11.9,19.14,9.14,7.81-2.76,11.9-11.33,9.14-19.14-1.51-4.27-4.87-7.63-9.14-9.14Z"/>
+  <path id="Rectangle_4701" data-name="Rectangle 4701" class="cls-2" d="m49,52h2v20h-2v-20Z"/>
 </svg>
