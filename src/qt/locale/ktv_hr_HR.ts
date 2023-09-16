@@ -3616,7 +3616,7 @@ pitanja</translation>
         <translation>Provjerite je li vaš novčanik potpuno sinkroniziran i koristite li najnovije izdanje. </translation>
     </message>
     <message>
-        <source>You must have a balance of KTV with a minimum of 300 confirmations.</source>
+        <source>You must have a balance of KTV with a minimum of 100 confirmations.</source>
         <translation>Morate imati saldo KTV-a s barem 300 potvrda na blockchainu.</translation>
     </message>
     <message>

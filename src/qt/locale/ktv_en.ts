@@ -4514,7 +4514,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+1"/>
-        <source>You must have a balance of KTV with a minimum of 300 confirmations.</source>
+        <source>You must have a balance of KTV with a minimum of 100 confirmations.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

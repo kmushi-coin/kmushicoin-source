@@ -3660,8 +3660,8 @@ There was an error trying to save the address list to %1. Please try again.</tra
         <translation>Make sure your wallet is completely synchronized and you are using the latest release.</translation>
     </message>
     <message>
-        <source>You must have a balance of KTV with a minimum of 300 confirmations.</source>
-        <translation>You must have a balance of KTV with a minimum of 300 confirmations.</translation>
+        <source>You must have a balance of KTV with a minimum of 100 confirmations.</source>
+        <translation>You must have a balance of KTV with a minimum of 100 confirmations.</translation>
     </message>
     <message>
         <source>Your wallet must stay online and be unlocked for staking purposes.</source>

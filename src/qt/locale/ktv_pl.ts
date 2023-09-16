@@ -3588,7 +3588,7 @@ Wystąpił błąd podczas próby zapisania listy adresów w %1. Proszę spróbuj
         <translation>Upewnij się, że Twój portfel jest całkowicie zsynchronizowany i używasz najnowszej wersji.</translation>
     </message>
     <message>
-        <source>You must have a balance of KTV with a minimum of 300 confirmations.</source>
+        <source>You must have a balance of KTV with a minimum of 100 confirmations.</source>
         <translation>Musisz mieć saldo KTV z minimum 300 potwierdzeń.</translation>
     </message>
     <message>

@@ -103,7 +103,7 @@ SettingsFaqWidget::SettingsFaqWidget(KTVGUI* parent, ClientModel* _model) :
     QString stakeContent = formatFAQContent(
         formatFAQOrderedList(
             formatFAQListItem(tr("Make sure your wallet is completely synchronized and you are using the latest release.")) +
-            formatFAQListItem(tr("You must have a balance of KTV with a minimum of 300 confirmations.")) +
+            formatFAQListItem(tr("You must have a balance of KTV with a minimum of 100 confirmations.")) +
             formatFAQListItem(tr("Your wallet must stay online and be unlocked for staking purposes.")) +
             formatFAQListItem(tr("Once all those steps are followed staking should be enabled."))) +
         formatFAQParagraph(
