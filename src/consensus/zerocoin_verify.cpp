@@ -59,7 +59,7 @@ static bool CheckZerocoinSpend(const CTransactionRef _tx, CValidationState& stat
             }
             libzerocoin::ZerocoinParams* params = consensus.Zerocoin_Params(false);
             PublicCoinSpend publicSpend(params);
-            if (!ZPIVModule::parseCoinSpend(txin, tx, prevOut, publicSpend)){
+            if (!ZKTVModule::parseCoinSpend(txin, tx, prevOut, publicSpend)){
                 return state.DoS(100, error("%s: public zerocoin spend parse failed", __func__));
             }
             newSpend = publicSpend;
@@ -82,7 +82,7 @@ static bool CheckZerocoinSpend(const CTransactionRef _tx, CValidationState& stat
         if (isPublicSpend) {
             libzerocoin::ZerocoinParams* params = consensus.Zerocoin_Params(false);
             PublicCoinSpend ret(params);
-            if (!ZPIVModule::validateInput(txin, prevOut, tx, ret)){
+            if (!ZKTVModule::validateInput(txin, prevOut, tx, ret)){
                 return state.DoS(100, error("%s: public zerocoin spend did not verify", __func__));
             }
         }
@@ -262,7 +262,7 @@ bool ParseAndValidateZerocoinSpends(const Consensus::Params& consensus,
         if (isPublicSpend) {
             libzerocoin::ZerocoinParams* params = consensus.Zerocoin_Params(false);
             PublicCoinSpend publicSpend(params);
-            if (!ZPIVModule::ParseZerocoinPublicSpend(txIn, tx, state, publicSpend)) {
+            if (!ZKTVModule::ParseZerocoinPublicSpend(txIn, tx, state, publicSpend)) {
                 return false;
             }
             //queue for db write after the 'justcheck' section has concluded

@@ -91,14 +91,14 @@ SettingsFaqWidget::SettingsFaqWidget(KTVGUI* parent, ClientModel* _model) :
                 .arg("<a style='color: #ffcc08' href='https://cdn.tierravivaescarabajos.com/WHITE%20PAPER.pdf'>" + tr("https://cdn.tierravivaescarabajos.com/WHITE%20PAPER.pdf") + "</a>.")));
     ui->labelContent_Intro->setText(introContent);
 
-    QString unspendablePIVContent = formatFAQContent(
+    QString unspendableKTVContent = formatFAQContent(
         formatFAQParagraph(
             tr("Newly received KTV requires 6 confirmations on the network "
                "to become eligible for spending which can take ~6 minutes.")) +
         formatFAQParagraph(
             tr("Your KTV wallet also needs to be completely synchronized "
                "to see and spend balances on the network.")));
-    ui->labelContent_UnspendableKTV->setText(unspendablePIVContent);
+    ui->labelContent_UnspendableKTV->setText(unspendableKTVContent);
 
     QString stakeContent = formatFAQContent(
         formatFAQOrderedList(

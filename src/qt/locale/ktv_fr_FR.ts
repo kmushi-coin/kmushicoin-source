@@ -726,9 +726,9 @@ pour le staking</translation>
         <translation>Erreur lors du chargement des délégations: %1</translation>
     </message>
     <message>
-        <source>You can delegate your PIVs, letting a hot node (24/7 online node)
+        <source>You can delegate your KTVs, letting a hot node (24/7 online node)
 stake on your behalf, while you keep the keys securely offline.</source>
-        <translation>Vous pouvez déléguer vos PIVs et laissez un noeud à chaud (en ligne 24/7) faire du staking en votre nom, tout en conservant les clés privées hors ligne.</translation>
+        <translation>Vous pouvez déléguer vos KTVs et laissez un noeud à chaud (en ligne 24/7) faire du staking en votre nom, tout en conservant les clés privées hors ligne.</translation>
     </message>
     <message>
         <source>Enter owner address</source>
@@ -2968,11 +2968,11 @@ Voulez-vous continuer?
 </translation>
     </message>
     <message>
-        <source>Error generating address to shield PIVs</source>
+        <source>Error generating address to shield KTVs</source>
         <translation>Erreur lors de la génération de l'adresse pour protéger les KTV</translation>
     </message>
     <message>
-        <source>You don't have any transparent PIVs to shield.</source>
+        <source>You don't have any transparent KTVs to shield.</source>
         <translation>Vous n'avez aucun KTV transparent à convertir.</translation>
     </message>
     <message>
@@ -4534,8 +4534,8 @@ nouvelle sauvegarde sera créée.
         <translation>Envoi protégé vers</translation>
     </message>
     <message>
-        <source>Burned PIVs</source>
-        <translation>PIVs détruits</translation>
+        <source>Burned KTVs</source>
+        <translation>KTVs détruits</translation>
     </message>
     <message>
         <source>watch-only</source>

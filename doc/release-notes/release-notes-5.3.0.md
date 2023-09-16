@@ -508,7 +508,7 @@ The `autocombine` RPC command has been replaced ([PR #2248](https://github.com/k
     Mine blocks immediately to a specified address (before the RPC call returns)
     Arguments:
     1. nblocks          (numeric, required) How many blocks are generated immediately.
-    2. "address"        (string, required) The address to send the newly generated PIVs to.
+    2. "address"        (string, required) The address to send the newly generated KTVs to.
     Result:
     [ blockhashes ]     (array) hashes of blocks generated
     ```

@@ -101,7 +101,7 @@ public:
         SendToSelfShieldedAddress, // Shielded send to self
         SendToSelfShieldToTransparent, // Unshield coins to self
         SendToSelfShieldToShieldChangeAddress, // Changing coins from one shielded address to another inside the wallet.
-        SendToNobody // Burned PIVs, op_return output.
+        SendToNobody // Burned KTVs, op_return output.
     };
 
     /** Number of confirmation recommended for accepting a transaction */

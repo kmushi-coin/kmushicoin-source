@@ -384,8 +384,8 @@ for staking</translation>
         <translation>Passphrases do not match!</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PIVs from being stolen by malware infecting your computer.</source>
-        <translation>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PIVs from being stolen by malware infecting your computer.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your KTVs from being stolen by malware infecting your computer.</source>
+        <translation>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your KTVs from being stolen by malware infecting your computer.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -738,9 +738,9 @@ for staking</translation>
         <translation>Error loading delegations: %1</translation>
     </message>
     <message>
-        <source>You can delegate your PIVs, letting a hot node (24/7 online node)
+        <source>You can delegate your KTVs, letting a hot node (24/7 online node)
 stake on your behalf, while you keep the keys securely offline.</source>
-        <translation>You can delegate your PIVs, letting a hot node (24/7 online node)
+        <translation>You can delegate your KTVs, letting a hot node (24/7 online node)
 stake on your behalf, while you keep the keys securely offline.</translation>
     </message>
     <message>
@@ -3066,12 +3066,12 @@ Do you want to continue?
 </translation>
     </message>
     <message>
-        <source>Error generating address to shield PIVs</source>
-        <translation>Error generating address to shield PIVs</translation>
+        <source>Error generating address to shield KTVs</source>
+        <translation>Error generating address to shield KTVs</translation>
     </message>
     <message>
-        <source>You don't have any transparent PIVs to shield.</source>
-        <translation>You don't have any transparent PIVs to shield.</translation>
+        <source>You don't have any transparent KTVs to shield.</source>
+        <translation>You don't have any transparent KTVs to shield.</translation>
     </message>
     <message>
         <source>No contacts available, you can go to the contacts screen and add some there!</source>
@@ -4796,8 +4796,8 @@ backup will be created.
         <translation>Shielded send to</translation>
     </message>
     <message>
-        <source>Burned PIVs</source>
-        <translation>Burned PIVs</translation>
+        <source>Burned KTVs</source>
+        <translation>Burned KTVs</translation>
     </message>
     <message>
         <source>watch-only</source>

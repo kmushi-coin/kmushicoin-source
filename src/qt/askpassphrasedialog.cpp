@@ -354,7 +354,7 @@ void AskPassphraseDialog::warningMessage()
             "<qt>" +
             tr("%1 will close now to finish the encryption process. "
                "Remember that encrypting your wallet cannot fully protect "
-               "your PIVs from being stolen by malware infecting your computer.").arg(PACKAGE_NAME) +
+               "your KTVs from being stolen by malware infecting your computer.").arg(PACKAGE_NAME) +
             "<br><br><b>" +
             tr("IMPORTANT: Any previous backups you have made of your wallet file "
                "should be replaced with the newly generated, encrypted wallet file. "

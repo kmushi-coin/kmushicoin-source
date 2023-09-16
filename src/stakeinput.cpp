@@ -20,7 +20,7 @@ static bool HasStakeMinAgeOrDepth(int nHeight, uint32_t nTime, const CBlockIndex
     return true;
 }
 
-CKtvStake* CKtvStake::NewPivStake(const CTxIn& txin, int nHeight, uint32_t nTime)
+CKtvStake* CKtvStake::NewKtvStake(const CTxIn& txin, int nHeight, uint32_t nTime)
 {
     if (txin.IsZerocoinSpend()) {
         error("%s: unable to initialize CKtvStake from zerocoin spend", __func__);

@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 //
-#ifndef KTV_ZPIVMODULE_H
-#define KTV_ZPIVMODULE_H
+#ifndef KTV_ZKTVMODULE_H
+#define KTV_ZKTVMODULE_H
 
 #include "libzerocoin/bignum.h"
 #include "libzerocoin/Denominations.h"
@@ -63,7 +63,7 @@ public:
 
 class CValidationState;
 
-namespace ZPIVModule {
+namespace ZKTVModule {
     CDataStream ScriptSigToSerializedSpend(const CScript& scriptSig);
     PublicCoinSpend parseCoinSpend(const CTxIn &in);
     bool parseCoinSpend(const CTxIn &in, const CTransaction& tx, const CTxOut &prevOut, PublicCoinSpend& publicCoinSpend);
@@ -81,4 +81,4 @@ namespace ZPIVModule {
 };
 
 
-#endif //KTV_ZPIVMODULE_H
+#endif //KTV_ZKTVMODULE_H

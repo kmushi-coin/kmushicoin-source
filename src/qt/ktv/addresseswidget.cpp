@@ -187,15 +187,15 @@ void AddressesWidget::onStoreContactClicked()
         QString address = ui->lineEditAddress->text();
 
         bool isStakingAddress = false;
-        auto pivAdd = Standard::DecodeDestination(address.toUtf8().constData(), isStakingAddress);
+        auto ktvAdd = Standard::DecodeDestination(address.toUtf8().constData(), isStakingAddress);
 
-        if (!Standard::IsValidDestination(pivAdd)) {
+        if (!Standard::IsValidDestination(ktvAdd)) {
             setCssEditLine(ui->lineEditAddress, false, true);
             inform(tr("Invalid Contact Address"));
             return;
         }
 
-        if (walletModel->isMine(pivAdd)) {
+        if (walletModel->isMine(ktvAdd)) {
             setCssEditLine(ui->lineEditAddress, false, true);
             inform(tr("Cannot store your own address as contact"));
             return;
@@ -208,8 +208,8 @@ void AddressesWidget::onStoreContactClicked()
             return;
         }
 
-        bool isShielded = walletModel->IsShieldedDestination(pivAdd);
-        if (walletModel->updateAddressBookLabels(pivAdd, label.toUtf8().constData(),
+        bool isShielded = walletModel->IsShieldedDestination(ktvAdd);
+        if (walletModel->updateAddressBookLabels(ktvAdd, label.toUtf8().constData(),
                          isShielded ? AddressBook::AddressBookPurpose::SHIELDED_SEND :
                          isStakingAddress ? AddressBook::AddressBookPurpose::COLD_STAKING_SEND : AddressBook::AddressBookPurpose::SEND)
                 ) {
