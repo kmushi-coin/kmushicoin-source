@@ -3280,8 +3280,8 @@ Ha habido un error al tratar de guardar la libreta de direcciones en %1. Por fav
         <translation>Kmushicoin es una moneda híbrida POS/MN que existe con el único objetivo de cuidar al medio ambiente. La misión declarada de Kmushicoin es ser una criptomoneda de código abierto, escalable, que pone el cuidado del medio ambiente por encima de todo. Kmushicoin fue creada por la empresa ambiental Tierra Viva en el año 2019, desde entonces venimos trabajando diario sin descanso para poder reforestar miles de hectareas dando beneficio a los agricultores</translation>
     </message>
     <message>
-        <source>We strive to educate the community about Kmushicoin and cryptocurrencies in Colombia, demonstrating the advances of blockchain with the environment, benefits by obtaining the only organic beetle compost in the world.  For more information read the Kmushicoin Whitepaper located here</source>
-        <translation>Nos esforzamos por educar a la comunidad sobre Kmushicoin y las criptomonedas en Colombia, demostrando los avances de blockchain con el medio ambiente, beneficios al obtener el único abono orgánico de escarabajos en el mundo.  Para mayor información lea el Whitepaper de Kmushicoin ubicado aquí</translation>
+        <source>We strive to educate the community about Kmushicoin and cryptocurrencies in Colombia, demonstrating the advances of blockchain with the environment, benefits by obtaining the only organic beetle compost in the world.  For more information read the Kmushicoin Whitepaper located here %1 </source>
+        <translation>Nos esforzamos por educar a la comunidad sobre Kmushicoin y las criptomonedas en Colombia, demostrando los avances de blockchain con el medio ambiente, beneficios al obtener el único abono orgánico de escarabajos en el mundo.  Para mayor información lea el Whitepaper de Kmushicoin ubicado aquí %1 </translation>
     </message>
     <message>
         <source>Newly received KTV requires 6 confirmations on the network to become eligible for spending which can take ~6 minutes.</source>
