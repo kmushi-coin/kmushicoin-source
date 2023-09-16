@@ -5,7 +5,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "util/system.h"
-#include "test/test_pivx.h"
+#include "test/test_ktv.h"
 
 #include <string>
 #include <vector>

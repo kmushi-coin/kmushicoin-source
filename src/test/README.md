@@ -5,7 +5,7 @@ and tests weren't explicitly disabled.
 
 After configuring, they can be run with `make check`.
 
-To run the ktvd tests manually, launch `src/test/test_pivx`. To recompile
+To run the ktvd tests manually, launch `src/test/test_ktv`. To recompile
 after a test file was modified, run `make` and then run the test again. If you
 modify a non-test file, use `make -C src/test` to recompile only what's needed
 to run the ktvd tests.
@@ -14,23 +14,23 @@ To add more ktvd tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
 .cpp files in the `test/` directory or add new .cpp files that
 implement new BOOST_FIXTURE_TEST_SUITE sections.
 
-To run the ktv-qt tests manually, launch `src/qt/test/test_pivx-qt`
+To run the ktv-qt tests manually, launch `src/qt/test/test_ktv-qt`
 
 To add more ktv-qt tests, add them to the `src/qt/test/` directory and
 the `src/qt/test/test_main.cpp` file.
 
 ### Running individual tests
 
-test_pivx has some built-in command-line arguments; for
+test_ktv has some built-in command-line arguments; for
 example, to run just the getarg_tests verbosely:
 
-    test_pivx --log_level=all --run_test=getarg_tests
+    test_ktv --log_level=all --run_test=getarg_tests
 
 ... or to run just the doubledash test:
 
-    test_pivx --run_test=getarg_tests/doubledash
+    test_ktv --run_test=getarg_tests/doubledash
 
-Run `test_pivx --help` for the full list.
+Run `test_ktv --help` for the full list.
 
 ### Note on adding test cases
 
@@ -40,9 +40,9 @@ sense to simply use this framework rather than require developers to
 configure some other framework (we want as few impediments to creating
 unit tests as possible).
 
-The build system is setup to compile an executable called `test_pivx`
+The build system is setup to compile an executable called `test_ktv`
 that runs all of the unit tests.  The main source file is called
-test_pivx.cpp, which simply includes other files that contain the
+test_ktv.cpp, which simply includes other files that contain the
 actual unit tests (outside of a couple required preprocessor
 directives). To add a new unit test file to our test suite you need
 to add the file to `src/Makefile.test.include`. The pattern is to

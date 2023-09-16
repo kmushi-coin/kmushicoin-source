@@ -453,8 +453,8 @@ bool CMasternodeBroadcast::CheckAndUpdate(int& nDos, int nChainHeight)
     }
 
     if (Params().NetworkIDString() == CBaseChainParams::MAIN) {
-        if (addr.GetPort() != 8233) return false;
-    } else if (addr.GetPort() == 8233)
+        if (addr.GetPort() != 36599) return false;
+    } else if (addr.GetPort() == 36599)
         return false;
 
     // incorrect ping or its sigTime

@@ -11,7 +11,7 @@
 #include "checkpoints.h"
 
 #include "uint256.h"
-#include "test_pivx.h"
+#include "test_ktv.h"
 
 #include <boost/test/unit_test.hpp>
 

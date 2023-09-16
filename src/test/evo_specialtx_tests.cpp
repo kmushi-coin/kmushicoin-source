@@ -3,7 +3,7 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or https://www.opensource.org/licenses/mit-license.php.
 
-#include "test/test_pivx.h"
+#include "test/test_ktv.h"
 #include "primitives/transaction.h"
 #include "evo/providertx.h"
 #include "evo/specialtx.h"
@@ -36,7 +36,7 @@ static ProRegPL GetRandomProRegPayload()
     ProRegPL pl;
     pl.collateralOutpoint.hash = GetRandHash();
     pl.collateralOutpoint.n = InsecureRandBits(2);
-    BOOST_CHECK(Lookup("57.12.210.11:8233", pl.addr, Params().GetDefaultPort(), false));
+    BOOST_CHECK(Lookup("57.12.210.11:36599", pl.addr, Params().GetDefaultPort(), false));
     pl.keyIDOwner = GetRandomKeyID();
     pl.keyIDOperator = GetRandomKeyID();
     pl.keyIDVoting = GetRandomKeyID();
@@ -52,7 +52,7 @@ static ProUpServPL GetRandomProUpServPayload()
 {
     ProUpServPL pl;
     pl.proTxHash = GetRandHash();
-    BOOST_CHECK(Lookup("127.0.0.1:8233", pl.addr, Params().GetDefaultPort(), false));
+    BOOST_CHECK(Lookup("127.0.0.1:36599", pl.addr, Params().GetDefaultPort(), false));
     pl.scriptOperatorPayout = GetRandomScript();
     pl.inputsHash = GetRandHash();
     pl.vchSig = InsecureRandBytes(63);
