@@ -118,7 +118,7 @@ SettingsFaqWidget::SettingsFaqWidget(KTVGUI* parent, ClientModel* _model) :
     QString supportContent = formatFAQContent(
         formatFAQParagraph(
             tr("We have support channels in most of our official chat groups, for example %1  if you prefer to submit a ticket, you can do so at soporte@kmushicoin.co")
-                .arg("<a style='color: #ffcc08' href='https://discord.gg/c26QuZw'>" + tr("#support in our Discord") + "</a>.")));
+                .arg("<a style='color: #ffcc08' href='https://t.me/Kmushicoin_es'>" + tr("#support in our Telegram") + "</a>.")));
     ui->labelContent_Support->setText(supportContent);
 
     QString masternodeContent = formatFAQContent(

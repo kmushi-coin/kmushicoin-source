@@ -4539,7 +4539,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+1"/>
-        <source>#support in our Discord</source>
+        <source>#support in our Telegram</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

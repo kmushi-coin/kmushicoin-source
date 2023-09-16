@@ -3680,8 +3680,8 @@ There was an error trying to save the address list to %1. Please try again.</tra
         <translation>We have support channels in most of our official chat groups, for example %1</translation>
     </message>
     <message>
-        <source>#support in our Discord</source>
-        <translation>#support in our Discord</translation>
+        <source>#support in our Telegram</source>
+        <translation>#support in our Telegram</translation>
     </message>
     <message>
         <source>%1 per single Masternode instance</source>

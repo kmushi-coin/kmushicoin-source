@@ -3608,8 +3608,8 @@ Wystąpił błąd podczas próby zapisania listy adresów w %1. Proszę spróbuj
         <translation>Mamy kanały wsparcia w większości naszych oficjalnych grup czatowych, na przykład %1</translation>
     </message>
     <message>
-        <source>#support in our Discord</source>
-        <translation>#wsparcie na naszym Discordzie</translation>
+        <source>#support in our Telegram</source>
+        <translation>#wsparcie na naszym Telegram</translation>
     </message>
     <message>
         <source>%1 per single Masternode instance</source>

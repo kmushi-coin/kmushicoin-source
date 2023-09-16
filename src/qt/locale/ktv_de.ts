@@ -3567,8 +3567,8 @@ Es gab ein Problem bei dem Versuch die Adressen unter %1 zu speichern. Bitte ver
         <translation>Hier können Sie mehr lesen</translation>
     </message>
     <message>
-        <source>#support in our Discord</source>
-        <translation>#Unterstützung in unserem Discord</translation>
+        <source>#support in our Telegram</source>
+        <translation>#Unterstützung in unserem Telegram</translation>
     </message>
     <message>
         <source>%1 per single Masternode instance</source>

@@ -3636,8 +3636,8 @@ pitanja</translation>
         <translation>Imamo kanale za podršku u većini naših službenih chat grupa, na primjer %1</translation>
     </message>
     <message>
-        <source>#support in our Discord</source>
-        <translation>#support na našem Discordu</translation>
+        <source>#support in our Telegram</source>
+        <translation>#support na našem Telegram</translation>
     </message>
     <message>
         <source>A decentralized budgeting system (Treasury)</source>
