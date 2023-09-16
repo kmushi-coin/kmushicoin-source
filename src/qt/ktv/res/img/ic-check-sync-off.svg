@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #cea446;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_8889" data-name="Group 8889">
+    <g id="Group_8887" data-name="Group 8887">
+      <path id="Path_18905" data-name="Path 18905" class="cls-1" d="m19.61,16.78c.91-1.43,1.39-3.09,1.39-4.78h-2c0,1.16-.29,2.31-.84,3.33l1.45,1.45Z"/>
+      <path id="Path_18906" data-name="Path 18906" class="cls-1" d="m15.33,18.16c-3.13,1.7-7.04.77-9.07-2.16h2.74v-2H3v6h2v-2.37c2.84,3.57,7.92,4.43,11.78,1.98l-1.45-1.45Z"/>
+    </g>
+    <g id="Group_8888" data-name="Group 8888">
+      <path id="Path_18907" data-name="Path 18907" class="cls-1" d="m8.67,5.84c3.13-1.69,7.04-.77,9.07,2.16h-2.75v2h6v-6h-2v2.37c-2.85-3.57-7.92-4.43-11.78-1.98l1.45,1.45Z"/>
+      <path id="Path_18908" data-name="Path 18908" class="cls-1" d="m4.39,7.22c-.91,1.43-1.39,3.09-1.39,4.78h2c0-1.16.29-2.31.84-3.33l-1.45-1.45Z"/>
+    </g>
+  </g>
+  <g id="Group_8890" data-name="Group 8890">
+    <path id="Rectangle_4442" data-name="Rectangle 4442" class="cls-1" d="m3.29,4.71l1.41-1.41,16,16-1.41,1.41L3.29,4.71Z"/>
+  </g>
+  <path id="Rectangle_4443" data-name="Rectangle 4443" class="cls-2" d="m0,0h24v24H0V0Z"/>
+</svg>

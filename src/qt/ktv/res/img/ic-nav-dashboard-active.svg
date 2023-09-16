@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_46" data-name="Capa 46" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f6c02c;
+      }
+    </style>
+  </defs>
+  <g id="Dashboard">
+    <g id="Group">
+      <g id="Group_8812" data-name="Group 8812">
+        <path id="Path_18866" data-name="Path 18866" class="cls-1" d="m10,8H0V0h10v8ZM2,6h6V2H2v4Z"/>
+      </g>
+      <g id="Group_8813" data-name="Group 8813">
+        <path id="Path_18867" data-name="Path 18867" class="cls-1" d="m22,22h-10V0h10v22Zm-8-2h6V2h-6v18Z"/>
+      </g>
+      <g id="Group_8814" data-name="Group 8814">
+        <path id="Path_18868" data-name="Path 18868" class="cls-1" d="m10,22H0v-12h10v12Zm-8-2h6v-8H2v8Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
