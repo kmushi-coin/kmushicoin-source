@@ -753,7 +753,7 @@ Haga Stake en tu nombre, manteniendo las llaves en un lugar seguro fuera de lín
     </message>
     <message>
         <source>Create Cold Staking Address</source>
-        <translation>Crear direccion de apuesta en frio</translation>
+        <translation>Crear direccion de Cold Stake</translation>
     </message>
     <message>
         <source>Creates an address to receive delegated coins
@@ -766,7 +766,7 @@ and stake them on their owner's behalf.</source>
     </message>
     <message>
         <source>List your own cold staking addresses.</source>
-        <translation>Enumere sus propias direcciones de apuesta en frío.</translation>
+        <translation>Enumere sus propias direcciones de Cold Stake.</translation>
     </message>
     <message>
         <source>Invalid entry</source>
@@ -1584,7 +1584,7 @@ MAESTROS</translation>
     <message>
         <source>COLD
 STAKING</source>
-        <translation>APUESTA
+        <translation>Stake
 EN FRIO</translation>
     </message>
     <message>
@@ -3280,12 +3280,16 @@ Ha habido un error al tratar de guardar la libreta de direcciones en %1. Por fav
         <translation>Kmushicoin es una moneda híbrida POS/MN que existe con el único objetivo de cuidar al medio ambiente. La misión declarada de Kmushicoin es ser una criptomoneda de código abierto, escalable, que pone el cuidado del medio ambiente por encima de todo. Kmushicoin fue creada por la empresa ambiental Tierra Viva en el año 2019, desde entonces venimos trabajando diario sin descanso para poder reforestar miles de hectareas dando beneficio a los agricultores</translation>
     </message>
     <message>
-        <source>Newly received KTV requires 6 confirmations on the network to become eligible for spending which can take ~6 minutes.</source>
-        <translation>El KTV recién recibido requiere 6 confirmaciones en la red para poder ser gastado, lo que puede llevar unos 6 minutos.</translation>
+        <source>We strive to educate the community about Kmushicoin and cryptocurrencies in Colombia, demonstrating the advances of blockchain with the environment, benefits by obtaining the only organic beetle compost in the world.  For more information read the Kmushicoin Whitepaper located here</source>
+        <translation>Nos esforzamos por educar a la comunidad sobre Kmushicoin y las criptomonedas en Colombia, demostrando los avances de blockchain con el medio ambiente, beneficios al obtener el único abono orgánico de escarabajos en el mundo.  Para mayor información lea el Whitepaper de Kmushicoin ubicado aquí</translation>
     </message>
     <message>
         <source>Newly received KTV requires 6 confirmations on the network to become eligible for spending which can take ~6 minutes.</source>
         <translation>El KTV recién recibido requiere 6 confirmaciones en la red para poder ser gastado, lo que puede llevar unos 6 minutos.</translation>
+    </message>
+    <message>
+        <source>Your KTV wallet also needs to be completely synchronized to see and spend balances on the network.</source>
+        <translation>Tu monedero KTV también debe estar completamente sincronizado para ver y gastar saldos en la red.</translation>
     </message>
     <message>
         <source>2) Why are my KTV unspendable?</source>
@@ -3344,8 +3348,8 @@ Ha habido un error al tratar de guardar la libreta de direcciones en %1. Por fav
         <translation>Puede ver el estado del staking en el monedero pasando el ratón por encima del icono del paquete en la fila de la parte superior izquierda de la interfaz del monedero. El paquete se iluminará y dirá "Staking Enabled" para indicar que está haciendo staking. Usando la interfaz de línea de comandos (%1); el comando %2 confirmará que el staking está activo.</translation>
     </message>
     <message>
-        <source>We have support channels in most of our official chat groups, for example %1</source>
-        <translation>Disponemos de canales de asistencia en la mayoría de nuestros grupos de chat oficiales, por ejemplo %1</translation>
+        <source>We have support channels in most of our official chat groups, for example %1  if you prefer to submit a ticket, you can do so at soporte@kmushicoin.co</source>
+        <translation>Disponemos de canales de soporte en la mayoría de nuestros grupos de chat oficiales, por ejemplo %1  Si prefieres enviar un ticket, puedes hacerlo en soporte@kmushicoin.co</translation>
     </message>
     <message>
         <source>#support in our Telegram</source>
@@ -4361,15 +4365,15 @@ una nueva copia de seguridad.
     </message>
     <message>
         <source>%1 Stake</source>
-        <translation>%1 Apuesta</translation>
+        <translation>%1 Stake</translation>
     </message>
     <message>
         <source>z%1 Stake</source>
-        <translation>z%1 Apuesta</translation>
+        <translation>z%1 Stake</translation>
     </message>
     <message>
         <source>%1 Cold Stake</source>
-        <translation>%1 apuesta en frio</translation>
+        <translation>%1 Cold Stake</translation>
     </message>
     <message>
         <source>%1 Stake on behalf of</source>
