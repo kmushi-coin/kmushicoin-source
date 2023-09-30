@@ -1,25 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" id="ic_empty_contacts" width="100" height="100" viewBox="0 0 100 100">
-    <defs>
-        <style type="text/css">
-            .cls-1{fill:#d6d6d6}.cls-2{fill:#666}.cls-3{fill:none}
-        </style>
-    </defs>
-    <g id="Group_9027" data-name="Group 9027">
-        <g id="Group_9025" data-name="Group 9025">
-            <path id="Rectangle_4676" d="M0 0h11v84H0z" class="cls-1" data-name="Rectangle 4676" transform="translate(18 8)"/>
-            <path id="Rectangle_4677" d="M0 0h5v12H0z" class="cls-1" data-name="Rectangle 4677" transform="translate(81 17)"/>
-            <path id="Rectangle_4678" d="M0 0h5v12H0z" class="cls-1" data-name="Rectangle 4678" transform="translate(81 38)"/>
-            <path id="Rectangle_4679" d="M0 0h5v12H0z" class="cls-1" data-name="Rectangle 4679" transform="translate(81 59)"/>
-            <circle id="Ellipse_625" cx="9" cy="9" r="9" class="cls-1" data-name="Ellipse 625" transform="translate(46 27)"/>
-            <path id="Path_18981" d="M70.581 64c-3.087-8.828-7.13-15-15.331-15S42.73 55.172 39.5 64z" class="cls-1" data-name="Path 18981"/>
-        </g>
-        <g id="Group_9026" data-name="Group 9026">
-            <path id="Rectangle_4680" d="M0 0h4.001v2H0z" class="cls-2" data-name="Rectangle 4680" transform="translate(64 7)"/>
-            <path id="Rectangle_4681" d="M0 0h2v4H0z" class="cls-2" data-name="Rectangle 4681" transform="translate(28 76)"/>
-            <path id="Path_18982" d="M87 30V16h-5V7H72v2h8v82H30v-7h-2v7h-9V9h9v63h2V9h30V7H17v86h65V72h5V58h-5v-7h5V37h-5v-7zm-5-12h3v10h-3zm3 42v10h-3V60zm0-21v10h-3V39z" class="cls-2" data-name="Path 18982"/>
-            <path id="Path_18983" d="M45 36a10 10 0 1 0 10-10 10.011 10.011 0 0 0-10 10zm18 0a8 8 0 1 1-8-8 8.009 8.009 0 0 1 8 8z" class="cls-2" data-name="Path 18983"/>
-            <path id="Path_18984" d="M55.25 48c-9.716 0-14.022 8.367-16.687 15.656L38.071 65H71.99l-.465-1.33C68.815 55.921 64.763 48 55.25 48zm-14.3 15c3.577-9.094 7.9-13 14.3-13 6.362 0 10.45 3.788 13.906 13z" class="cls-2" data-name="Path 18984"/>
-        </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_27" data-name="Capa 27" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffef00;
+      }
+
+      .cls-2 {
+        fill: #775c15;
+      }
+    </style>
+  </defs>
+  <g id="Group_9057" data-name="Group 9057">
+    <g id="Group_9055" data-name="Group 9055">
+      <path id="Rectangle_4710" data-name="Rectangle 4710" class="cls-1" d="m18,8h11v84h-11V8Z"/>
+      <path id="Rectangle_4711" data-name="Rectangle 4711" class="cls-1" d="m81,17h5v12h-5v-12Z"/>
+      <path id="Rectangle_4712" data-name="Rectangle 4712" class="cls-1" d="m81,38h5v12h-5v-12Z"/>
+      <path id="Rectangle_4713" data-name="Rectangle 4713" class="cls-1" d="m81,59h5v12h-5v-12Z"/>
+      <circle id="Ellipse_642" data-name="Ellipse 642" class="cls-1" cx="55" cy="36" r="9"/>
+      <path id="Path_19002" data-name="Path 19002" class="cls-1" d="m70.58,64c-3.09-8.83-7.13-15-15.33-15s-12.52,6.17-15.75,15h31.08Z"/>
     </g>
-    <path id="Rectangle_4682" d="M0 0h100v100H0z" class="cls-3" data-name="Rectangle 4682"/>
+    <g id="Group_9056" data-name="Group 9056">
+      <path id="Rectangle_4714" data-name="Rectangle 4714" class="cls-2" d="m64,7h4v2h-4v-2Z"/>
+      <path id="Rectangle_4715" data-name="Rectangle 4715" class="cls-2" d="m28,76h2v4h-2v-4Z"/>
+      <path id="Path_19003" data-name="Path 19003" class="cls-2" d="m87,30v-14h-5V7h-10v2h8v82H30v-7h-2v7h-9V9h9v63h2V9h30v-2H17v86h65v-21h5v-14h-5v-7h5v-14h-5v-7h5Zm-5-12h3v10h-3v-10Zm3,42v10h-3v-10h3Zm0-21v10h-3v-10h3Z"/>
+      <path id="Path_19004" data-name="Path 19004" class="cls-2" d="m45,36c0,5.52,4.48,10,10,10s10-4.48,10-10-4.48-10-10-10c-5.52,0-9.99,4.48-10,10Zm18,0c0,4.42-3.58,8-8,8s-8-3.58-8-8,3.58-8,8-8c4.42,0,8,3.58,8,8Z"/>
+      <path id="Path_19005" data-name="Path 19005" class="cls-2" d="m55.25,48c-9.72,0-14.02,8.37-16.69,15.66l-.49,1.34h33.92l-.46-1.33c-2.71-7.75-6.76-15.67-16.28-15.67Zm-14.3,15c3.58-9.09,7.9-13,14.3-13s10.45,3.79,13.91,13h-28.21Z"/>
+    </g>
+  </g>
 </svg>
