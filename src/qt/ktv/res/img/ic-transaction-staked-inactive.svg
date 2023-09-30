@@ -1,9 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" id="ic-transaction-staked" width="24" height="24" viewBox="0 0 24 24">
-    <defs>
-        <style type="text/css">
-            .cls-1{fill:#B6B6B6}.cls-2{fill:none}
-        </style>
-    </defs>
-    <path id="Path_18914" d="M18 6V4.854a3 3 0 0 0-5.964-.3L12 4.586l-.033-.033A3 3 0 0 0 6 5v1H2v6h2v10h16V12h2V6zm-4-.586V5a1 1 0 0 1 2 0v1h-2.586zM13 8v8h-2V8zM8 5a1 1 0 0 1 2 0v.414l.586.586H8zM4 8h5v2H4zm14 12H6v-8h3v6h6v-6h3zm2-10h-5V8h5z" class="cls-1" data-name="Path 18914"/>
-    <path id="Rectangle_4527" d="M0 0h24v24H0z" class="cls-2" data-name="Rectangle 4527"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <path id="Path_18914" d="M18,6L18,4.854C17.925,3.263 16.596,1.995 15.003,1.995C13.524,1.995 12.254,3.09 12.036,4.554L12,4.586L11.967,4.553C11.748,3.09 10.479,1.997 9,1.997C7.354,1.997 6,3.351 6,4.997C6,4.998 6,6 6,6L2,6L2,12L4,12L4,22L20,22L20,12L22,12L22,6L18,6ZM14,5.414L14,5C14,4.451 14.451,4 15,4C15.549,4 16,4.451 16,5L16,6L13.414,6L14,5.414ZM13,8L13,16L11,16L11,8L13,8ZM8,5C8,4.451 8.451,4 9,4C9.549,4 10,4.451 10,5L10,5.414L10.586,6L8,6L8,5ZM4,8L9,8L9,10L4,10L4,8ZM18,20L6,20L6,12L9,12L9,18L15,18L15,12L18,12L18,20ZM20,10L15,10L15,8L20,8L20,10Z" style="fill:rgb(182,182,182);fill-rule:nonzero;"/>
 </svg>
