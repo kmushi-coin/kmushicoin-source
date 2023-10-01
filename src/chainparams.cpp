@@ -127,7 +127,7 @@ public:
         consensus.nFutureTimeDriftPoW = 7200;
         consensus.nFutureTimeDriftPoS = 180;
         consensus.nMaxMoneyOut = 21000000 * COIN;
-        consensus.nMNCollateralAmt = 500 * COIN;
+        consensus.nMNCollateralAmt = 1200 * COIN;
         consensus.nPoolMaxTransactions = 3;
         consensus.nProposalEstablishmentTime = 60 * 60 * 24; // must be at least a day old to make it into a budget
         consensus.nStakeMinAge = 60 * 60;
@@ -182,7 +182,7 @@ public:
         consensus.vUpgrades[Consensus::UPGRADE_ZC_PUBLIC].nActivationHeight = 99999999;
         consensus.vUpgrades[Consensus::UPGRADE_V3_4].nActivationHeight = 210;
         consensus.vUpgrades[Consensus::UPGRADE_V4_0].nActivationHeight = 210;
-        consensus.vUpgrades[Consensus::UPGRADE_V5_0].nActivationHeight = 630000;
+        consensus.vUpgrades[Consensus::UPGRADE_V5_0].nActivationHeight = 27100;
         consensus.vUpgrades[Consensus::UPGRADE_V5_2].nActivationHeight = 99999999;
         consensus.vUpgrades[Consensus::UPGRADE_V5_3].nActivationHeight = 99999999;
         consensus.vUpgrades[Consensus::UPGRADE_V6_0].nActivationHeight =
