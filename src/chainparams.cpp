@@ -127,7 +127,7 @@ public:
         consensus.nFutureTimeDriftPoW = 7200;
         consensus.nFutureTimeDriftPoS = 180;
         consensus.nMaxMoneyOut = 21000000 * COIN;
-        consensus.nMNCollateralAmt = 1200 * COIN;
+        consensus.nMNCollateralAmt = 800 * COIN;
         consensus.nPoolMaxTransactions = 3;
         consensus.nProposalEstablishmentTime = 60 * 60 * 24; // must be at least a day old to make it into a budget
         consensus.nStakeMinAge = 60 * 60;
