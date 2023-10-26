@@ -1,30 +1,3 @@
-# The test build matrix (stage: test) is constructed to test a wide range of
-# configurations, rather than a single pass/fail. This helps to catch build
-# failures and logic errors that present on platforms other than the ones the
-# author has tested.
-#
-# Some builders use the dependency-generator in `./depends`, rather than using
-# apt-get to install build dependencies. This guarantees that the tester is
-# using the same versions as Gitian, so the build results are nearly identical
-# to what would be found in a final release.
-#
-# In order to avoid rebuilding all dependencies for each build, the binaries
-# are cached and re-used when possible. Changes in the dependency-generator
-# will trigger cache-invalidation and rebuilds as necessary.
-#
-# These caches can be manually removed if necessary. This is one of the very
-# few manual operations that is possible with Travis, and it can be done by a
-# PIVX GitHub member via the Travis web interface [0].
-#
-# Travis CI uploads the cache after the script phase of the build [1].
-# However, the build is terminated without saving the chache if it takes over
-# 50 minutes [2]. Thus, if we spent too much time in early build stages, fail
-# with an error and save the cache.
-#
-# [0] https://travis-ci.org/pivx-project/pivx/caches
-# [1] https://docs.travis-ci.com/user/caching/#build-phases
-# [2] https://docs.travis-ci.com/user/customizing-the-build#build-timeouts
-
 dist: xenial
 os: linux
 language: minimal
@@ -34,7 +7,7 @@ cache:
     - $TRAVIS_BUILD_DIR/depends/built
     - $TRAVIS_BUILD_DIR/depends/sdk-sources
     - $HOME/.ccache
-    - $HOME/.pivx-params
+    - $HOME/.ktv-params
 stages:
   - lint
   - cmake
@@ -52,7 +25,7 @@ env:
     - CCACHE_TEMPDIR=/tmp/.ccache-temp
     - CCACHE_COMPRESS=1
     - CCACHE_DIR=$HOME/.ccache
-    - PARAMS_DIR=$HOME/.pivx-params
+    - PARAMS_DIR=$HOME/.ktv-params
     - BASE_OUTDIR=$TRAVIS_BUILD_DIR/out
     - SDK_URL=https://bitcoincore.org/depends-sources/sdks
     - WINEDEBUG=fixme-all
@@ -79,42 +52,6 @@ jobs:
     - stage: cmake
   fast_finish: true
   include:
-
-    - stage: lint
-      name: 'lint'
-      env:
-      cache: false
-      language: python
-      python: '3.5' # Oldest supported version according to doc/dependencies.md
-      install:
-        - set -o errexit; source .travis/lint_04_install.sh
-      before_script:
-        - set -o errexit; source .travis/lint_05_before_script.sh
-      script:
-        - set -o errexit; source .travis/lint_06_script.sh
-
-    - stage: test
-      name: 'ARM 32-bit  [GOAL: install]  [no unit or functional tests]'
-      env: >-
-        HOST=arm-linux-gnueabihf
-        PACKAGES="python3 g++-arm-linux-gnueabihf"
-        RUN_UNIT_TESTS=false
-        RUN_FUNCTIONAL_TESTS=false
-        GOAL="install"
-        # -Wno-psabi is to disable ABI warnings: "note: parameter passing for argument of type ... changed in GCC 7.1"
-        # This could be removed once the ABI change warning does not show up by default
-        BITCOIN_CONFIG="--with-gui=qt5 --enable-glibc-back-compat --enable-reduce-exports --disable-online-rust CXXFLAGS=-Wno-psabi"
-
-    - stage: test
-      name: 'ARM 64-bit  [GOAL:install] [no unit or functional tests]'
-      env: >-
-        HOST=aarch64-linux-gnu
-        PACKAGES="python3 g++-aarch64-linux-gnu"
-        RUN_UNIT_TESTS=false
-        RUN_FUNCTIONAL_TESTS=false
-        GOAL="install"
-        BITCOIN_CONFIG="--with-gui=qt5 --enable-glibc-back-compat --enable-reduce-exports --disable-online-rust"
-
     - stage: test
       name: 'Win64  [GOAL: deploy] [no functional tests]'
       env: >-
@@ -123,107 +60,6 @@ jobs:
         RUN_FUNCTIONAL_TESTS=false
         GOAL="deploy"
         BITCOIN_CONFIG="--with-gui=auto --enable-reduce-exports --disable-online-rust --with-params-dir=$PARAMS_DIR"
-
-    - stage: test
-      name: '32-bit + dash  [GOAL: install]'
-      env: >-
-        HOST=i686-pc-linux-gnu
-        PACKAGES="g++-multilib python3-zmq"
-        GOAL="install"
-        BITCOIN_CONFIG="--enable-zmq --with-gui=qt5 --enable-glibc-back-compat --enable-reduce-exports --disable-online-rust --with-params-dir=$PARAMS_DIR LDFLAGS=-static-libstdc++"
-        CONFIG_SHELL="/bin/dash"
-        BUILD_TIMEOUT=600
-
-    - stage: test
-      name: 'x86_64 Linux  [GOAL: install]  [bionic]  [uses qt5 dev package instead of depends Qt to speed up build and avoid timeout]'
-      env: >-
-        HOST=x86_64-unknown-linux-gnu
-        PACKAGES="python3-zmq qtbase5-dev qttools5-dev-tools libqt5svg5-dev libqt5charts5-dev libqrencode-dev protobuf-compiler libdbus-1-dev libharfbuzz-dev libprotobuf-dev"
-        DEP_OPTS="NO_QT=1 NO_UPNP=1 DEBUG=1 ALLOW_HOST_PACKAGES=1"
-        RUN_UNIT_TESTS=false
-        RUN_FUNCTIONAL_TESTS=true
-        #TEST_RUNNER_EXTRA="--coverage --extended"  # Run extended tests so that coverage does not fail, but exclude the very slow dbcrash
-        GOAL="install"
-        BITCOIN_CONFIG="--enable-zmq --with-gui=qt5 --enable-glibc-back-compat --enable-reduce-exports --disable-online-rust --with-params-dir=$PARAMS_DIR"
-        BUILD_TIMEOUT=540
-
-    - stage: test
-      name: 'x86_64 Linux  [GOAL: install]  [bionic]  [only unit tests]'
-      env: >-
-        HOST=x86_64-unknown-linux-gnu
-        PACKAGES="python3-zmq qtbase5-dev qttools5-dev-tools libqt5svg5-dev libqt5charts5-dev libqrencode-dev protobuf-compiler libdbus-1-dev libharfbuzz-dev libprotobuf-dev"
-        DEP_OPTS="NO_QT=1 NO_UPNP=1 DEBUG=1 ALLOW_HOST_PACKAGES=1"
-        RUN_UNIT_TESTS=true
-        RUN_FUNCTIONAL_TESTS=false
-        GOAL="install"
-        BITCOIN_CONFIG="--enable-zmq --with-gui=qt5 --enable-glibc-back-compat --enable-reduce-exports --disable-online-rust --with-params-dir=$PARAMS_DIR"
-        BUILT_TIMEOUT=1200
-
-    - stage: test
-      name: 'x86_64 Linux  [GOAL: install]  [bionic]  [no GUI, no unit tests - only functional tests on legacy pre-HD wallets]'
-      env: >-
-        HOST=x86_64-unknown-linux-gnu
-        PACKAGES="python3-zmq protobuf-compiler libdbus-1-dev libharfbuzz-dev libprotobuf-dev"
-        DEP_OPTS="NO_QT=1 NO_UPNP=1 DEBUG=1 ALLOW_HOST_PACKAGES=1"
-        RUN_UNIT_TESTS=false
-        RUN_FUNCTIONAL_TESTS=true
-        TEST_RUNNER_EXTRA="--legacywallet"  # Run functional tests on pre-HD wallet
-        GOAL="install"
-        BITCOIN_CONFIG="--enable-zmq --with-gui=no --enable-glibc-back-compat --enable-reduce-exports --disable-online-rust --with-params-dir=$PARAMS_DIR"
-        BUILD_TIMEOUT=800
-
-    - stage: test
-      name: 'x86_64 Linux  [GOAL: install]  [bionic]  [no GUI, no unit tests - only tiertwo/sapling functional tests]'
-      env: >-
-        HOST=x86_64-unknown-linux-gnu
-        PACKAGES="python3-zmq protobuf-compiler libdbus-1-dev libharfbuzz-dev libprotobuf-dev"
-        DEP_OPTS="NO_QT=1 NO_UPNP=1 DEBUG=1 ALLOW_HOST_PACKAGES=1"
-        RUN_UNIT_TESTS=false
-        RUN_FUNCTIONAL_TESTS=true
-        TEST_RUNNER_EXTRA="--tiertwo --sapling"   # Run tier two and sapling functional tests only.
-        GOAL="install"
-        BITCOIN_CONFIG="--with-gui=no --enable-glibc-back-compat --enable-reduce-exports --disable-online-rust --with-params-dir=$PARAMS_DIR"
-        BUILD_TIMEOUT=800
-
-    - stage: test
-      name: 'x86_64 Linux  [GOAL: install]  [xenial]  [no depends, only system libs]'
-      env: >-
-        HOST=x86_64-unknown-linux-gnu
-        DOCKER_NAME_TAG=ubuntu:16.04
-        PACKAGES="python3-zmq qtbase5-dev qttools5-dev-tools libqt5svg5-dev libssl-dev libevent-dev bsdmainutils libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev libdb5.3++-dev libminiupnpc-dev libzmq3-dev libprotobuf-dev protobuf-compiler libqrencode-dev libgmp-dev libsodium-dev cargo"
-        NO_DEPENDS=1
-        GOAL="install"
-        BITCOIN_CONFIG="--enable-zmq --with-incompatible-bdb --with-gui=qt5 CPPFLAGS=-DDEBUG_LOCKORDER --disable-hardening --disable-asm --with-params-dir=$PARAMS_DIR"
-
-    - stage: test
-      name: 'x86_64 Linux  [GOAL: install]  [bionic]  [no depends, only system libs]'
-      env: >-
-        HOST=x86_64-unknown-linux-gnu
-        PACKAGES="python3-zmq qtbase5-dev qttools5-dev-tools libqt5svg5-dev libqt5charts5-dev libssl1.0-dev libevent-dev bsdmainutils libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev libdb5.3++-dev libminiupnpc-dev libzmq3-dev libprotobuf-dev protobuf-compiler libqrencode-dev libgmp-dev libsodium-dev cargo"
-        NO_DEPENDS=1
-        GOAL="install"
-        BITCOIN_CONFIG="--enable-zmq --with-incompatible-bdb --with-gui=qt5 --with-params-dir=$PARAMS_DIR CPPFLAGS=-DDEBUG_LOCKORDER"
-
-#    - stage: test
-#      name: 'x86_64 Linux  [GOAL: install]  [bionic]  [no depends, only system libs, sanitizers: fuzzer,address]'
-#      env: >-
-#        HOST=x86_64-unknown-linux-gnu
-#        PACKAGES="clang python3-zmq qtbase5-dev qttools5-dev-tools libqt5svg5-dev libqt5charts5-dev libssl1.0-dev libevent-dev bsdmainutils libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev libdb5.3++-dev libminiupnpc-dev libzmq3-dev libprotobuf-dev protobuf-compiler libqrencode-dev libgmp-dev"
-#        NO_DEPENDS=1
-#        RUN_UNIT_TESTS=false
-#        RUN_FUNCTIONAL_TESTS=false
-#        RUN_BENCH=true
-#        GOAL="install"
-#        BITCOIN_CONFIG="--enable-zmq --with-incompatible-bdb --enable-glibc-back-compat --enable-reduce-exports --with-gui=qt5 CPPFLAGS=-DDEBUG_LOCKORDER --with-sanitizers=undefined CC=clang CXX=clang++"
-
-#    - stage: test
-#      name: 'x86_64 Linux  [GOAL: install]  [bionic]  [no wallet]'
-#      env: >-
-#        HOST=x86_64-unknown-linux-gnu
-#        PACKAGES="python3-zmq"
-#        DEP_OPTS="NO_WALLET=1"
-#        GOAL="install"
-#        BITCOIN_CONFIG="--enable-glibc-back-compat --enable-reduce-exports"
 
     - stage: test
       name: 'macOS 10.10  [GOAL: deploy] [no functional tests]'
@@ -235,22 +71,6 @@ jobs:
         RUN_FUNCTIONAL_TESTS=false
         GOAL="deploy"
         BITCOIN_CONFIG="--enable-gui --enable-reduce-exports --enable-werror --disable-online-rust"
-
-    - stage: cmake
-      name: 'CMake Linux'
-      language: cpp
-      compiler:
-        - gcc
-      addons:
-        apt:
-          packages:
-           - python3-zmq qtbase5-dev qttools5-dev-tools libqt5svg5-dev libssl-dev libevent-dev bsdmainutils libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev libdb5.3++-dev libminiupnpc-dev libzmq3-dev libprotobuf-dev protobuf-compiler libqrencode-dev libgmp-dev libsodium-dev cargo
-      before_install:
-        - set -o errexit; source .travis/test_03_before_install.sh
-      install:
-      before_script:
-      script:
-        - set -o errexit; source .travis/cmake_06_script.sh
 
     - stage: cmake
       name: 'CMake macOS'
@@ -280,8 +100,6 @@ jobs:
             - gmp
             - libsodium
             - rust
-#         Set 'update: true' below until TravisCI updates their macOS build images.
-#         See https://travis-ci.community/t/macos-build-fails-because-of-homebrew-bundle-unknown-command/7296/16
           update: false
       before_install:
       install:
