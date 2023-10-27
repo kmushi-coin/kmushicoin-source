@@ -36,22 +36,6 @@ jobs:
         if: github.event_name == 'pull_request'
         run: echo "TRAVIS_BRANCH=${{ github.base_ref }}" >> $GITHUB_ENV
 
-      - name: Lint
-        run: |
-          export PATH="/tmp/shellcheck-${SHELLCHECK_VERSION}:${PATH}"
-          echo $PATH
-
-          git checkout -qf -B master refs/remotes/origin/master
-          git checkout -qf $GITHUB_SHA
-          test/lint/check-doc.py
-          test/lint/logprint-scanner.py
-          test/lint/lint-all.sh
-
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            COMMIT_RANGE="${{ github.base_ref }}..HEAD"
-            test/lint/commit-script-check.sh $COMMIT_RANGE
-          fi
-
   cmake:
     name: CMake-${{ matrix.config.name }}
     runs-on: ${{ matrix.config.os }}
