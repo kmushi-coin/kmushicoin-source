@@ -6,7 +6,7 @@
 
 export LC_ALL=C.UTF-8
 
-#DOCKER_EXEC echo \> \$HOME/.pivxl  # Make sure default datadir does not exist and is never read by creating a dummy file
+#DOCKER_EXEC echo \> \$HOME/.ktv  # Make sure default datadir does not exist and is never read by creating a dummy file
 
 mkdir -p depends/SDKs depends/sdk-sources
 
