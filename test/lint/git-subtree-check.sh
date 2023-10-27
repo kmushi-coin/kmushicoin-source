@@ -21,7 +21,7 @@ while getopts "?hr" opt; do
       echo "-r      Check that subtree commit is present in repository."
       echo "        To do this check, fetch the subtreed remote first. Example:"
       echo ""
-      echo "            git fetch https://github.com/KTV-Project/bls-signatures.git"
+      echo "            git fetch https://github.com/"
       echo "            test/lint/git-subtree-check.sh -r src/chiabls"
       exit 1
     ;;
