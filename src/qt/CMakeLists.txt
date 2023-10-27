@@ -49,6 +49,14 @@ if (QRCODE_FOUND)
     link_directories ( ${QRCODE_LIBRARY_DIRS} )
 endif()
 
+find_program(MOC_BIN NAMES moc moc-qt5 qt5-moc
+        PATHS /usr/lib/qt5/bin /usr/lib/x86_64-linux-gnu/qt5/bin /usr/local/opt/qt/bin /usr/local/opt/qt5/bin
+        NO_DEFAULT_PATH
+        NO_SYSTEM_ENVIRONMENT_PATH)
+if (MOC_BIN)
+    MESSAGE(STATUS "FOUND MOC ${MOC_BIN}")
+endif ()
+
 add_compile_options("-DQT_NO_KEYWORDS")
 
 # Why isn't this done automatically??
@@ -71,6 +79,7 @@ SET(QT_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/notificator.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/optionsmodel.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/peertablemodel.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/platformstyle.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/qvalidatedlineedit.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/qvaluecombobox.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/rpcconsole.cpp
@@ -85,6 +94,7 @@ SET(QT_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/editaddressdialog.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/openuridialog.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/paymentserver.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/recentrequeststablemodel.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/transactionfilterproxy.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/transactionrecord.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/transactiontablemodel.cpp
@@ -124,6 +134,7 @@ SET(QT_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/ktv/sendmemodialog.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/ktv/sendmultirow.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/ktv/send.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/ktv/addnewaddressdialog.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/ktv/addnewcontactdialog.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/ktv/requestdialog.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/ktv/receivewidget.cpp
@@ -134,12 +145,6 @@ SET(QT_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/ktv/addresseswidget.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/ktv/defaultdialog.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/ktv/coldstakingwidget.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/ktv/mnselectiondialog.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/ktv/proposalcard.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/ktv/votedialog.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/ktv/createproposaldialog.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/ktv/proposalinfodialog.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/ktv/governancewidget.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/ktv/settings/settingsbackupwallet.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/ktv/settings/settingsbittoolwidget.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/ktv/settings/settingsconsolewidget.cpp
@@ -154,10 +159,12 @@ SET(QT_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/ktv/settings/settingswidget.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/ktv/welcomecontentwidget.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/ktv/splash.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/ktv/governancemodel.cpp
         )
 
-qt5_generate_moc(ktv/pfborderimage.h ${CMAKE_CURRENT_SOURCE_DIR}/ktv/moc_pfborderimage.cpp)
+execute_process(
+        COMMAND ${MOC_BIN} -o moc_pfborderimage.cpp pfborderimage.h
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/ktv
+)
 list(APPEND QT_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/ktv/moc_pfborderimage.cpp)
 
 if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
@@ -170,9 +177,6 @@ target_include_directories(qt_stuff PUBLIC ${CMAKE_SOURCE_DIR}/src
         ${CMAKE_SOURCE_DIR}/src/leveldb/include
         ${CMAKE_SOURCE_DIR}/src/univalue/include
         ${CMAKE_SOURCE_DIR}/src/secp256k1/include
-        ${CMAKE_SOURCE_DIR}/src/chiabls/src
-        ${relic_SOURCE_DIR}/include
-        ${relic_BINARY_DIR}/include
         ${CMAKE_CURRENT_SOURCE_DIR}
         ${CMAKE_CURRENT_SOURCE_DIR}/ktv
         ${CMAKE_CURRENT_SOURCE_DIR}/ktv/settings
