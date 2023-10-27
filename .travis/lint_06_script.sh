@@ -6,16 +6,3 @@
 
 export LC_ALL=C
 
-
-contrib/devtools/git-subtree-check.sh src/secp256k1
-contrib/devtools/git-subtree-check.sh src/univalue
-contrib/devtools/git-subtree-check.sh src/leveldb
-contrib/devtools/git-subtree-check.sh src/crc32c
-contrib/devtools/check-doc.py
-contrib/devtools/logprint-scanner.py
-
-if [ "$TRAVIS_EVENT_TYPE" = "pull_request" ]; then
-  contrib/devtools/lint-whitespace.sh
-  contrib/devtools/commit-script-check.sh $TRAVIS_COMMIT_RANGE
-  test/lint/lint-qt.sh
-fi

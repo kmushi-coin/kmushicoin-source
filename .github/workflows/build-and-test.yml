@@ -176,7 +176,8 @@ jobs:
             host: x86_64-w64-mingw32
             apt_get: python3 nsis g++-mingw-w64-x86-64 wine-binfmt wine64
             symbol_check: true
-            goal: deploy
+            goal: ""
+            nsis: true
             BITCOIN_CONFIG: "--disable-tests --with-gui=auto --enable-reduce-exports --disable-online-rust"
 
           - name: x86_64 Linux [GOAL:install] [no unit or functional tests]
@@ -308,5 +309,11 @@ jobs:
           if [ "${{matrix.config.symbol_check }}" = "true" ]; then
             echo ::group::Symbol-Check
             make -j2 -C src check-symbols
+            echo ::endgroup::
+          fi
+
+          if [ "${{matrix.config.nsis }}" = "true" ]; then
+            echo ::group::Nsis
+            make deploy -j2
             echo ::endgroup::
           fi
