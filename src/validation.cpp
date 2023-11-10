@@ -858,7 +858,8 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockvalue)
 {
     int64_t ret = 0;
     if (nHeight >= Params().GetConsensus().vUpgrades[Consensus::UPGRADE_POS].nActivationHeight) {
-        ret = blockvalue * 0.56; // 70% to masternodes
+        ret = blockvalue * 0.56; // 56% to masternodes
+        if (nHeight > 84000) return blockvalue * 0.2;
     }
     return ret;
 }

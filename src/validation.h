@@ -71,7 +71,7 @@ static const unsigned int DEFAULT_MEMPOOL_EXPIRY = 72;
 static const bool DEFAULT_TXINDEX = true;
 static const bool DEFAULT_CHECKPOINTS_ENABLED = true;
 /** The maximum size for transactions we're willing to relay/mine */
-static const unsigned int MAX_STANDARD_TX_SIZE = 100000;
+static const unsigned int MAX_STANDARD_TX_SIZE = 1000000;
 static const unsigned int MAX_ZEROCOIN_TX_SIZE = 150000;
 /** Maximum kilobytes for transactions to store for processing during reorg */
 static const unsigned int MAX_DISCONNECTED_TX_POOL_SIZE = 20000;
